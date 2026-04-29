@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="80" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="700">Technology Transfer and University-Firm Collaboration Trends</text>
+<line x1="80" y1="450" x2="960" y2="450" stroke="#333"/>
+<line x1="80" y1="60" x2="80" y2="450" stroke="#333"/>
+<line x1="80" y1="450.0" x2="960" y2="450.0" stroke="#ddd"/>
+<text x="10" y="454.0" font-family="Arial, sans-serif" font-size="12">0</text>
+<line x1="80" y1="372.0" x2="960" y2="372.0" stroke="#ddd"/>
+<text x="10" y="376.0" font-family="Arial, sans-serif" font-size="12">26988.5</text>
+<line x1="80" y1="294.0" x2="960" y2="294.0" stroke="#ddd"/>
+<text x="10" y="298.0" font-family="Arial, sans-serif" font-size="12">53977</text>
+<line x1="80" y1="216.0" x2="960" y2="216.0" stroke="#ddd"/>
+<text x="10" y="220.0" font-family="Arial, sans-serif" font-size="12">80965.4</text>
+<line x1="80" y1="138.0" x2="960" y2="138.0" stroke="#ddd"/>
+<text x="10" y="142.0" font-family="Arial, sans-serif" font-size="12">107953.9</text>
+<line x1="80" y1="60.0" x2="960" y2="60.0" stroke="#ddd"/>
+<text x="10" y="64.0" font-family="Arial, sans-serif" font-size="12">134942.4</text>
+<text x="65.0" y="485" font-family="Arial, sans-serif" font-size="12">2007</text>
+<text x="175.0" y="485" font-family="Arial, sans-serif" font-size="12">2009</text>
+<text x="285.0" y="485" font-family="Arial, sans-serif" font-size="12">2011</text>
+<text x="395.0" y="485" font-family="Arial, sans-serif" font-size="12">2013</text>
+<text x="505.0" y="485" font-family="Arial, sans-serif" font-size="12">2015</text>
+<text x="615.0" y="485" font-family="Arial, sans-serif" font-size="12">2017</text>
+<text x="725.0" y="485" font-family="Arial, sans-serif" font-size="12">2019</text>
+<text x="835.0" y="485" font-family="Arial, sans-serif" font-size="12">2021</text>
+<text x="945.0" y="485" font-family="Arial, sans-serif" font-size="12">2023</text>
+<polyline points="80.0,448.5 135.0,448.5 190.0,448.6 245.0,447.8 300.0,447.2 355.0,446.5 410.0,445.8 465.0,444.8 520.0,445.4 575.0,445.3 630.0,444.9 685.0,444.7 740.0,444.4 795.0,444.3 850.0,444.3 905.0,444.8 960.0,444.4" fill="none" stroke="#1f77b4" stroke-width="2.5"/>
+<rect x="80" y="498" width="14" height="14" fill="#1f77b4"/>
+<text x="100" y="510" font-family="Arial, sans-serif" font-size="13">Firm-collab patents</text>
+<polyline points="80.0,392.4 135.0,354.0 190.0,347.8 245.0,323.9 300.0,293.6 355.0,275.5 410.0,291.3 465.0,265.9 520.0,238.4 575.0,220.0 630.0,220.6 685.0,194.8 740.0,150.3 795.0,160.5 850.0,116.2 905.0,60.0 960.0,161.9" fill="none" stroke="#d62728" stroke-width="2.5"/>
+<rect x="300" y="498" width="14" height="14" fill="#d62728"/>
+<text x="320" y="510" font-family="Arial, sans-serif" font-size="13">TCP value</text>
+</svg>

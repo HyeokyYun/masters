@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="80" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="700">Raw Patent Collaboration Trends</text>
+<line x1="80" y1="450" x2="960" y2="450" stroke="#333"/>
+<line x1="80" y1="60" x2="80" y2="450" stroke="#333"/>
+<line x1="80" y1="450.0" x2="960" y2="450.0" stroke="#ddd"/>
+<text x="10" y="454.0" font-family="Arial, sans-serif" font-size="12">0</text>
+<line x1="80" y1="372.0" x2="960" y2="372.0" stroke="#ddd"/>
+<text x="10" y="376.0" font-family="Arial, sans-serif" font-size="12">654.4</text>
+<line x1="80" y1="294.0" x2="960" y2="294.0" stroke="#ddd"/>
+<text x="10" y="298.0" font-family="Arial, sans-serif" font-size="12">1308.8</text>
+<line x1="80" y1="216.0" x2="960" y2="216.0" stroke="#ddd"/>
+<text x="10" y="220.0" font-family="Arial, sans-serif" font-size="12">1963.2</text>
+<line x1="80" y1="138.0" x2="960" y2="138.0" stroke="#ddd"/>
+<text x="10" y="142.0" font-family="Arial, sans-serif" font-size="12">2617.6</text>
+<line x1="80" y1="60.0" x2="960" y2="60.0" stroke="#ddd"/>
+<text x="10" y="64.0" font-family="Arial, sans-serif" font-size="12">3272</text>
+<text x="65.0" y="485" font-family="Arial, sans-serif" font-size="12">2007</text>
+<text x="175.0" y="485" font-family="Arial, sans-serif" font-size="12">2009</text>
+<text x="285.0" y="485" font-family="Arial, sans-serif" font-size="12">2011</text>
+<text x="395.0" y="485" font-family="Arial, sans-serif" font-size="12">2013</text>
+<text x="505.0" y="485" font-family="Arial, sans-serif" font-size="12">2015</text>
+<text x="615.0" y="485" font-family="Arial, sans-serif" font-size="12">2017</text>
+<text x="725.0" y="485" font-family="Arial, sans-serif" font-size="12">2019</text>
+<text x="835.0" y="485" font-family="Arial, sans-serif" font-size="12">2021</text>
+<text x="945.0" y="485" font-family="Arial, sans-serif" font-size="12">2023</text>
+<polyline points="80.0,348.7 135.0,355.7 190.0,362.2 245.0,307.4 300.0,267.2 355.0,235.2 410.0,190.6 465.0,144.7 520.0,186.3 575.0,161.7 630.0,107.2 685.0,99.7 740.0,86.9 795.0,74.8 850.0,60.0 905.0,111.4 960.0,94.9" fill="none" stroke="#1f77b4" stroke-width="2.5"/>
+<rect x="80" y="498" width="14" height="14" fill="#1f77b4"/>
+<text x="100" y="510" font-family="Arial, sans-serif" font-size="13">All patent rows</text>
+<polyline points="80.0,387.1 135.0,384.4 190.0,389.3 245.0,352.6 300.0,324.0 355.0,303.0 410.0,272.3 465.0,232.0 520.0,259.6 575.0,250.2 630.0,234.9 685.0,228.8 740.0,219.7 795.0,218.3 850.0,215.4 905.0,239.1 960.0,224.8" fill="none" stroke="#d62728" stroke-width="2.5"/>
+<rect x="300" y="498" width="14" height="14" fill="#d62728"/>
+<text x="320" y="510" font-family="Arial, sans-serif" font-size="13">Firm-collab patent rows</text>
+<polyline points="80.0,400.4 135.0,402.3 190.0,407.6 245.0,407.4 300.0,393.0 355.0,372.2 410.0,355.8 465.0,322.0 520.0,334.1 575.0,306.7 630.0,271.0 685.0,255.1 740.0,257.1 795.0,240.7 850.0,215.2 905.0,258.8 960.0,260.0" fill="none" stroke="#2ca02c" stroke-width="2.5"/>
+<rect x="520" y="498" width="14" height="14" fill="#2ca02c"/>
+<text x="540" y="510" font-family="Arial, sans-serif" font-size="13">Gov-supported rows</text>
+</svg>
