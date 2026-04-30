@@ -1,0 +1,58 @@
+2026-02-12T00:16:12.958305 Train stores: 35692, Test stores: 8923
+2026-02-12T00:16:12.958689 Train size: 35692, Test size: 8923
+2026-02-12T00:16:12.982242 LogisticRegression — Accuracy: 0.6231, F1: 0.7578
+2026-02-12T00:16:12.982885   Confusion matrix:
+[[ 299 3167]
+ [ 196 5261]]
+2026-02-12T00:16:13.269998 XGBClassifier — Accuracy: 0.6303, F1: 0.7305
+2026-02-12T00:16:13.270798   Confusion matrix:
+[[1153 2313]
+ [ 986 4471]]
+2026-02-12T00:16:13.273073 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260211/outputs/tables/prediction_80_20_results.csv
+2026-02-12T00:16:13.377868 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260211/outputs/figures/prediction_80_20_scores.png
+2026-02-12T01:20:23.639902 Merged cluster labels: 44615 stores (from /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/store_cluster_labels_K6.parquet)
+2026-02-12T01:20:23.649683 Train stores: 35692, Test stores: 8923
+2026-02-12T01:20:23.676659 M0 LogisticRegression — Acc: 0.6231, F1: 0.7578
+2026-02-12T01:20:23.864832 M0 XGBClassifier — Acc: 0.6315, F1: 0.7313
+2026-02-12T01:20:24.098322 M1 LogisticRegression — Acc: 0.6326, F1: 0.7481
+2026-02-12T01:20:24.264656 M1 XGBClassifier — Acc: 0.6301, F1: 0.7311
+2026-02-12T01:20:24.265037 M1: cluster predicted from first-30w features only (no leakage).
+2026-02-12T01:20:24.271154 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260211/outputs/tables/prediction_80_20_results.csv
+2026-02-12T01:20:24.365571 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260211/outputs/figures/prediction_80_20_M0_vs_M1.png
+2026-02-16T07:10:23.345914 No cluster labels found; running M0 only.
+2026-02-16T07:10:23.376031 Train stores: 35692, Test stores: 8923
+2026-02-16T07:10:23.467317 M0 LogisticRegression — Acc: 0.5915, F1: 0.6536
+2026-02-16T07:10:24.079780 M0 XGBClassifier — Acc: 0.6078, F1: 0.6707
+2026-02-16T07:10:24.083762 Saved /home/hyeoky98/kcd/260211/outputs/tables/prediction_80_20_results.csv
+2026-02-16T07:10:24.466373 Saved /home/hyeoky98/kcd/260211/outputs/figures/prediction_80_20_M0_vs_M1.png
+2026-02-16T08:20:34.990247 Merged cluster labels: 44615 stores (from /home/hyeoky98/kcd/260204/outputs/tables/store_cluster_labels_K6.parquet)
+2026-02-16T08:20:35.018971 Train stores: 35692, Test stores: 8923
+2026-02-16T08:20:37.219959 XGBoost: using device=cuda (CUDA)
+2026-02-16T08:20:37.311115 M0 LogisticRegression — Acc: 0.5871, F1: 0.6480
+2026-02-16T08:20:37.968024 M0 XGBClassifier — Acc: 0.6072, F1: 0.6677
+2026-02-16T08:20:47.896812 M0_meta LogisticRegression — Acc: 0.6237, F1: 0.6725
+2026-02-16T08:20:48.681519 M0_meta XGBClassifier — Acc: 0.6442, F1: 0.6899
+2026-02-16T08:20:48.681842 M0_meta: + 5 meta cat cols → 542 dummies
+2026-02-16T08:20:50.675775 M1 LogisticRegression — Acc: 0.5927, F1: 0.6620
+2026-02-16T08:20:51.000765 M1 XGBClassifier — Acc: 0.6008, F1: 0.6617
+2026-02-16T08:20:51.001007 M1: cluster predicted from first-30w only (no leakage).
+2026-02-16T08:21:01.398166 M1_meta LogisticRegression — Acc: 0.6248, F1: 0.6705
+2026-02-16T08:21:02.108950 M1_meta XGBClassifier — Acc: 0.6454, F1: 0.6903
+2026-02-16T08:21:02.116818 Saved /home/hyeoky98/kcd/260211/outputs/tables/prediction_80_20_results.csv
+2026-02-16T08:21:02.484524 Saved /home/hyeoky98/kcd/260211/outputs/figures/prediction_80_20_M0_vs_M1.png
+2026-02-16T08:27:13.793849 Merged cluster labels: 44615 stores (from /home/hyeoky98/kcd/260204/outputs/tables/store_cluster_labels_K6.parquet)
+2026-02-16T08:27:13.824002 Train stores: 35692, Test stores: 8923
+2026-02-16T08:27:16.251231 XGBoost: using device=cuda (CUDA)
+2026-02-16T08:27:16.350150 M0 LogisticRegression — Acc: 0.5871, F1: 0.6480
+2026-02-16T08:27:16.979779 M0 XGBClassifier — Acc: 0.6072, F1: 0.6677
+2026-02-16T08:27:25.829534 M2 LogisticRegression — Acc: 0.6237, F1: 0.6725
+2026-02-16T08:27:26.538028 M2 XGBClassifier — Acc: 0.6442, F1: 0.6899
+2026-02-16T08:27:26.538361 M2: M0 + 5 meta cat cols → 542 dummies
+2026-02-16T08:27:28.584116 M1 LogisticRegression — Acc: 0.5927, F1: 0.6620
+2026-02-16T08:27:28.885343 M1 XGBClassifier — Acc: 0.6008, F1: 0.6617
+2026-02-16T08:27:28.885594 M1: M0 + cluster (predicted from first-30w only, no leakage).
+2026-02-16T08:27:38.429274 M3 LogisticRegression — Acc: 0.6248, F1: 0.6705
+2026-02-16T08:27:39.137815 M3 XGBClassifier — Acc: 0.6454, F1: 0.6903
+2026-02-16T08:27:39.138140 M3: M1 + meta.
+2026-02-16T08:27:39.147162 Saved /home/hyeoky98/kcd/260211/outputs/tables/prediction_80_20_results.csv
+2026-02-16T08:27:39.509843 Saved /home/hyeoky98/kcd/260211/outputs/figures/prediction_80_20_M0_vs_M1.png

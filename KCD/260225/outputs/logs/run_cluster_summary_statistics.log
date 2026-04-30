@@ -1,0 +1,28 @@
+2026-03-01T12:32:27.309224 ============================================================
+2026-03-01T12:32:27.309501 Step 1: 클러스터별 Summary Statistics (outcome_4)
+2026-03-01T12:32:27.310985 ============================================================
+2026-03-01T12:32:27.340866 final_code -> outcome_4: {'Stable': 28728, 'Decline': 3772, 'DUY': 934, 'DUX': 430}
+2026-03-01T12:32:27.433479 df_base_features: 33514 rows
+2026-03-01T12:32:27.438298 Merged: 31877 rows
+2026-03-01T12:32:27.454483 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/outcome4_summary_statistics.csv
+2026-03-01T12:32:27.464006 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/outcome4_depth2_distribution.csv
+2026-03-01T12:32:27.468841 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/outcome4_summary_key_vars.csv
+2026-03-01T12:32:27.470566 Counts: {'DUX': 386, 'DUY': 898, 'Decline': 3401, 'Stable': 27192}
+2026-03-01T12:32:27.815670 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/df_for_multinomial_logit.csv (for Step 2)
+2026-03-01T12:32:27.815955 Step 1 완료.
+2026-03-03T03:19:01.042436 ============================================================
+2026-03-03T03:19:01.042814 Step 1: 클러스터별 Summary Statistics (outcome_4)
+2026-03-03T03:19:01.042875 ============================================================
+2026-03-03T03:19:01.042982 ERROR: Not found /home/hyeoky98/kcd/260224/03_inflection_udx/final_code_by_store_260121_outlier_removal.csv
+2026-03-03T03:21:33.947292 ============================================================
+2026-03-03T03:21:33.947426 Step 1: 클러스터별 Summary Statistics (outcome_4)
+2026-03-03T03:21:33.947496 ============================================================
+2026-03-03T03:21:34.011228 final_code -> outcome_4: {'Stable': 28728, 'Decline': 3772, 'DUY': 934, 'DUX': 430}
+2026-03-03T03:21:34.238516 df_base_features: 33514 rows
+2026-03-03T03:21:34.262056 Merged: 31877 rows
+2026-03-03T03:21:34.309392 Saved /home/hyeoky98/kcd/260225/outputs/tables/outcome4_summary_statistics.csv
+2026-03-03T03:21:34.331159 Saved /home/hyeoky98/kcd/260225/outputs/tables/outcome4_depth2_distribution.csv
+2026-03-03T03:21:34.342498 Saved /home/hyeoky98/kcd/260225/outputs/tables/outcome4_summary_key_vars.csv
+2026-03-03T03:21:34.345947 Counts: {'DUX': 386, 'DUY': 898, 'Decline': 3401, 'Stable': 27192}
+2026-03-03T03:21:36.319364 Saved /home/hyeoky98/kcd/260225/outputs/tables/df_for_multinomial_logit.csv (for Step 2)
+2026-03-03T03:21:36.319529 Step 1 완료.

@@ -1,0 +1,16 @@
+[audit02] computing slope on first 30w ...
+[audit02] slope_30w computed for 50,635 stores
+[audit02] merged: 50,635 stores, outcome_3 dist:
+outcome_3
+Growth     20273
+Stable     19365
+Decline    10997
+
+=== Trivial vs Full Feature Baselines (Logistic Regression 5-fold CV) ===
+               label  f1_mean  f1_std  auc_mean  rec_g_mean  rec_d_mean  n_features
+ B0_slope_early_only   0.4428  0.0029    0.6161      0.6353      0.2053           1
+B1_slope_cv_mean_30w   0.4384  0.0038    0.6512      0.7304      0.2134           3
+           A_base_46   0.5174  0.0033    0.7092      0.6911      0.3209          43
+
+[audit02] Incremental lift A vs B0: F1 ++0.075, AUC ++0.093
+[audit02] 즉, 46 features는 slope-only 대비 F1/AUC 개선 이만큼이 'novelty' 의 수치적 증거.

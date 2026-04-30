@@ -1,0 +1,41 @@
+[13] device: cpu
+[13] aligned: (49007, 30), y classes (array(['Decline', 'Growth', 'Stable'], dtype=object), array([10997, 20273, 17737]))
+
+=== LSTM_bi ===
+  fold=0  F1=0.512  G_rec=0.617  D_rec=0.558  AUC=0.703  (294.1s)
+  fold=1  F1=0.524  G_rec=0.633  D_rec=0.572  AUC=0.710  (287.2s)
+  fold=2  F1=0.522  G_rec=0.616  D_rec=0.576  AUC=0.711  (283.8s)
+  fold=3  F1=0.519  G_rec=0.626  D_rec=0.566  AUC=0.708  (285.8s)
+  fold=4  F1=0.510  G_rec=0.607  D_rec=0.553  AUC=0.705  (263.5s)
+
+=== GRU_bi ===
+  fold=0  F1=0.510  G_rec=0.624  D_rec=0.573  AUC=0.701  (518.2s)
+  fold=1  F1=0.523  G_rec=0.638  D_rec=0.580  AUC=0.713  (516.2s)
+  fold=2  F1=0.521  G_rec=0.625  D_rec=0.578  AUC=0.713  (474.9s)
+  fold=3  F1=0.518  G_rec=0.636  D_rec=0.577  AUC=0.708  (459.2s)
+  fold=4  F1=0.515  G_rec=0.625  D_rec=0.563  AUC=0.709  (485.5s)
+
+=== Transformer ===
+  fold=0  F1=0.507  G_rec=0.610  D_rec=0.554  AUC=0.702  (367.5s)
+  fold=1  F1=0.517  G_rec=0.595  D_rec=0.565  AUC=0.708  (364.0s)
+  fold=2  F1=0.518  G_rec=0.633  D_rec=0.587  AUC=0.713  (367.9s)
+  fold=3  F1=0.507  G_rec=0.623  D_rec=0.573  AUC=0.706  (365.4s)
+  fold=4  F1=0.517  G_rec=0.626  D_rec=0.572  AUC=0.710  (365.1s)
+
+=== Summary (mean ± std) ===
+            macro_f1         recall_Growth recall_Decline auc_ovr
+                mean     std          mean           mean    mean
+model                                                            
+GRU_bi        0.5174  0.0054        0.6299         0.5739  0.7089
+LSTM_bi       0.5172  0.0064        0.6198         0.5650  0.7074
+Transformer   0.5132  0.0056        0.6174         0.5703  0.7078
+
+=== Deep vs Hybrid/Classical ===
+                     model           family  macro_f1_mean  macro_f1_std  recall_Growth  recall_Decline  auc_ovr
+D_base_cluster_cp_PROPOSED classical/hybrid         0.6476        0.0035         0.7845          0.5726   0.8299
+            B_base_cluster classical/hybrid         0.6353        0.0049         0.7668          0.5546   0.8205
+                 C_base_cp classical/hybrid         0.6143        0.0066         0.7543          0.5226   0.8051
+                 A_base_46 classical/hybrid         0.5466        0.0049         0.7049          0.4250   0.7342
+                    GRU_bi    deep_sequence         0.5174        0.0054         0.6299          0.5739   0.7089
+                   LSTM_bi    deep_sequence         0.5172        0.0064         0.6198          0.5650   0.7074
+               Transformer    deep_sequence         0.5132        0.0056         0.6174          0.5703   0.7078

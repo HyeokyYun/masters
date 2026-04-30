@@ -1,0 +1,22 @@
+# 첫 30주 기반 성장/하락 예측 설정 (260211)
+
+data:
+  weekly_parquet_primary: "../original_data/weekly_processed.parquet"
+  weekly_parquet_fallback: "../original_data/weekly.parquet"
+  meta_csv: "../original_data/meta_processed.csv"
+  meta_fallback: "../original_data/meta.csv"
+  id_col_store: "public_id"
+  time_col_week: "day_after1"
+  y_col_sales: "sales_card"
+
+prediction:
+  first_n_weeks: 30
+  min_total_weeks: 50
+  train_ratio: 0.8
+  seed: 42
+  growth_slope_threshold: 0.0
+
+outputs:
+  tables: "outputs/tables"
+  figures: "outputs/figures"
+  logs: "outputs/logs"

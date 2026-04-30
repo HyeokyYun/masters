@@ -1,0 +1,65 @@
+2026-02-04T03:06:52.582209 Loading weekly data from /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/../original_data/weekly_processed.parquet
+2026-02-04T03:07:29.123796 Loading weekly data from /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/../original_data/weekly_processed.parquet
+2026-02-04T03:08:31.766114 Loading weekly data from /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/../original_data/weekly_processed.parquet
+2026-02-04T03:10:40.564421 Loading weekly data from /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/../original_data/weekly_processed.parquet
+2026-02-04T03:10:40.732926 Using columns: store='public_id', week='day_after1', sales='sales_card'
+2026-02-04T03:10:40.733347 Building store x week matrix (fill: interpolate then ffill/bfill).
+2026-02-04T03:10:42.876901 Matrix shape: 55310 stores x 139 weeks.
+2026-02-04T03:10:45.922169 --- K = 4 ---
+2026-02-04T03:52:07.732313   Seed stability: mean ARI=0.4359, mean NMI=0.4336
+2026-02-04T04:56:29.317971   Bootstrap stability: mean ARI=0.4201
+2026-02-04T04:56:29.331221   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/store_cluster_labels_K4.parquet
+2026-02-04T04:56:29.466263   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/figures/cluster_means_K4.png
+2026-02-04T04:56:29.466354 --- K = 5 ---
+2026-02-04T05:48:34.306418   Seed stability: mean ARI=0.4633, mean NMI=0.4662
+2026-02-04T07:11:24.999218   Bootstrap stability: mean ARI=0.4000
+2026-02-04T07:11:25.011314   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/store_cluster_labels_K5.parquet
+2026-02-04T07:11:25.076555   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/figures/cluster_means_K5.png
+2026-02-04T07:11:25.076648 --- K = 6 ---
+2026-02-04T08:05:49.513502   Seed stability: mean ARI=0.4305, mean NMI=0.4666
+2026-02-04T09:34:44.447370   Bootstrap stability: mean ARI=0.4142
+2026-02-04T09:34:44.459360   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/store_cluster_labels_K6.parquet
+2026-02-04T09:34:44.527045   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/figures/cluster_means_K6.png
+2026-02-04T09:34:44.527122 --- K = 7 ---
+2026-02-04T10:36:36.075552   Seed stability: mean ARI=0.4116, mean NMI=0.4618
+2026-02-04T12:22:45.775826   Bootstrap stability: mean ARI=0.4062
+2026-02-04T12:22:45.793580   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/store_cluster_labels_K7.parquet
+2026-02-04T12:22:45.887673   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/figures/cluster_means_K7.png
+2026-02-04T12:22:45.887803 --- K = 8 ---
+2026-02-04T13:28:50.267912   Seed stability: mean ARI=0.3732, mean NMI=0.4632
+2026-02-04T15:21:29.074402   Bootstrap stability: mean ARI=0.3850
+2026-02-04T15:21:29.087357   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/store_cluster_labels_K8.parquet
+2026-02-04T15:21:29.176165   Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/figures/cluster_means_K8.png
+2026-02-04T15:21:29.188962 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/cluster_stability_summary.csv
+2026-02-04T15:21:29.189035 run_02_cluster_fix finished.
+2026-02-16T07:29:16.578649 Loading weekly data from /home/hyeoky98/kcd/260204/../original_data/weekly_processed.parquet
+2026-02-16T07:29:16.987715 Using columns: store='public_id', week='day_after1', sales='sales_card'
+2026-02-16T07:29:16.987912 Building store x week matrix (fill: interpolate then ffill/bfill).
+2026-02-16T07:29:25.930877 Matrix shape: 55310 stores x 139 weeks.
+2026-02-16T07:31:54.913851 --- K = 4 ---
+2026-02-16T07:44:36.353410 Loading weekly data from /home/hyeoky98/kcd/260204/../original_data/weekly_processed.parquet
+2026-02-16T07:44:36.733969 Using columns: store='public_id', week='day_after1', sales='sales_card'
+2026-02-16T07:44:36.734227 Building store x week matrix (fill: interpolate then ffill/bfill).
+2026-02-16T07:44:45.652841 Matrix shape: 55310 stores x 139 weeks.
+2026-02-16T07:47:17.182976 --- K = 1 ---
+2026-02-16T08:10:31.321843 Loading weekly data from /home/hyeoky98/kcd/260204/../original_data/weekly_processed.parquet
+2026-02-16T08:10:31.717534 Using columns: store='public_id', week='day_after1', sales='sales_card'
+2026-02-16T08:10:31.717788 Building store x week matrix (fill: interpolate then ffill/bfill).
+2026-02-16T08:10:40.671793 Matrix shape: 55310 stores x 139 weeks.
+2026-02-16T08:13:14.231164 --- K = 1 ---
+2026-02-16T10:50:26.582204   Seed stability: mean ARI=1.0000, mean NMI=1.0000
+2026-02-16T14:23:50.729909   Bootstrap stability: mean ARI=1.0000
+2026-02-16T14:23:50.789350   Saved /home/hyeoky98/kcd/260204/outputs/tables/store_cluster_labels_K1.parquet
+2026-02-16T14:23:50.999385   Saved /home/hyeoky98/kcd/260204/outputs/figures/cluster_means_K1.png
+2026-02-16T14:23:50.999496 --- K = 2 ---
+2026-02-16T19:40:00.495740   Seed stability: mean ARI=0.6052, mean NMI=0.5310
+2026-02-17T02:25:02.233506   Bootstrap stability: mean ARI=0.6812
+2026-02-17T02:25:02.293150   Saved /home/hyeoky98/kcd/260204/outputs/tables/store_cluster_labels_K2.parquet
+2026-02-17T02:25:02.521784   Saved /home/hyeoky98/kcd/260204/outputs/figures/cluster_means_K2.png
+2026-02-17T02:25:02.521895 --- K = 3 ---
+2026-02-17T07:02:09.148851   Seed stability: mean ARI=0.5600, mean NMI=0.4965
+2026-02-17T14:50:23.630617   Bootstrap stability: mean ARI=0.5719
+2026-02-17T14:50:23.675345   Saved /home/hyeoky98/kcd/260204/outputs/tables/store_cluster_labels_K3.parquet
+2026-02-17T14:50:23.923162   Saved /home/hyeoky98/kcd/260204/outputs/figures/cluster_means_K3.png
+2026-02-17T14:50:23.931389 Saved /home/hyeoky98/kcd/260204/outputs/tables/cluster_stability_summary.csv
+2026-02-17T14:50:23.931469 run_02_cluster_fix finished.

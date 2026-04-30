@@ -1,0 +1,20 @@
+[06] XGB trained
+[06] Top 15 SHAP features:
+feature
+ma10_slope     0.431662
+slope_all      0.410197
+sales_max      0.319791
+cust_mean      0.273257
+slope_21_30    0.255004
+wk_mean        0.234925
+zero_cross     0.234679
+sales_skew     0.192756
+del_mean       0.174694
+nc_mean        0.164782
+ma5_slope      0.151166
+sales_range    0.149494
+bn_mean        0.141283
+nc_std         0.135408
+cust_slope     0.128990
+Name: mean_abs_shap, dtype: float64
+[06] shap_top15_by_class.png saved

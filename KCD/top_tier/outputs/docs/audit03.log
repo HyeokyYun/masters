@@ -1,0 +1,20 @@
+[audit03] data loaded: unified=59,089, feats_labeled=50,635, feat_mat=50,635
+
+=== (a) Closure cutoff sensitivity ===
+ cutoff_weeks  n_closed_total  closure_rate_total  panel_closure_rate  non_panel_closure_rate
+            2            9565              0.1619              0.1020                  0.5206
+            4            9247              0.1565              0.0961                  0.5181
+            6            8925              0.1510              0.0901                  0.5163
+            8            8683              0.1469              0.0856                  0.5147
+
+=== (b) Outcome slope threshold sensitivity ===
+ slope_factor     n  Growth_pct  Stable_pct  Decline_pct  A46_macro_f1  A46_auc
+         0.25 50635      0.5097      0.2104       0.2798        0.5010   0.7145
+         0.50 50635      0.4004      0.3824       0.2172        0.5174   0.7092
+         0.75 50635      0.2888      0.5458       0.1654        0.4465   0.7066
+         1.00 50635      0.1883      0.6874       0.1243        0.3570   0.7087
+
+=== 해석 ===
+  Closure rate @ 2w vs 8w: 0.162 vs 0.147 — 차이 +0.015
+  A46 F1 @ factor 0.25 vs 1.0: 0.501 vs 0.357
+  → threshold 변화가 결과 robust 함을 확인하기 위한 sensitivity table 확보

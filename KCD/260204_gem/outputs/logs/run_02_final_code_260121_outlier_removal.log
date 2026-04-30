@@ -1,0 +1,17 @@
+2026-02-04T11:28:32.314272 Loading inflection P1/P2 labels and 260121 cluster labels (outlier removed).
+2026-02-04T11:28:32.449218 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv (rows=33864)
+2026-02-04T11:28:32.550637 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204_gem/outputs/figures/final_code_distribution_260121_outlier_removal.png
+2026-02-04T11:28:32.551203 Distribution summary:
+2026-02-04T11:28:32.552040   DDX: 476
+2026-02-04T11:28:32.552370   DDY: 2282
+2026-02-04T11:28:32.552616   DDZ: 3772
+2026-02-04T11:28:32.552850   DUX: 430
+2026-02-04T11:28:32.553078   DUY: 934
+2026-02-04T11:28:32.553300   DUZ: 654
+2026-02-04T11:28:32.553526   UDX: 4166
+2026-02-04T11:28:32.553785   UDY: 6684
+2026-02-04T11:28:32.554057   UDZ: 6116
+2026-02-04T11:28:32.554361   UUX: 1824
+2026-02-04T11:28:32.554620   UUY: 4059
+2026-02-04T11:28:32.554905   UUZ: 2467
+2026-02-04T11:28:32.555135 Done.

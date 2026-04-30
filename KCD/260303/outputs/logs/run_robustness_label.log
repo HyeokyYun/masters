@@ -1,0 +1,8 @@
+2026-03-09T08:08:15.636023 DONE pattern_only_baseline: n=31877 macro_f1=0.7531383191851869
+2026-03-09T08:08:17.655581 DONE pattern_plus_growth_q20_q80: n=31877 macro_f1=0.8138254308415575
+2026-03-09T08:08:19.501301 DONE strict_pattern_growth_gate: n=31877 macro_f1=0.8109302219889941
+2026-03-09T08:08:19.504966 Saved /home/hyeoky98/kcd/260303/outputs/tables/robustness_label_results.csv
+2026-03-09T08:18:57.875870 DONE pattern_only_baseline: n=31877 macro_f1=0.7531383191851869
+2026-03-09T08:18:59.875118 DONE pattern_plus_growth_q20_q80: n=31877 macro_f1=0.8138254308415575
+2026-03-09T08:19:01.904863 DONE strict_pattern_growth_gate: n=31877 macro_f1=0.8109302219889941
+2026-03-09T08:19:01.908490 Saved /home/hyeoky98/kcd/260303/outputs/tables/robustness_label_results.csv

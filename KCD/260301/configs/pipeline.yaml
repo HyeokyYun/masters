@@ -1,0 +1,27 @@
+# 260301 — original_data 기반 통합 파이프라인
+# 모든 경로는 26-1(프로젝트 루트) 기준
+
+data:
+  project_root: ".."
+  # 기본 데이터 (필수)
+  original_data:
+    weekly_parquet: "../original_data/weekly.parquet"
+    weekly_processed_parquet: "../original_data/weekly_processed.parquet"
+    meta_csv: "../original_data/meta.csv"
+    meta_processed_csv: "../original_data/meta_processed.csv"
+  # 파생 데이터
+  basic_data:
+    features_csv: "../basic_data/store_features_for_analysis.csv"
+  # 260204 산출물
+  data_clean_parquet: "../260204/outputs/data_features_clean.parquet"
+  cluster_k6_parquet: "../260204/outputs/tables/store_cluster_labels_K6.parquet"
+  # 260204_gem 산출물
+  inflection_csv: "../260204_gem/outputs/tables/inflection_p1p2_labels.csv"
+  final_code_csv: "../260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv"
+  id_col: "public_id"
+  time_col_week: "day_after1"
+  sales_col: "sales_card"
+
+outputs:
+  tables: "outputs/tables"
+  logs: "outputs/logs"

@@ -1,0 +1,10 @@
+{
+  "window_weeks": 30,
+  "segment_length": 10,
+  "n_stores": 49007,
+  "early_slope_growth_minus_decline_mean": 0.03924142468918119,
+  "late_slope_growth_minus_decline_mean": -0.004421077348671195,
+  "early_late_pearson_overall": -0.12662373254332487,
+  "best_predictor": "both_slopes",
+  "best_predictor_f1": 0.39286373263875096
+}

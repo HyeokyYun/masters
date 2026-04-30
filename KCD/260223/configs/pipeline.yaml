@@ -1,0 +1,51 @@
+# 260223 4-step pipeline config (paths relative to project root 26-1)
+
+data:
+  project_root: ".."  # 26-1
+  features_csv: "../basic_data/store_features_for_analysis.csv"
+  # Optional: 260204 clean (if exists)
+  data_clean_parquet: "../260204/outputs/data_features_clean.parquet"
+  # Step 2 inputs
+  cluster_k6_parquet: "../260204/outputs/tables/store_cluster_labels_K6.parquet"
+  inflection_csv: "../260204_gem/outputs/tables/inflection_p1p2_labels.csv"
+  final_code_csv: "../260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv"
+  # Weekly for event study
+  weekly_parquet: "../original_data/weekly_processed.parquet"
+  weekly_parquet_fallback: "../original_data/weekly.parquet"
+  id_col: "public_id"
+  time_col_week: "day_after1"
+  sales_col: "sales_card"
+
+# Econometric regression
+regression:
+  # Y: 1=growth (X type), 0=decline (Z type) for Logit; or growth_rate for OLS
+  target_binary: "growth_type"   # 1=성장형(X), 0=쇠퇴형(Z) — from final_code or growth_rate >= 1
+  target_continuous: "growth_rate"
+  main_x: ["new_customer_ratio", "cv_sales_card"]
+  controls: ["business_age_months", "business_density", "business_square_size"]
+  fixed_effects: ["sigungu", "depth_2"]  # 고정 효과
+  min_samples: 1000
+
+# Event study
+event_study:
+  weeks_before: 12
+  weeks_after: 12
+  value_col: "sales_card"  # or avg_sales per store-week
+
+# Prediction (Step 4)
+prediction:
+  seed: 42
+  test_ratio: 0.2
+  models: ["RandomForest", "XGBoost", "LightGBM"]
+  ablation_specs:
+    - name: "base"
+      use_udx: false
+      use_inflection: false
+    - name: "base_udx_inflection"
+      use_udx: true
+      use_inflection: true
+
+outputs:
+  tables: "outputs/tables"
+  figures: "outputs/figures"
+  logs: "outputs/logs"

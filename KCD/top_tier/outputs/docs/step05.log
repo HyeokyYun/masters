@@ -1,0 +1,14 @@
+[05-A] Eligible stores for Granger test: 45904
+[05-A] Granger summary: {'n_stores_tested': 3000, 'nc_causes_sales_sig_pct': np.float64(10.466666666666667), 'sales_causes_nc_sig_pct': np.float64(11.166666666666666), 'asymmetry_nc_only_pct': np.float64(8.833333333333334), 'asymmetry_sales_only_pct': np.float64(9.533333333333333), 'both_sig_pct': np.float64(1.633333333333333)}
+[05-B] Golden cross (top 30% by delta≥0.31): 30.0% of 50635 stores
+[05-B] PSM + DiD analysis ...
+[05-B] DiD ATT = +0.1165 (log-sales), t=18.065, p=1.805e-72
+[05-C] Panel FE regression ...
+                       coef   std_err             t  ...  ci_upper   n_obs  n_stores
+const         -8.678200e-16  0.000051 -1.685604e-11  ...  0.000101  988698     10000
+nc_l1_fe       2.775516e-01  0.007421  3.740222e+01  ...  0.292096  988698     10000
+nc_l2_fe       7.663668e-02  0.007034  1.089543e+01  ...  0.090423  988698     10000
+nc_l4_fe       1.005480e-01  0.005296  1.898537e+01  ...  0.110928  988698     10000
+sales_lag1_fe  6.199791e-01  0.007881  7.866871e+01  ...  0.635425  988698     10000
+
+[5 rows x 8 columns]

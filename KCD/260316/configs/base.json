@@ -1,0 +1,60 @@
+{
+  "data": {
+    "weekly_parquet": "original_data/weekly.parquet",
+    "meta_csv": "original_data/meta.csv"
+  },
+  "analysis": {
+    "min_weeks": 52,
+    "max_weeks": 108,
+    "early_window": 30,
+    "future_window": 12,
+    "min_segment_weeks": 12,
+    "cluster_k": 6,
+    "cluster_screen_top_numeric": 8,
+    "cluster_screen_top_categorical": 4,
+    "random_state": 42,
+    "slope_epsilon": 0.0005,
+    "pattern_growth_threshold": 0.08,
+    "fallback_improvement_threshold": 0.05
+  },
+  "features": {
+    "numeric_candidates": [
+      "total_weeks",
+      "avg_sales_total",
+      "std_sales_total",
+      "cv_sales_total",
+      "growth_rate",
+      "trend_slope",
+      "weekend_ratio",
+      "avg_customer",
+      "cv_customer",
+      "new_customer_ratio",
+      "card_ratio",
+      "invoice_ratio",
+      "delivery_ratio",
+      "before_noon_ratio",
+      "after_noon_ratio",
+      "purchase_to_sales_ratio",
+      "max_sales",
+      "min_sales",
+      "max_min_ratio",
+      "business_square_size",
+      "business_age_months",
+      "age_numeric",
+      "dong_store_count",
+      "dong_avg_sales",
+      "sigungu_store_count",
+      "sigungu_avg_sales",
+      "business_density"
+    ],
+    "categorical_candidates": [
+      "sido",
+      "sigungu",
+      "depth_1",
+      "depth_2",
+      "delivery_link",
+      "growth_type",
+      "cluster"
+    ]
+  }
+}

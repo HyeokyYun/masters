@@ -1,0 +1,59 @@
+=== LEVI x MACRO INDICATORS (gu level, n=25) ===
+
+Window: 2021-01 ~ 2023-08 (KCD data window)
+
+Living population source: Seoul Open Data LOCAL_PEOPLE_GU
+
+Closure source: Seoul Open Data Food Service Permit Register
+
+
+--- Gu-level merged table (sorted by LEVI V1) ---
+sigungu  kcd_n_stores  LEVI_v1  LP_mean  LP_pct_change  ClosureRate_mean
+    종로구        2153.0    0.430   273085           6.60             0.419
+     중구        1871.0    0.406   254172          10.80             0.853
+    용산구        1771.0    0.281   281022           2.14             0.708
+    강남구        4242.0    0.267   800847           7.02             0.962
+    마포구        3705.0    0.263   443418           1.01             1.012
+    서초구        2213.0    0.248   556430          -0.15             1.070
+   영등포구        2376.0    0.234   465531           4.71             0.764
+    광진구        1973.0    0.208   356224          -2.82             0.913
+   서대문구        1540.0    0.203   354008          -2.89             1.050
+    동작구        1573.0    0.191   377096          -5.76             0.730
+    성동구        1647.0    0.189   339169          -2.51             0.971
+    성북구        1760.0    0.177   415213          -6.23             0.793
+   동대문구        1686.0    0.138   343913          -4.96             0.797
+    송파구        3041.0    0.119   737600          -2.08             0.927
+    관악구        2280.0    0.118   464873          -6.87             1.035
+    강서구        2774.0    0.112   537288          -2.07             0.997
+    노원구        1648.0    0.098   497051          -9.20             0.777
+    구로구        1772.0    0.091   383377          -2.26             1.020
+    은평구        1890.0    0.086   428774          -8.32             0.884
+    강동구        1927.0    0.085   500563          -2.70             1.062
+    금천구        1315.0    0.077   218350          -2.94             0.865
+    도봉구        1073.0    0.070   269121          -9.39             0.951
+    양천구        1456.0    0.065   374058          -8.63             1.047
+    강북구        1389.0    0.061   287487          -9.55             1.038
+    중랑구        1560.0    0.037   348014          -7.47             0.720
+
+--- Correlation matrix (Pearson) ---
+macro                 closure_rate_mean  closure_rate_median  lp_mean  lp_pct_change
+levi                                                                                
+levi_v1_balance                  -0.428               -0.534   -0.049          0.855
+levi_v2_log_odds                 -0.440               -0.545   -0.049          0.858
+levi_v3_trend_mean               -0.394               -0.513   -0.040          0.858
+levi_v4_trend_median             -0.397               -0.505   -0.036          0.847
+levi_v5_shrinkage20              -0.427               -0.532   -0.046          0.856
+
+--- Correlation matrix (Spearman) ---
+macro                 closure_rate_mean  closure_rate_median  lp_mean  lp_pct_change
+levi                                                                                
+levi_v1_balance                  -0.255               -0.258    0.055          0.805
+levi_v2_log_odds                 -0.238               -0.248    0.049          0.808
+levi_v3_trend_mean               -0.201               -0.230    0.051          0.795
+levi_v4_trend_median             -0.219               -0.266    0.044          0.795
+levi_v5_shrinkage20              -0.255               -0.258    0.055          0.805
+
+--- Headline correlations ---
+LEVI_v1 vs closure_rate_mean : Pearson -0.428, Spearman -0.255
+LEVI_v1 vs lp_mean           : Pearson -0.049, Spearman 0.055
+LEVI_v1 vs lp_pct_change     : Pearson 0.855, Spearman 0.805

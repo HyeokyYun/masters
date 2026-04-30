@@ -1,0 +1,18 @@
+[2026-02-13 09:23:53] ===== GAF PoC start =====
+[2026-02-13 09:23:53] Loading weekly data from /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260211/../original_data/weekly_processed.parquet...
+[2026-02-13 09:23:56] Pivot shape: 55310 stores x 142 weeks
+[2026-02-13 09:23:56] Subsampled to 5000 stores
+[2026-02-13 09:23:56] Computing GAF transform (vectorized)...
+[2026-02-13 09:23:56] GAF shape: (5000, 142, 142)
+[2026-02-13 09:24:11] Saved gaf_sample_1_64593361.png
+[2026-02-13 09:24:11] Saved gaf_sample_2_97856641.png
+[2026-02-13 09:24:12] Saved gaf_sample_3_56133492.png
+[2026-02-13 09:24:12] Saved gaf_sample_4_26957382.png
+[2026-02-13 09:24:12] Saved gaf_sample_5_90600468.png
+[2026-02-13 09:24:12] Saved gaf_sample_6_97958472.png
+[2026-02-13 09:24:12] Saved gaf_sample_7_54529687.png
+[2026-02-13 09:24:12] Saved gaf_sample_8_93567272.png
+[2026-02-13 09:24:12] Saved gaf_sample_9_65196396.png
+[2026-02-13 09:24:12] Saved gaf_sample_10_505427.png
+[2026-02-13 09:24:12] Saved grid gaf_sample_10_grid.png
+[2026-02-13 09:24:12] ===== GAF PoC done =====

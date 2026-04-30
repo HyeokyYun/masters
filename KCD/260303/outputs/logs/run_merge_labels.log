@@ -1,0 +1,36 @@
+2026-03-03T15:17:38.546295 ============================================================
+2026-03-03T15:17:38.546507 260303 Step 1: Merge labels — life_cycle_category (rising/maintaining/declining)
+2026-03-03T15:17:38.546630 ============================================================
+2026-03-03T15:17:38.690144 df_base: 33514 rows
+2026-03-03T15:17:38.734621 final_code -> life_cycle_category: {'maintaining': 13959, 'declining': 13009, 'rising': 6896}
+2026-03-03T15:17:38.747371 Merged: 31877 rows
+2026-03-03T15:17:38.965005 Cluster K6 merged
+2026-03-03T15:17:39.317850 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260303/outputs/tables/df_for_life_cycle_regression.csv
+2026-03-03T15:17:39.317969 Step 1 완료.
+2026-03-03T06:23:51.916653 ============================================================
+2026-03-03T06:23:51.916783 260303 Step 1: Merge labels — life_cycle_category (rising/maintaining/declining)
+2026-03-03T06:23:51.916844 ============================================================
+2026-03-03T06:23:52.170958 df_base: 33514 rows
+2026-03-03T06:23:52.239311 final_code -> life_cycle_category: {'maintaining': 13959, 'declining': 13009, 'rising': 6896}
+2026-03-03T06:23:52.260020 Merged: 31877 rows
+2026-03-03T06:23:52.317806 Cluster K6 merged
+2026-03-03T06:23:54.362786 Saved /home/hyeoky98/kcd/260303/outputs/tables/df_for_life_cycle_regression.csv
+2026-03-03T06:23:54.363017 Step 1 완료.
+2026-03-09T08:04:57.719163 ============================================================
+2026-03-09T08:04:57.719421 260303 Step 1: Merge labels — life_cycle_category (rising/maintaining/declining)
+2026-03-09T08:04:57.719486 ============================================================
+2026-03-09T08:04:57.988322 df_base: 33514 rows
+2026-03-09T08:04:58.058472 final_code -> life_cycle_category: {'maintaining': 13959, 'declining': 13009, 'rising': 6896}
+2026-03-09T08:04:58.093613 Merged: 31877 rows
+2026-03-09T08:04:58.168578 Cluster K6 merged
+2026-03-09T08:05:00.346571 Saved /home/hyeoky98/kcd/260303/outputs/tables/df_for_life_cycle_regression.csv
+2026-03-09T08:05:00.346896 Step 1 완료.
+2026-03-09T08:08:05.136566 ============================================================
+2026-03-09T08:08:05.136701 260303 Step 1: Merge labels — life_cycle_category (rising/maintaining/declining)
+2026-03-09T08:08:05.136761 ============================================================
+2026-03-09T08:08:05.388520 df_base: 33514 rows
+2026-03-09T08:08:05.457540 final_code -> life_cycle_category: {'maintaining': 13959, 'declining': 13009, 'rising': 6896}
+2026-03-09T08:08:05.479333 Merged: 31877 rows
+2026-03-09T08:08:05.535770 Cluster K6 merged
+2026-03-09T08:08:07.557959 Saved /home/hyeoky98/kcd/260303/outputs/tables/df_for_life_cycle_regression.csv
+2026-03-09T08:08:07.558191 Step 1 완료.

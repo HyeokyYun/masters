@@ -1,0 +1,46 @@
+[10b] aligned stores: 49,007, seq shape: (49007, 30)
+[10b] computing change point features (store-internal, no leakage) ...
+[10b] enriched base matrix: (49007, 53)
+
+[10b] fold 0: fit KMeans / KShape on 39,205 train stores
+  A_base_46: F1=0.540 AUC=0.728
+  B_base_cluster_fold: F1=0.625 AUC=0.815
+  C_base_cp: F1=0.606 AUC=0.800
+  D_proposed_fold_safe: F1=0.642 AUC=0.824
+
+[10b] fold 1: fit KMeans / KShape on 39,205 train stores
+  A_base_46: F1=0.547 AUC=0.732
+  B_base_cluster_fold: F1=0.635 AUC=0.820
+  C_base_cp: F1=0.621 AUC=0.807
+  D_proposed_fold_safe: F1=0.644 AUC=0.830
+
+[10b] fold 2: fit KMeans / KShape on 39,206 train stores
+  A_base_46: F1=0.553 AUC=0.739
+  B_base_cluster_fold: F1=0.641 AUC=0.825
+  C_base_cp: F1=0.612 AUC=0.808
+  D_proposed_fold_safe: F1=0.654 AUC=0.836
+
+[10b] fold 3: fit KMeans / KShape on 39,206 train stores
+  A_base_46: F1=0.544 AUC=0.737
+  B_base_cluster_fold: F1=0.635 AUC=0.820
+  C_base_cp: F1=0.612 AUC=0.803
+  D_proposed_fold_safe: F1=0.641 AUC=0.829
+
+[10b] fold 4: fit KMeans / KShape on 39,206 train stores
+  A_base_46: F1=0.550 AUC=0.736
+  B_base_cluster_fold: F1=0.631 AUC=0.817
+  C_base_cp: F1=0.621 AUC=0.807
+  D_proposed_fold_safe: F1=0.648 AUC=0.829
+
+=== Fold-safe Summary (mean ± std) ===
+                     macro_f1         recall_Growth recall_Decline auc_ovr
+                         mean     std          mean           mean    mean
+model                                                                     
+A_base_46              0.5466  0.0049        0.7049         0.4250  0.7342
+B_base_cluster_fold    0.6334  0.0060        0.7661         0.5513  0.8196
+C_base_cp              0.6143  0.0066        0.7543         0.5226  0.8051
+D_proposed_fold_safe   0.6458  0.0053        0.7823         0.5723  0.8296
+
+=== vs step10 (with leakage) ===
+  A_base_46: F1 0.547 → 0.547 (Δ+0.000), AUC 0.734 → 0.734 (Δ+0.000)
+  D_proposed_fold_safe: F1 0.648 → 0.646 (Δ-0.002), AUC 0.830 → 0.830 (Δ-0.000)

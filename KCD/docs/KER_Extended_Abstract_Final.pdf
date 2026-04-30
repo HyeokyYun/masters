@@ -1,0 +1,92 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [5 0 R 7 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 5129 >>
+stream
+BT /F1 16 Tf 1 0 0 1 54 786 Tm (Extended Abstract: Diagnosing Small-Business Life Cycles from Weekly Transaction Data: Evidence from Seoul's Food-Service Sector) Tj ET
+BT /F1 13 Tf 1 0 0 1 54 748 Tm (Research Question) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 730 Tm (Do small businesses actually follow the conventional start-up-growth-maturity-decline life) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 716 Tm (cycle, or do weekly transaction records reveal more heterogeneous paths? We examine whether) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 702 Tm (high-frequency sales data can define economically meaningful life-cycle states for small) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 688 Tm (businesses and whether early signals such as sales trend, drawdown risk, volatility, and) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 674 Tm (new-customer acquisition help distinguish recovery from persistent decline.) Tj ET
+BT /F1 13 Tf 1 0 0 1 54 644 Tm (Methodology) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 626 Tm (This study uses weekly transaction records from Korean Credit Data \(KCD\) for 59,089) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 612 Tm (establishments in Seoul's food-service sector. We combine two complementary empirical) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 598 Tm (designs. First, for post-entry dynamics, we study recently opened establishments by aligning) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 584 Tm (stores by weeks since opening and recovering recurring sales-path patterns from weekly time) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 570 Tm (series. We then summarize movement before and after major turning points to assign) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 556 Tm (interpretable trajectory labels such as DDZ and UUX. Second, for the broader stock of) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 542 Tm (surviving businesses, we use an observed-window design covering 50,635 establishments with) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 528 Tm (at least 52 observed weeks and classify current Growth, Stable, and Decline states across) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 514 Tm (the full sample.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 484 Tm (We then estimate multinomial logit models to examine which variables separate these states) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 470 Tm (across business-age buckets. The main explanatory variables include sales trend, maximum) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 456 Tm (drawdown \(MDD\), volatility, new-customer ratio, delivery share, and industry and) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 442 Tm (local-market controls. Finally, we test whether long-run outcomes can be predicted from only) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 428 Tm (the first 30 weeks of observed operation by comparing baseline models with specifications) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 414 Tm (that incorporate trajectory-based features.) Tj ET
+BT /F1 13 Tf 1 0 0 1 54 384 Tm (Expected Results) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 366 Tm (Three findings stand out. First, post-entry trajectories are highly heterogeneous. In the) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 352 Tm (108-week entrant sample, the dominant pattern is persistent decline followed by exit-stage) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 338 Tm (behavior \(DDZ\), indicating that the canonical hump-shaped life cycle is a poor summary of) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 324 Tm (most establishments. Second, the full-sample observed-window analysis yields a different but) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 310 Tm (complementary picture: among 50,635 establishments, 40.0 percent are classified as Growth,) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 296 Tm (38.2 percent as Stable, and 21.7 percent as Decline. This distribution should be interpreted) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 282 Tm (as the pattern of currently observed windows among surviving stores rather than as a literal) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 268 Tm (description of the initial life cycle of all businesses.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 238 Tm (Third, the variables that separate outcomes are not constant over age. Sales trend is the) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 224 Tm (most consistent discriminator across age groups, maximum drawdown is closely associated with) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 210 Tm (decline, and new-customer ratio becomes increasingly informative for Growth in older) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 196 Tm (establishments. In the observed-window age-bucket models, the Growth share rises and the) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 182 Tm (Decline share falls in older groups, while early-stage groups show a more even split between) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 168 Tm (Growth, Stable, and Decline. In complementary forecasting exercises, adding trajectory-based) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 154 Tm (features to baseline store characteristics materially improves predictive performance over) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 140 Tm (level-only specifications, showing that early path information contains meaningful signal) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 126 Tm (about later outcomes.) Tj ET
+BT /F1 13 Tf 1 0 0 1 54 96 Tm (Significance) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 78 Tm (This study contributes to the economics of small-business dynamics by replacing survey-based) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 880 >>
+stream
+BT /F1 10.5 Tf 1 0 0 1 54 786 Tm (or purely age-based life-cycle definitions with transaction-based diagnoses grounded in) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 772 Tm (observed behavior. It also shows that two empirical lenses are necessary: entry-cohort) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 758 Tm (analysis for early post-opening dynamics and observed-window analysis for the current state) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 744 Tm (of the full surviving store population. For policy, the implication is that support should) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 730 Tm (rely less on broad linear stages and more on observed trajectory type, trend deterioration,) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 716 Tm (drawdown risk, and customer-acquisition dynamics when identifying businesses that are likely) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 54 702 Tm (to recover versus those facing persistent decline.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000005378 00000 n 
+0000005504 00000 n 
+0000006435 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+6561
+%%EOF

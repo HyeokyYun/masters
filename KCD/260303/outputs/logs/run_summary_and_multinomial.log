@@ -1,0 +1,32 @@
+2026-03-03T15:17:41.864501 ============================================================
+2026-03-03T15:17:41.864862 260303 Step 2: Summary + Multinomial Logit (Y = life_cycle_category)
+2026-03-03T15:17:41.864991 ============================================================
+2026-03-03T15:17:41.935717 Loaded: 31877 rows
+2026-03-03T15:17:41.936796 life_cycle_category counts: {'maintaining': 13496, 'declining': 11988, 'rising': 6393}
+2026-03-03T15:17:41.950238 Saved life_cycle_summary_key_vars.csv
+2026-03-03T15:17:42.113234 Multinomial Logit 완료 (baseline=maintaining).
+2026-03-03T15:17:42.113335 Step 2 완료.
+2026-03-03T06:23:56.473005 ============================================================
+2026-03-03T06:23:56.473135 260303 Step 2: Summary + Multinomial Logit (Y = life_cycle_category)
+2026-03-03T06:23:56.473192 ============================================================
+2026-03-03T06:23:56.717247 Loaded: 31877 rows
+2026-03-03T06:23:56.720763 life_cycle_category counts: {'maintaining': 13496, 'declining': 11988, 'rising': 6393}
+2026-03-03T06:23:56.734743 Saved life_cycle_summary_key_vars.csv
+2026-03-03T06:23:57.380677 Multinomial Logit 완료 (baseline=maintaining).
+2026-03-03T06:23:57.380790 Step 2 완료.
+2026-03-09T08:05:02.998849 ============================================================
+2026-03-09T08:05:02.999097 260303 Step 2: Summary + Multinomial Logit (Y = life_cycle_category)
+2026-03-09T08:05:02.999162 ============================================================
+2026-03-09T08:05:03.241748 Loaded: 31877 rows
+2026-03-09T08:05:03.245653 life_cycle_category counts: {'maintaining': 13496, 'declining': 11988, 'rising': 6393}
+2026-03-09T08:05:03.262201 Saved life_cycle_summary_key_vars.csv
+2026-03-09T08:05:04.169452 Multinomial Logit 완료 (baseline=maintaining).
+2026-03-09T08:05:04.169590 Step 2 완료.
+2026-03-09T08:08:09.762722 ============================================================
+2026-03-09T08:08:09.762861 260303 Step 2: Summary + Multinomial Logit (Y = life_cycle_category)
+2026-03-09T08:08:09.762922 ============================================================
+2026-03-09T08:08:10.004685 Loaded: 31877 rows
+2026-03-09T08:08:10.008295 life_cycle_category counts: {'maintaining': 13496, 'declining': 11988, 'rising': 6393}
+2026-03-09T08:08:10.022130 Saved life_cycle_summary_key_vars.csv
+2026-03-09T08:08:10.756852 Multinomial Logit 완료 (baseline=maintaining).
+2026-03-09T08:08:10.756967 Step 2 완료.

@@ -1,0 +1,19 @@
+# 260303 — Life cycle classification: rising / maintaining / declining
+# Y variable: life_cycle_category from Pattern (X=rising, Y=maintaining, Z=declining)
+# All paths relative to 26-1 (project root)
+
+data:
+  project_root: ".."
+  df_base_features: "../260301/outputs/tables/df_base_features.csv"
+  final_code_csv: "../260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv"
+  cluster_k6_parquet: "../260204/outputs/tables/store_cluster_labels_K6.parquet"
+  id_col: "public_id"
+
+outputs:
+  tables: "outputs/tables"
+  logs: "outputs/logs"
+
+# Life cycle mapping (final_code = P1 + P2 + Pattern)
+# Pattern X -> rising, Y -> maintaining, Z -> declining
+life_cycle:
+  baseline: "maintaining"  # reference category for multinomial logit

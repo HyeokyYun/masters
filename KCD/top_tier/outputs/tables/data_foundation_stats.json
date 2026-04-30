@@ -1,0 +1,30 @@
+{
+  "n_stores_total": 59089,
+  "n_stores_closed": 9247,
+  "n_stores_survived": 49842,
+  "closure_rate": 0.15649274822725043,
+  "n_in_panel": 49007,
+  "n_not_in_panel": 10082,
+  "median_survival_weeks_all": 217.0,
+  "median_survival_weeks_closed": 183.0,
+  "median_survival_weeks_survived": 225.0,
+  "outcome_distribution": {
+    "Growth": 20087,
+    "Stable": 18003,
+    "Decline": 10917
+  },
+  "outcome_by_closure": {
+    "Decline": {
+      "0": 8168,
+      "1": 2749
+    },
+    "Growth": {
+      "0": 19496,
+      "1": 591
+    },
+    "Stable": {
+      "0": 16972,
+      "1": 1031
+    }
+  }
+}

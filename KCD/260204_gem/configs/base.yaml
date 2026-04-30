@@ -1,0 +1,18 @@
+# 260204_gem: 변곡점 추출 및 P1/P2 라벨링 (분절 회귀)
+
+data:
+  weekly_parquet_primary: "../original_data/weekly_processed.parquet"
+  weekly_parquet_fallback: "../original_data/weekly.parquet"
+  id_col_store: "public_id"
+  time_col_week: "day_after1"
+  y_col_sales: "sales_card"
+
+inflection:
+  min_segment_weeks: 2          # 각 구간 최소 주 수
+  default_split_ratio: 0.5      # 변곡점 미발견 시 전체의 절반(142주 기준 71주)
+  rss_improvement_threshold: 0.0  # 단일 직선 대비 개선 최소 비율 (0 = 항상 최적 변곡점 사용)
+
+outputs:
+  tables: "outputs/tables"
+  figures: "outputs/figures"
+  logs: "outputs/logs"

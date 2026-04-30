@@ -1,0 +1,102 @@
+2026-02-23T13:35:44.942150 Train 26811, Test 6703. Base features: 54, Full: 57
+2026-02-23T13:35:47.374964 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T13:35:47.375272 SHAP not installed; skip shap_summary_plot.
+2026-02-23T13:36:10.788284 Train 26811, Test 6703. Base features: 54, Full: 57
+2026-02-23T13:36:13.276895 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T13:36:13.277202 SHAP not installed; skip shap_summary_plot.
+2026-02-23T13:36:27.373151 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/figures/feature_importance_rf.png (install shap for SHAP plot)
+2026-02-23T13:49:29.038980 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T13:49:29.193199 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T13:49:31.710489 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T13:49:31.710850 ERROR: SHAP is required for Ablation interpretation. Install with: pip install shap
+2026-02-23T13:50:03.472070 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T13:50:03.628690 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T13:50:06.284233 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T13:50:20.290454 SHAP not installed. Generating tree feature importance plots (XGB/LGB) for Ablation.
+2026-02-23T13:50:55.211329 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T13:50:55.369539 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T13:50:58.000659 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T13:51:12.090425 SHAP not installed. Generating tree feature importance plots (XGB/LGB) for Ablation.
+2026-02-23T13:51:51.977451 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T13:51:52.131982 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T13:51:54.743430 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T13:52:08.614982 SHAP not installed. Generating tree feature importance plots (XGB/LGB) for Ablation.
+2026-02-23T13:52:25.854985 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T13:52:26.007691 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T13:52:28.543418 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T13:52:42.601806 SHAP not installed. Generating tree feature importance plots (XGB/LGB) for Ablation.
+2026-02-23T13:52:42.602542 Full models for importance: []
+2026-02-23T13:52:57.800085 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T13:52:57.951851 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T13:53:03.222680 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T13:53:17.220934 SHAP not installed. Generating tree feature importance plots (XGB/LGB) for Ablation.
+2026-02-23T13:53:17.221651 Full models for importance: ['RandomForest']
+2026-02-23T13:53:17.226074 Feature importance plot for RandomForest failed: module 'matplotlib' has no attribute 'subplots'
+Traceback (most recent call last):
+  File "/Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/04_prediction/run_step4_ml_shap.py", line 243, in main
+    fig, ax = plt.subplots(figsize=(9, 8))
+              ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/matplotlib/_api/__init__.py", line 218, in __getattr__
+    raise AttributeError(
+AttributeError: module 'matplotlib' has no attribute 'subplots'
+
+2026-02-23T13:53:32.289505 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T13:53:32.450933 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T13:53:37.930810 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T13:53:51.746714 SHAP not installed. Generating tree feature importance plots (XGB/LGB) for Ablation.
+2026-02-23T13:53:51.747364 Full models for importance: ['RandomForest']
+2026-02-23T13:53:51.881050 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/figures/feature_importance_randomforest_full.png
+2026-02-23T14:01:46.364450 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T14:01:46.905724 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T14:01:52.800080 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T14:02:00.772442 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/figures/shap_summary_randomforest.png
+2026-02-23T14:02:02.328305 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/figures/shap_summary_xgboost.png
+2026-02-23T14:02:03.681285 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/figures/shap_summary_plot.png
+2026-02-23T14:02:03.681470 Full models for importance: ['RandomForest', 'XGBoost']
+2026-02-23T14:02:03.844452 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/figures/feature_importance_randomforest_full.png
+2026-02-23T14:02:04.038792 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/figures/feature_importance_xgboost_full.png
+2026-02-23T06:21:17.713230 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T06:21:17.988909 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T06:21:29.401953 Saved /home/hyeoky98/kcd/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T06:21:45.298484 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_randomforest.png
+2026-02-23T06:21:49.437014 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_xgboost.png
+2026-02-23T06:21:52.776192 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_plot.png
+2026-02-23T06:21:52.776322 Full models for importance: ['RandomForest', 'XGBoost']
+2026-02-23T06:21:53.367940 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_randomforest_full.png
+2026-02-23T06:21:53.807505 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_xgboost_full.png
+2026-02-23T07:23:21.251714 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T07:23:21.517390 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T07:23:32.866080 Saved /home/hyeoky98/kcd/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T07:23:48.698956 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_randomforest.png
+2026-02-23T07:23:52.887121 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_xgboost.png
+2026-02-23T07:23:56.259719 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_plot.png
+2026-02-23T07:23:56.259849 Full models for importance: ['RandomForest', 'XGBoost']
+2026-02-23T07:23:56.875611 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_randomforest_full.png
+2026-02-23T07:23:57.331185 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_xgboost_full.png
+2026-02-23T07:28:24.369534 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T07:28:24.638698 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T07:28:36.216871 Saved /home/hyeoky98/kcd/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T07:28:52.086831 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_randomforest.png
+2026-02-23T07:28:56.283554 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_xgboost.png
+2026-02-23T07:28:59.679122 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_plot.png
+2026-02-23T07:28:59.679270 Full models for importance: ['RandomForest', 'XGBoost']
+2026-02-23T07:29:00.294955 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_randomforest_full.png
+2026-02-23T07:29:00.748639 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_xgboost_full.png
+2026-02-23T07:33:02.878589 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T07:33:03.139488 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T07:33:14.575409 Saved /home/hyeoky98/kcd/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T07:33:30.427771 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_randomforest.png
+2026-02-23T07:33:34.649157 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_xgboost.png
+2026-02-23T07:33:38.029705 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_plot.png
+2026-02-23T07:33:38.029838 Full models for importance: ['RandomForest', 'XGBoost']
+2026-02-23T07:33:38.734640 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_randomforest_full.png
+2026-02-23T07:33:39.218562 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_xgboost_full.png
+2026-02-23T07:40:42.184060 Step 4: Ablation Study — UDX & inflection feature importance (not future prediction).
+2026-02-23T07:40:42.445206 Train 26811, Test 6703. Base features: 54, Full (base+UDX+inflection): 69
+2026-02-23T07:41:33.510982 Saved /home/hyeoky98/kcd/260223/outputs/tables/prediction_metrics.csv
+2026-02-23T07:41:49.391205 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_randomforest.png
+2026-02-23T07:41:53.672405 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_xgboost.png
+2026-02-23T07:41:57.108412 Saved /home/hyeoky98/kcd/260223/outputs/figures/shap_summary_plot.png
+2026-02-23T07:41:57.108555 Full models for importance: ['RandomForest', 'XGBoost']
+2026-02-23T07:41:57.747933 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_randomforest_full.png
+2026-02-23T07:41:58.206628 Saved /home/hyeoky98/kcd/260223/outputs/figures/feature_importance_xgboost_full.png

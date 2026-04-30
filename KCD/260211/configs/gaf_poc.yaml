@@ -1,0 +1,35 @@
+# GAF PoC: 이미지 기반 클러스터링 (Proof of Concept)
+# 데이터 로드 → GAF 변환 → 샘플 시각화 → (선택) CNN 클러스터링
+
+data:
+  weekly_parquet_primary: "../original_data/weekly_processed.parquet"
+  weekly_parquet_fallback: "../original_data/weekly.parquet"
+  id_col_store: "public_id"
+  time_col_week: "day_after1"
+  y_col_sales: "sales_card"
+
+gaf:
+  # 사용할 주 수 (이미지 한 변 길이). 142주 → 142x142 픽셀
+  n_weeks: 142
+  # 최소 주 수 있는 매장만 사용 (이미지 품질)
+  min_weeks: 100
+  # GAF 이미지 리사이즈 (CNN용). null 이면 n_weeks 그대로
+  image_size_cnn: 64
+  # pyts GramianAngularField: summation(GASF)=추세/형상, difference(GADF)=변동
+  method: "summation"   # 'summation' (GASF) or 'difference' (GADF)
+  sample_range: [-1, 1]  # 시계열 스케일 범위
+
+poc:
+  # 시각화용 샘플 개수 (특징적인 매장 GAF 이미지)
+  n_sample_images: 10
+  # 전체 매장 중 PoC에 사용할 최대 개수 (메모리/속도). null 이면 전부 (약 5.5만 개)
+  max_stores: 5000
+  # CNN 클러스터링 수행 여부
+  run_cnn_clustering: true
+  n_clusters: 6
+  seed: 42
+
+outputs:
+  tables: "outputs/tables"
+  figures: "outputs/figures"
+  logs: "outputs/logs"

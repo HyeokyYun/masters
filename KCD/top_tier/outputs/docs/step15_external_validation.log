@@ -1,0 +1,19 @@
+# Step 15 External Validation
+
+## Headline correlations
+- KCD LEVI vs living-population change: Pearson 0.853, Spearman 0.802, n=25
+- KCD LEVI vs permit closure rate: Pearson -0.430, Spearman -0.241, n=25
+- KCD inferred closure vs permit closure rate: Pearson 0.430, Spearman 0.275, n=25
+- KCD quarterly sales vs Seoul commercial sales: Pearson 0.766, Spearman 0.727, n=11
+- QoQ sales growth correlation: Pearson 0.839, Spearman 0.891, n=10
+
+## Top LEVI districts
+sigungu  kcd_n_stores  kcd_levi  lp_pct_change  permit_closure_rate_mean
+    종로구          2087  0.442741       0.066002                  0.004187
+     중구          1814  0.414553       0.108044                  0.008534
+    용산구          1695  0.293805       0.021429                  0.007080
+    강남구          4074  0.273932       0.070170                  0.009617
+    마포구          3567  0.269414       0.010066                  0.010119
+    서초구          2142  0.252568      -0.001471                  0.010696
+   영등포구          2301  0.239027       0.047136                  0.007636
+    광진구          1899  0.212744      -0.028236                  0.009127

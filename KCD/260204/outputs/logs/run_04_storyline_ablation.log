@@ -1,0 +1,6 @@
+2026-02-04T03:00:12.903085 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/success_rate_by_cluster.csv
+2026-02-04T03:00:13.054871 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/figures/success_rate_by_cluster.png
+2026-02-04T03:00:40.316127 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/ablation_results.csv
+2026-02-04T03:00:40.381600 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/figures/ablation_f1.png
+2026-02-04T03:00:40.382212 Best setting: XGBClassifier / M3 (F1=0.8046)
+2026-02-04T03:00:40.382294 Improvement over M0 (XGBClassifier): 0.1287

@@ -1,0 +1,7 @@
+2026-02-16T08:50:07.263208 Merged cluster labels: 44615 stores
+2026-02-16T08:50:07.310790 M0 Ridge — RMSE: 271549914, MAE: 140916943, R²: 0.7982
+2026-02-16T08:50:10.142208 M0 XGBRegressor — RMSE: 286104434, MAE: 141179749, R²: 0.7760
+2026-02-16T08:50:10.998247 M1 Ridge — RMSE: 270578481, MAE: 141007858, R²: 0.7996
+2026-02-16T08:50:15.395995 M1 XGBRegressor — RMSE: 300173515, MAE: 141994521, R²: 0.7534
+2026-02-16T08:50:15.404562 Saved /home/hyeoky98/kcd/260211/outputs/tables/regression_total_sales_30w_results.csv
+2026-02-16T08:50:15.649871 Saved /home/hyeoky98/kcd/260211/outputs/figures/regression_total_sales_30w_r2.png

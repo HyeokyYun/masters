@@ -1,0 +1,46 @@
+[10] base feature matrix: (50635, 46)
+[10] aligned stores: 49,007
+[10] computing clusters ...
+[10] computing change point features ...
+     10000 done
+     20000 done
+     30000 done
+     40000 done
+[10] enriched feature matrix: (49007, 55)
+
+=== A_base_46 | 43 features ===
+  fold=0 F1=0.540 G_rec=0.696 D_rec=0.428 AUC=0.728
+  fold=1 F1=0.547 G_rec=0.710 D_rec=0.417 AUC=0.732
+  fold=2 F1=0.553 G_rec=0.702 D_rec=0.431 AUC=0.739
+  fold=3 F1=0.544 G_rec=0.714 D_rec=0.423 AUC=0.737
+  fold=4 F1=0.550 G_rec=0.703 D_rec=0.427 AUC=0.736
+
+=== B_base_cluster | 54 features ===
+  fold=0 F1=0.633 G_rec=0.759 D_rec=0.545 AUC=0.817
+  fold=1 F1=0.638 G_rec=0.774 D_rec=0.551 AUC=0.822
+  fold=2 F1=0.642 G_rec=0.773 D_rec=0.562 AUC=0.826
+  fold=3 F1=0.631 G_rec=0.774 D_rec=0.561 AUC=0.820
+  fold=4 F1=0.632 G_rec=0.754 D_rec=0.554 AUC=0.818
+
+=== C_base_cp | 50 features ===
+  fold=0 F1=0.606 G_rec=0.749 D_rec=0.510 AUC=0.800
+  fold=1 F1=0.621 G_rec=0.765 D_rec=0.518 AUC=0.807
+  fold=2 F1=0.612 G_rec=0.750 D_rec=0.517 AUC=0.808
+  fold=3 F1=0.612 G_rec=0.758 D_rec=0.532 AUC=0.803
+  fold=4 F1=0.621 G_rec=0.750 D_rec=0.536 AUC=0.807
+
+=== D_base_cluster_cp_PROPOSED | 61 features ===
+  fold=0 F1=0.647 G_rec=0.773 D_rec=0.569 AUC=0.825
+  fold=1 F1=0.647 G_rec=0.792 D_rec=0.558 AUC=0.831
+  fold=2 F1=0.653 G_rec=0.789 D_rec=0.579 AUC=0.836
+  fold=3 F1=0.643 G_rec=0.790 D_rec=0.583 AUC=0.829
+  fold=4 F1=0.648 G_rec=0.779 D_rec=0.575 AUC=0.829
+
+=== Summary (mean ± std) ===
+                           macro_f1         recall_Growth recall_Decline auc_ovr
+                               mean     std          mean           mean    mean
+model                                                                           
+A_base_46                    0.5466  0.0049        0.7049         0.4250  0.7342
+B_base_cluster               0.6353  0.0049        0.7668         0.5546  0.8205
+C_base_cp                    0.6143  0.0066        0.7543         0.5226  0.8051
+D_base_cluster_cp_PROPOSED   0.6476  0.0035        0.7845         0.5726  0.8299

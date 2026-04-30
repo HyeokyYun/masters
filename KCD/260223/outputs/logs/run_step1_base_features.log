@@ -1,0 +1,12 @@
+2026-02-23T13:32:27.408679 Loading /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/data_features_clean.parquet
+2026-02-23T13:32:27.705217 Loaded rows=33514, cols=34
+2026-02-23T13:32:27.715321 Dropna on ['growth_rate', 'new_customer_ratio', 'cv_sales_card', 'business_age_months']: 33514 -> 33514 rows
+2026-02-23T13:32:27.718794 Winsorized growth_rate, cv_sales_card (1%, 99%)
+2026-02-23T13:32:27.719492 growth_type: 1(growth)=5235, 0(decline)=28279
+2026-02-23T13:32:28.174814 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/df_base_features.parquet and /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/df_base_features.csv (rows=33514)
+2026-02-23T07:40:22.730274 Loading /home/hyeoky98/kcd/260204/outputs/data_features_clean.parquet
+2026-02-23T07:40:22.782037 Loaded rows=33514, cols=34
+2026-02-23T07:40:22.803367 Dropna on ['growth_rate', 'new_customer_ratio', 'cv_sales_card', 'business_age_months']: 33514 -> 33514 rows
+2026-02-23T07:40:22.810679 Winsorized growth_rate, cv_sales_card (1%, 99%)
+2026-02-23T07:40:22.812006 growth_type: 1(growth)=5235, 0(decline)=28279
+2026-02-23T07:40:25.067455 Saved /home/hyeoky98/kcd/260223/outputs/tables/df_base_features.parquet and /home/hyeoky98/kcd/260223/outputs/tables/df_base_features.csv (rows=33514)

@@ -1,0 +1,4 @@
+2026-03-09T08:08:35.368003 DONE multinomial_logit: macro_f1=0.7472
+2026-03-09T08:08:59.380420 DONE random_forest: macro_f1=0.7946
+2026-03-09T08:09:00.566356 DONE linear_svm: macro_f1=0.6969
+2026-03-09T08:09:00.570426 Saved /home/hyeoky98/kcd/260303/outputs/tables/robustness_model_results.csv

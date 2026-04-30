@@ -1,0 +1,57 @@
+
+=== H1: Survivorship Bias ===
+                   population outcome     n  cv_mean  cv_median   cv_std
+ Survivors only (is_closed=0)  Growth 19678 0.412688   0.366437 0.189444
+ Survivors only (is_closed=0)  Stable 17848 0.372648   0.291100 0.297525
+ Survivors only (is_closed=0) Decline  8242 0.570488   0.470697 0.342286
+All stores (including closed)  Growth 20273 0.411513   0.365416 0.190306
+All stores (including closed)  Stable 19365 0.364372   0.286656 0.303961
+All stores (including closed) Decline 10997 0.591676   0.494834 0.349419
+All stores (including closed)  Closed  4867 0.499582   0.424765 0.390288
+  [Survivors only (is_closed=0)] Growth cv=0.413 vs Decline cv=0.570 → Growth<Decline
+  [All stores (including closed)] Growth cv=0.412 vs Decline cv=0.592 → Growth<Decline
+
+=== H2: Phase-dependent ===
+      phase outcome     n  cv_mean  cv_median
+   cv_w1_15  Growth 20273 0.036161   0.030293
+   cv_w1_15  Stable 17737 0.036278   0.029480
+   cv_w1_15 Decline 10997 0.033725   0.027026
+  cv_w16_30  Growth 20273 0.021219   0.016180
+  cv_w16_30  Stable 17737 0.021956   0.015150
+  cv_w16_30 Decline 10997 0.024534   0.017830
+cv_w31_plus  Growth 20273 0.032089   0.027989
+cv_w31_plus  Stable 17737 0.032242   0.026551
+cv_w31_plus Decline 10997 0.043637   0.033911
+
+방향성 요약:
+  cv_w1_15: Growth=0.036  Decline=0.034  → Growth > Decline
+  cv_w16_30: Growth=0.021  Decline=0.025  → Growth < Decline
+  cv_w31_plus: Growth=0.032  Decline=0.044  → Growth < Decline
+  cv_w1_15 Mann-Whitney U: p=5.092e-56  (n_G=20,273, n_D=10,997)
+  cv_w16_30 Mann-Whitney U: p=4.119e-31  (n_G=20,273, n_D=10,997)
+  cv_w31_plus Mann-Whitney U: p=1.837e-108  (n_G=20,273, n_D=10,997)
+
+=== H3: Inverted-U (분위수별) ===
+ cv_decile    n  closure_rate  growth_rate  stable_rate  decline_rate  cv_lower  cv_upper
+         0 5064      0.182662     0.134676     0.811216      0.054107  0.000000  0.206606
+         1 5063      0.050168     0.347225     0.562117      0.090658  0.206613  0.244772
+         2 5064      0.047591     0.436414     0.443918      0.119668  0.244784  0.277944
+         3 5063      0.052538     0.485483     0.366384      0.148134  0.277950  0.314443
+         4 5064      0.059044     0.510861     0.311019      0.178120  0.314448  0.357106
+         5 5063      0.071499     0.513925     0.279084      0.206992  0.357117  0.409675
+         6 5063      0.086312     0.512937     0.248272      0.238791  0.409686  0.479020
+         7 5064      0.094392     0.497038     0.237362      0.265600  0.479022  0.580396
+         8 5063      0.129370     0.374679     0.271183      0.354138  0.580403  0.762076
+         9 5064      0.187599     0.190561     0.293839      0.515600  0.762091  5.000000
+
+Growth rate 최대 decile: D5 (cv 0.36 — 0.41)
+
+=== Interaction Cox PH ===
+outcome_subgroup     n  events    HR_cv  CI_lower  CI_upper            p
+          Growth 20273     595 0.838856  0.774718  0.908303 1.491638e-05
+          Stable 19355    1512 0.611689  0.573982  0.651873 8.637423e-52
+         Decline 10977    2738 1.182597  1.144120  1.222369 2.855592e-23
+
+=== 해석 요약 ===
+표 volatility_h1_survivorship.csv, h2_phase.csv, h3_deciles.csv, cox_by_outcome.csv
+Fig: fig9_volatility_paradox.png

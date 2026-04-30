@@ -1,0 +1,35 @@
+# 2. Related Work
+
+*Target: ~750 words, 3 subsections. Structured as: review → explicit gap statement → our position.*
+*Citations in (author, year) form. Full references to be compiled in References section.*
+
+---
+
+## 2.1 Small Business Survival and Lifecycle Dynamics
+
+Research on small business survival traces its modern foundations to the Cooper et al. (1994) framework linking initial human and financial capital to survival probability, subsequently extended by Bates (1990) and Disney, Haskel, and Heden (2003) to incorporate productivity and market-structure moderators. Stage models of firm lifecycle — most influentially Greiner (1972) and Churchill and Lewis (1983) — posit that firms progress through qualitatively distinct phases (existence, survival, success, take-off, resource maturity), each characterized by different managerial challenges and failure modes. Shepherd (2003) complements this quantitative survival literature with attention to the emotional and social costs of business failure, while Shane (2003) positions entrepreneurial outcomes as the interaction of individual characteristics with opportunity structures. However, four methodological limitations pervade this literature. **First**, reliance on owner surveys captures *ex post* rationalizations prone to hindsight bias (Nisbett & Wilson, 1977). **Second**, annual financial statements — the bedrock of firm-level panels — are simply unavailable for the vast majority of micro-enterprises, precluding lifecycle analysis at the small end of the size distribution. **Third**, panel inclusion criteria (e.g., "observed for at least 52 weeks") systematically exclude stores that exit early, introducing survivorship bias that Denrell (2003) shows can invert the sign of estimated success determinants. **Fourth**, outcomes are typically treated as binary (survive/close) or at best tripartite (grow/stay/decline), obscuring the rich temporal dynamics that distinguish, for example, a store that grew for 20 weeks then declined from one that declined from the outset. Our data-driven approach addresses all four: KCD's card-transaction data offers behavioral rather than self-reported signals, covers micro-enterprises that financial-statement panels miss, includes closure events within the observation window, and permits lifecycle modeling as a continuous trajectory.
+
+## 2.2 Early Warning Systems in Financial and Business Distress
+
+The prediction of business failure as a decision-support artifact originates with Altman's (1968) Z-score, combining five accounting ratios via multiple discriminant analysis to predict bankruptcy two years ahead. Subsequent refinements — Ohlson's (1980) O-score using logistic regression, Zmijewski's (1984) probit model, and the incorporation of market-based variables (Shumway, 2001) — established the methodological playbook of EWS research. The deep learning era has seen this playbook retooled: Barboza, Kimura, and Altman (2017) benchmark random forests, SVM, and neural networks for bankruptcy prediction, generally finding modest improvements over logistic baselines when sample sizes are large. Recent EWS work in non-financial domains — hospital readmission (Rajkomar et al., 2018), student dropout (Márquez-Vera et al., 2016), infrastructure failure (Zheng et al., 2014) — has expanded the artifact class but preserves the core evaluation logic: discrimination (AUC), calibration (Brier score, reliability diagrams), and increasingly, cost-sensitive operating-point analysis (Elkan, 2001). Two limitations bear on the small-business context. **First**, virtually all established EWS artifacts presuppose access to structured financial variables — precisely the signal that is unavailable for our target population. **Second**, EWS for non-financial distress has predominantly focused on individual-level rather than establishment-level outcomes, and has rarely integrated causal identification of leading indicators alongside predictive accuracy. Our EWS artifact fills both gaps by operating on behavioral (card-transaction) rather than financial signals and by pairing the prediction model with causal evidence on the "Golden Cross" phenomenon — new customer inflow as a leading indicator of sales rebound.
+
+## 2.3 Time-Series Representation for Short-Window Lifecycle Prediction
+
+Time-series clustering methods with explicit shape-invariance — DTW-based hierarchical clustering (Rakthanmanon et al., 2012), K-Shape (Paparrizos & Gravano, 2015), and shapelet-based approaches (Ye & Keogh, 2009) — provide unsupervised state discovery complementary to supervised prediction. In parallel, end-to-end sequence modeling via LSTM (Hochreiter & Schmidhuber, 1997) and Transformer architectures (Vaswani et al., 2017; Zhou et al., 2021 for forecasting) has become the default for sufficiently long sequences with rich labeled signal. However, at the intersection of **short observation windows** (T ≈ 20–40), **moderate sample sizes** (tens of thousands of entities), and **multi-class lifecycle targets**, no-free-lunch theorems (Wolpert, 1996) suggest that inductive biases — hand-engineered features, cluster-derived state variables, change-point summaries — may outperform end-to-end models whose data hunger cannot be satisfied. Empirical support for this hypothesis has been mixed and domain-specific (Fawaz et al., 2019 for classification benchmarks; Shwartz-Ziv & Armon, 2022 for tabular data). Whether hand-crafted representations dominate deep sequence models in the small-business lifecycle setting remains, prior to this study, an open question. We contribute direct evidence: a hybrid representation (46 engineered features + K-Means/K-Shape cluster one-hot + change-point features) achieves Macro-F1 = 0.648, a 25% improvement over the best multivariate LSTM/GRU/Transformer benchmarked under identical cross-validation protocols. This result, together with the causal-identification and survivorship-bias-quantification contributions, positions our study at the intersection of Design Science Research artifact development and entrepreneurship lifecycle theory refinement.
+
+---
+
+## Notes for revision
+
+- **Word count**: ~750. 3 subsections balanced ~250 each.
+- **Explicit "gap" statement**: each subsection ends with our positioning.
+- **Citations**: ~22 unique entries implied. See `02_theoretical_framing.md` §"키 문헌 lineage" for canonical list. Need full BibTeX.
+- **Korean-specific literature**: should include if space allows — ex) 김지희 교수님 연구 lineage 또는 Korean SMB studies. Advisor input critical here.
+- **Section 2.3 is most novel for IS community** — this argument (inductive bias wins at T=30 small sample) is a legitimate theoretical contribution beyond pure DSR.
+
+## 보완 필요
+
+- [ ] Korean research literature 통합 (KOSIS, 한국경영학회 논문 중 SMB failure, fintech data lineage)
+- [ ] Recent IS review papers (MISQ Research Curations on predictive analytics)
+- [ ] Section 2.4 — "IS for Social Good" 서브섹션 추가 여부 — DSR 프레임 강화 시 유용
+- [ ] 제 draft의 Korean context가 "Korea alone"으로만 등장 — 더 integrative하게 엮을지 advisor 상의

@@ -1,0 +1,9 @@
+2026-02-23T13:32:39.751310 Loading /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv
+2026-02-23T13:32:39.771385   rows=33864
+2026-02-23T13:32:39.820157 Merged K-Shape K6 from /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/store_cluster_labels_K6.parquet; cluster column overwritten.
+2026-02-23T13:33:00.599840 Loading /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv
+2026-02-23T13:33:00.620129   rows=33864
+2026-02-23T13:33:00.663369 Merged K-Shape K6 from /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/store_cluster_labels_K6.parquet; cluster column overwritten.
+2026-02-23T13:33:00.686784 Merged extra columns from inflection CSV: ['P1_slope', 'P2_slope']
+2026-02-23T13:33:00.851989 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/df_udx_labels.parquet and /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/df_udx_labels.csv (rows=33864)
+2026-02-23T07:40:25.804177 ERROR: Not found /home/hyeoky98/kcd/260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv

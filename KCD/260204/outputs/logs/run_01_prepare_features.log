@@ -1,0 +1,8 @@
+2026-02-04T02:58:57.477433 Loading features CSV.
+2026-02-04T02:58:57.590828 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/data_missing_top30.csv
+2026-02-04T02:58:57.593639 Dropped column: open_month
+2026-02-04T02:58:57.596201 Filled missing categorical 'dong' with 'Unknown'
+2026-02-04T02:58:57.598364 Filled missing categorical 'age' with 'Unknown'
+2026-02-04T02:58:57.679266 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/data_features_clean.parquet
+2026-02-04T02:58:57.680495 Copied variable description to /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/tables/variable_description_copy.csv
+2026-02-04T02:58:57.781655 run_01_prepare_features finished.

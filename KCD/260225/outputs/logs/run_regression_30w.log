@@ -1,0 +1,38 @@
+2026-03-01T12:33:14.790164 ============================================================
+2026-03-01T12:33:14.791104 Step 3: 회귀 — 첫 30주만 사용 (설계)
+2026-03-01T12:33:14.793768 ============================================================
+2026-03-01T12:33:14.868679 Loaded: 31877 rows
+2026-03-01T12:33:14.869019 Weekly data found: /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/original_data/weekly_processed.parquet
+2026-03-01T12:33:14.869341 TODO: 여기서 첫 30주 new_customer_ratio 평균, cv 등 계산 후 회귀
+2026-03-01T12:33:14.869766 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/regression_30w_design.md
+2026-03-01T12:33:14.869961 Step 3 완료 (설계 문서화).
+2026-03-01T12:34:11.935814 ============================================================
+2026-03-01T12:34:11.936511 Step 3: 회귀 — 첫 30주만 사용
+2026-03-01T12:34:11.937743 ============================================================
+2026-03-01T12:34:12.036465 Loaded: 31877 rows
+2026-03-01T12:34:14.943063 Weekly: 5686549 rows
+2026-03-01T12:34:22.029769 Early 30w features: 44867 stores
+2026-03-01T12:34:22.041220 Merged: 31273 rows
+2026-03-01T12:34:22.403111 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/multinomial_logit_30w_coefficients.csv
+2026-03-01T12:34:22.804037 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/regression_30w_design.md
+2026-03-01T12:34:22.804269 Step 3 완료.
+2026-03-03T03:19:07.460678 ============================================================
+2026-03-03T03:19:07.460809 Step 3: 회귀 — 첫 30주만 사용
+2026-03-03T03:19:07.460867 ============================================================
+2026-03-03T03:19:07.718292 Loaded: 31877 rows
+2026-03-03T03:19:08.045527 Weekly: 5686549 rows
+2026-03-03T03:19:43.944368 Early 30w features: 44867 stores
+2026-03-03T03:19:43.976895 Merged: 31273 rows
+2026-03-03T03:19:45.480088 Saved /home/hyeoky98/kcd/260225/outputs/tables/multinomial_logit_30w_coefficients.csv
+2026-03-03T03:19:47.865596 Saved /home/hyeoky98/kcd/260225/outputs/tables/regression_30w_design.md
+2026-03-03T03:19:47.865725 Step 3 완료.
+2026-03-03T03:21:42.721724 ============================================================
+2026-03-03T03:21:42.721881 Step 3: 회귀 — 첫 30주만 사용
+2026-03-03T03:21:42.721944 ============================================================
+2026-03-03T03:21:42.975947 Loaded: 31877 rows
+2026-03-03T03:21:43.249037 Weekly: 5686549 rows
+2026-03-03T03:22:19.188384 Early 30w features: 44867 stores
+2026-03-03T03:22:19.220105 Merged: 31273 rows
+2026-03-03T03:22:21.068040 Saved /home/hyeoky98/kcd/260225/outputs/tables/multinomial_logit_30w_coefficients.csv
+2026-03-03T03:22:23.466793 Saved /home/hyeoky98/kcd/260225/outputs/tables/regression_30w_design.md
+2026-03-03T03:22:23.466880 Step 3 완료.

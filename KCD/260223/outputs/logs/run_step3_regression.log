@@ -1,0 +1,28 @@
+2026-02-23T13:34:57.193820 Merged df_udx_labels: 33514 rows
+2026-02-23T13:34:57.203243 Analysis sample: 33514 stores. growth_type 1=5235, 0=28279
+2026-02-23T13:34:57.208355 OLS Model1: R2=0.1161, N=33514 (numpy fallback)
+2026-02-23T13:34:58.015832 Logit Model1: N=33514 (sklearn fallback; install statsmodels for p-values)
+2026-02-23T13:34:58.021624 OLS Model2: R2=0.1228, N=33514 (numpy fallback)
+2026-02-23T13:34:58.195346 Logit Model2: N=33514 (sklearn fallback; install statsmodels for p-values)
+2026-02-23T13:34:58.239176 OLS Model3: R2=0.1784, N=33514 (numpy fallback)
+2026-02-23T13:34:59.817707 Logit Model3: N=33514 (sklearn fallback; install statsmodels for p-values)
+2026-02-23T13:34:59.819859 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/regression_tables_ols.csv
+2026-02-23T13:34:59.820636 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/regression_tables_logit.csv
+2026-02-23T13:34:59.823993 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/regression_ols_wide_coef.csv
+2026-02-23T13:34:59.826397 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/regression_ols_wide_pvalue.csv
+2026-02-23T13:34:59.828242 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/regression_logit_wide_coef.csv
+2026-02-23T13:34:59.830136 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/regression_logit_wide_pvalue.csv
+2026-02-23T07:40:28.050495 Merged df_udx_labels: 33514 rows
+2026-02-23T07:40:28.073941 Analysis sample: 33514 stores. growth_type 1=5235, 0=28279
+2026-02-23T07:40:28.111747 OLS Model1: R2=0.1161, N=33514
+2026-02-23T07:40:29.451406 Logit Model1: Pseudo-R2=0.1633, N=33514
+2026-02-23T07:40:29.479904 OLS Model2: R2=0.1228, N=33514
+2026-02-23T07:40:30.692536 Logit Model2: Pseudo-R2=0.1644, N=33514
+2026-02-23T07:40:31.122465 OLS Model3: R2=0.1784, N=33514
+2026-02-23T07:40:33.668530 Logit Model3: Pseudo-R2=0.2162, N=33514
+2026-02-23T07:40:33.678108 Saved /home/hyeoky98/kcd/260223/outputs/tables/regression_tables_ols.csv
+2026-02-23T07:40:33.681456 Saved /home/hyeoky98/kcd/260223/outputs/tables/regression_tables_logit.csv
+2026-02-23T07:40:33.692270 Saved /home/hyeoky98/kcd/260223/outputs/tables/regression_ols_wide_coef.csv
+2026-02-23T07:40:33.700113 Saved /home/hyeoky98/kcd/260223/outputs/tables/regression_ols_wide_pvalue.csv
+2026-02-23T07:40:33.707738 Saved /home/hyeoky98/kcd/260223/outputs/tables/regression_logit_wide_coef.csv
+2026-02-23T07:40:33.715317 Saved /home/hyeoky98/kcd/260223/outputs/tables/regression_logit_wide_pvalue.csv

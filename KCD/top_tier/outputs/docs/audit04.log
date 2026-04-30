@@ -1,0 +1,14 @@
+[audit04] merged rows: 49,007
+
+=== Cluster external validity — UDX와 outcome_3 분리 ===
+   cluster  nmi_vs_udx  ari_vs_udx  nmi_vs_outcome  ari_vs_outcome  nmi_cluster_outcome_given_udx
+km_cluster      0.0401      0.0311          0.0941          0.0918                         0.0897
+ks_cluster      0.0379      0.0219          0.0449          0.0386                         0.0495
+
+=== Cluster만으로 outcome 예측 (one-hot, logistic 5-fold) ===
+   cluster  f1_alone  auc_alone
+km_cluster    0.5012     0.6731
+ks_cluster    0.4853     0.6459
+
+=== UDX alone vs cluster alone 비교 ===
+  UDX alone: F1=0.406 AUC=0.609

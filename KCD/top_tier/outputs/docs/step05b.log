@@ -1,0 +1,39 @@
+[05b] panel (5175151, 27), gc (50635, 6), feats (50635, 23)
+[05b] matched: 15191 treated, 15191 control
+[05b] subsampled to 3000 for event study efficiency
+[05b] event panel: (93006, 5)
+=== Event-time mean log-sales ===
+group       control  treated    diff
+event_time                          
+-8          14.2899  13.8781 -0.4118
+-7          14.3040  13.9062 -0.3977
+-6          14.3035  13.8881 -0.4154
+-5          14.3066  13.9133 -0.3934
+-4          14.3129  13.9242 -0.3887
+-3          14.3250  13.8878 -0.4372
+-2          14.3232  14.0058 -0.3174
+-1          14.3197  13.9990 -0.3207
+ 0          14.3384  13.9830 -0.3554
+ 1          14.3239  14.0673 -0.2567
+ 2          14.3533  14.0550 -0.2983
+ 3          14.3377  14.0535 -0.2842
+ 4          14.3324  14.0268 -0.3056
+ 5          14.3379  14.0380 -0.2999
+ 6          14.3412  14.0421 -0.2991
+ 7          14.3375  14.0244 -0.3131
+
+Pre-period mean diff (treated - control): -0.3853
+Post-period mean diff: -0.3015
+DiD (post - pre diff): +0.0837
+Pre-trend parallelism test (H0: pre-diff=0): t=-24.987, p=0.0000  (p>0.05 = parallel trends hold)
+[05b] saved figure to /home/hyeoky98/kcd/top_tier/outputs/figures/fig14_did_event_study.png
+
+=== Placebo Test (random GC week) ===
+Placebo ATT mean: +0.0109
+Placebo ATT std:  0.0093
+Placebo ATT range: [-0.0070, +0.0253]
+Real ATT vs placebo distribution: z = 11.35σ  (>2 = real effect is robust)
+
+=== Summary ===
+ pre_mean_diff  post_mean_diff  did_estimate  pre_trend_pvalue  placebo_mean  placebo_std  real_att_zscore_vs_placebo
+       -0.3853         -0.3015        0.0837               0.0        0.0109       0.0093                      7.7968

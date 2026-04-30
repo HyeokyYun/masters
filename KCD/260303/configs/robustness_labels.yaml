@@ -1,0 +1,27 @@
+baseline: maintaining
+
+feature_candidates:
+  - business_age_months
+  - new_customer_ratio
+  - cv_sales_card
+  - growth_rate
+  - delivery_ratio
+  - weekend_ratio
+  - avg_customer
+  - trend_slope
+  - depth_2
+
+scenarios:
+  - name: pattern_only_baseline
+    mode: pattern_only
+    notes: "Pattern X/Y/Z only (same as base mapping)"
+
+  - name: pattern_plus_growth_q20_q80
+    mode: pattern_plus_growth
+    growth_q_low: 0.2
+    growth_q_high: 0.8
+    notes: "Pattern + growth quantile tails"
+
+  - name: strict_pattern_growth_gate
+    mode: strict_pattern_with_growth_gate
+    notes: "Pattern with median growth gate"

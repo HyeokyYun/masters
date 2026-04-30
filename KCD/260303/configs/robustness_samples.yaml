@@ -1,0 +1,34 @@
+baseline: maintaining
+label_col: life_cycle_category
+
+feature_candidates:
+  - business_age_months
+  - new_customer_ratio
+  - cv_sales_card
+  - growth_rate
+  - delivery_ratio
+  - weekend_ratio
+  - avg_customer
+  - trend_slope
+  - depth_2
+
+samples:
+  - name: all
+    query: "life_cycle_category == life_cycle_category"
+    notes: "Full sample"
+
+  - name: min_weeks_78
+    query: "total_weeks >= 78"
+    notes: "Stores with >= 78 observed weeks"
+
+  - name: min_weeks_104
+    query: "total_weeks >= 104"
+    notes: "Stores with >= 104 observed weeks"
+
+  - name: young_stores_half
+    query: "business_age_months <= business_age_months.median()"
+    notes: "Younger half by business age"
+
+  - name: older_stores_half
+    query: "business_age_months > business_age_months.median()"
+    notes: "Older half by business age"

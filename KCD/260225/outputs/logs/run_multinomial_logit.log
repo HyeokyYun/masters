@@ -1,0 +1,36 @@
+2026-03-01T12:33:10.879059 ============================================================
+2026-03-01T12:33:10.879617 Step 2: Multinomial Logit (outcome_4)
+2026-03-01T12:33:10.880617 ============================================================
+2026-03-01T12:33:10.977844 Loaded: 31877 rows
+2026-03-01T12:33:10.979773 outcome_4: {'Stable': 27192, 'Decline': 3401, 'DUY': 898, 'DUX': 386}
+2026-03-01T12:33:10.981998 DUX=386, DUY=898 — Multinomial Logit 가능 여부 확인
+2026-03-01T12:33:10.983269 After dropna: 31877 rows
+2026-03-01T12:33:11.039796 Multinomial Logit 추정 완료.
+2026-03-01T12:33:11.441125 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/multinomial_logit_coefficients.csv
+2026-03-01T12:33:11.442043 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/multinomial_logit_odds_ratios.csv
+2026-03-01T12:33:11.450475 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260225/outputs/tables/multinomial_logit_summary.txt
+2026-03-01T12:33:11.450702 Step 2 완료.
+2026-03-03T03:19:03.124132 ============================================================
+2026-03-03T03:19:03.124258 Step 2: Multinomial Logit (outcome_4)
+2026-03-03T03:19:03.124314 ============================================================
+2026-03-03T03:19:03.383583 Loaded: 31877 rows
+2026-03-03T03:19:03.387057 outcome_4: {'Stable': 27192, 'Decline': 3401, 'DUY': 898, 'DUX': 386}
+2026-03-03T03:19:03.392214 DUX=386, DUY=898 — Multinomial Logit 가능 여부 확인
+2026-03-03T03:19:03.397361 After dropna: 31877 rows
+2026-03-03T03:19:03.594328 Multinomial Logit 추정 완료.
+2026-03-03T03:19:05.190106 Saved /home/hyeoky98/kcd/260225/outputs/tables/multinomial_logit_coefficients.csv
+2026-03-03T03:19:05.192466 Saved /home/hyeoky98/kcd/260225/outputs/tables/multinomial_logit_odds_ratios.csv
+2026-03-03T03:19:05.236907 Saved /home/hyeoky98/kcd/260225/outputs/tables/multinomial_logit_summary.txt
+2026-03-03T03:19:05.237007 Step 2 완료.
+2026-03-03T03:21:38.406367 ============================================================
+2026-03-03T03:21:38.406494 Step 2: Multinomial Logit (outcome_4)
+2026-03-03T03:21:38.406550 ============================================================
+2026-03-03T03:21:38.662150 Loaded: 31877 rows
+2026-03-03T03:21:38.665334 outcome_4: {'Stable': 27192, 'Decline': 3401, 'DUY': 898, 'DUX': 386}
+2026-03-03T03:21:38.670478 DUX=386, DUY=898 — Multinomial Logit 가능 여부 확인
+2026-03-03T03:21:38.675631 After dropna: 31877 rows
+2026-03-03T03:21:38.874346 Multinomial Logit 추정 완료.
+2026-03-03T03:21:40.454791 Saved /home/hyeoky98/kcd/260225/outputs/tables/multinomial_logit_coefficients.csv
+2026-03-03T03:21:40.457070 Saved /home/hyeoky98/kcd/260225/outputs/tables/multinomial_logit_odds_ratios.csv
+2026-03-03T03:21:40.499097 Saved /home/hyeoky98/kcd/260225/outputs/tables/multinomial_logit_summary.txt
+2026-03-03T03:21:40.499199 Step 2 완료.

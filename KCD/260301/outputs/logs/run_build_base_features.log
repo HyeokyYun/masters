@@ -1,0 +1,40 @@
+2026-03-01T12:39:52.343068 ============================================================
+2026-03-01T12:39:52.343558 Step 1: Base features (df_base_features)
+2026-03-01T12:39:52.343917 ============================================================
+2026-03-01T12:39:52.344217 Loading /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260204/outputs/data_features_clean.parquet
+2026-03-01T12:39:52.380100 Loaded: 33514 rows, 34 cols
+2026-03-01T12:39:52.383109 Dropna on ['growth_rate', 'new_customer_ratio', 'cv_sales_card', 'business_age_months']: 33514 -> 33514
+2026-03-01T12:39:52.385313 Winsorized growth_rate, cv_sales_card (1%, 99%)
+2026-03-01T12:39:52.385836 growth_type: 1=5235, 0=28279
+2026-03-01T12:39:52.746488 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260301/outputs/tables/df_base_features.csv
+2026-03-01T12:39:52.746750 Step 1 완료.
+2026-03-03T03:22:10.968720 ============================================================
+2026-03-03T03:22:10.968849 Step 1: Base features (df_base_features)
+2026-03-03T03:22:10.968904 ============================================================
+2026-03-03T03:22:10.968981 Loading /home/hyeoky98/kcd/260204/outputs/data_features_clean.parquet
+2026-03-03T03:22:11.020041 Loaded: 33514 rows, 34 cols
+2026-03-03T03:22:11.040192 Dropna on ['growth_rate', 'new_customer_ratio', 'cv_sales_card', 'business_age_months']: 33514 -> 33514
+2026-03-03T03:22:11.047360 Winsorized growth_rate, cv_sales_card (1%, 99%)
+2026-03-03T03:22:11.048652 growth_type: 1=5235, 0=28279
+2026-03-03T03:22:13.152974 Saved /home/hyeoky98/kcd/260301/outputs/tables/df_base_features.csv
+2026-03-03T03:22:13.153115 Step 1 완료.
+2026-03-03T03:30:04.646090 ============================================================
+2026-03-03T03:30:04.646227 Step 1: Base features (df_base_features)
+2026-03-03T03:30:04.646288 ============================================================
+2026-03-03T03:30:04.646376 Loading /home/hyeoky98/kcd/260204/outputs/data_features_clean.parquet
+2026-03-03T03:30:04.695471 Loaded: 33514 rows, 34 cols
+2026-03-03T03:30:04.715684 Dropna on ['growth_rate', 'new_customer_ratio', 'cv_sales_card', 'business_age_months']: 33514 -> 33514
+2026-03-03T03:30:04.723246 Winsorized growth_rate, cv_sales_card (1%, 99%)
+2026-03-03T03:30:04.724624 growth_type: 1=5235, 0=28279
+2026-03-03T03:30:06.859381 Saved /home/hyeoky98/kcd/260301/outputs/tables/df_base_features.csv
+2026-03-03T03:30:06.859605 Step 1 완료.
+2026-03-03T03:42:57.095428 ============================================================
+2026-03-03T03:42:57.095559 Step 1: Base features (df_base_features)
+2026-03-03T03:42:57.095616 ============================================================
+2026-03-03T03:42:57.095696 Loading /home/hyeoky98/kcd/260204/outputs/data_features_clean.parquet
+2026-03-03T03:42:57.145086 Loaded: 33514 rows, 34 cols
+2026-03-03T03:42:57.165580 Dropna on ['growth_rate', 'new_customer_ratio', 'cv_sales_card', 'business_age_months']: 33514 -> 33514
+2026-03-03T03:42:57.172809 Winsorized growth_rate, cv_sales_card (1%, 99%)
+2026-03-03T03:42:57.174105 growth_type: 1=5235, 0=28279
+2026-03-03T03:42:59.325101 Saved /home/hyeoky98/kcd/260301/outputs/tables/df_base_features.csv
+2026-03-03T03:42:59.325317 Step 1 완료.

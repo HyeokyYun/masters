@@ -1,0 +1,22 @@
+2026-02-23T13:35:26.068370 Stores with inflection_week: 33864
+2026-02-23T13:35:26.486088 Weekly: 5686549 rows, stores=55310
+2026-02-23T13:35:26.784856 Event window: event_time in [-12, 12], rows=819442
+2026-02-23T13:35:26.927030 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/figures/event_study_plots.png
+2026-02-23T13:35:26.930548 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/event_study_means.csv
+2026-02-23T13:48:36.153713 Stores (DUY+DDZ) with inflection: 4706. DUY=934, DDZ=3772
+2026-02-23T13:48:39.013284 Using proxy: sales_growth_4w (4-week sales growth). Add weekly new_customer_ratio in data for actual ratio.
+2026-02-23T13:48:39.106570 Event window: event_time [-12, 12], rows=114456
+2026-02-23T13:48:39.186286 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/figures/event_study_plots.png
+2026-02-23T13:48:39.187791 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260223/outputs/tables/event_study_means.csv
+2026-02-23T07:40:35.103467 Stores (DUY+DDZ) with inflection: 4706. DUY=934, DDZ=3772
+2026-02-23T07:40:38.351401 Using proxy: sales_growth_4w (4-week sales growth). Add weekly new_customer_ratio in data for actual ratio.
+2026-02-23T07:40:38.565277 Event window: event_time [-12, 12], rows=114456
+2026-02-23T07:40:38.844763 Saved /home/hyeoky98/kcd/260223/outputs/figures/event_study_plots.png
+2026-02-23T07:40:38.848583 Saved /home/hyeoky98/kcd/260223/outputs/tables/event_study_means.csv
+2026-02-25T03:26:01.073308 Stores (DUY+DDZ) with inflection: 4706. DUY=934, DDZ=3772
+2026-02-25T03:26:04.513482 Using proxy: sales_growth_4w (4-week sales growth). Add weekly new_customer_ratio in data for actual ratio.
+2026-02-25T03:26:04.749597 Event window: event_time [-12, 12], rows=114456
+2026-02-25T03:26:05.026991 Saved /home/hyeoky98/kcd/260223/outputs/figures/event_study_plots.png
+2026-02-25T03:26:05.031233 Saved /home/hyeoky98/kcd/260223/outputs/tables/event_study_means.csv
+2026-02-25T03:26:07.196605 Saved /home/hyeoky98/kcd/260223/outputs/tables/event_study_means_controlled.csv (sigungu, depth_2 controlled)
+2026-02-25T03:26:07.518848 Saved /home/hyeoky98/kcd/260223/outputs/figures/event_study_plots_controlled.png

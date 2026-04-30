@@ -1,0 +1,5 @@
+2026-03-21T16:06:15.074375 Loaded merged: 31877 rows
+2026-03-21T16:06:15.575087 Merged owner_age_numeric; non-null: 26743
+2026-03-21T16:06:15.618575 Merged store_trend_residual_cv.csv
+2026-03-21T16:06:18.675199 Saved /home/hyeoky98/kcd/260320_cur/outputs/tables/df_extended_for_regression.csv (31877 rows, 42 cols)
+2026-03-21T16:06:18.675371 Done.

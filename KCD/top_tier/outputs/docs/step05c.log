@@ -1,0 +1,23 @@
+[05c] computing pre-period sales features ...
+[05c] pre-period features computed: 50,635
+[05c] merged after pre-period enrichment: 49,007
+[05c] treated: 15191, control pool: 33816
+  quartile Q2: tr=4173 ct=8079 → matched 4173 within caliper 0.05
+  quartile Q4: tr=2243 ct=10009 → matched 2242 within caliper 0.05
+  quartile Q3: tr=3333 ct=8918 → matched 3332 within caliper 0.05
+  quartile Q1: tr=5442 ct=6810 → matched 5442 within caliper 0.05
+[05c] total matched: 15189 pairs
+[05c] event panel: (92828, 6)
+
+[05c] Enhanced PSM — event study results
+  Pre-period mean (treated - control): -0.0859
+  Post-period mean: +0.0132
+  DiD (post - pre): +0.0992
+  Pre-trend parallelism: t=-4.928, p=0.0017  (FAIL parallel trends)
+
+[05c] saved summary: {'pre_mean_diff': np.float64(-0.08591852463717964), 'post_mean_diff': np.float64(0.013247135011432931), 'did_estimate': np.float64(0.09916565964861257), 'pre_trend_t': np.float64(-4.928468001504896), 'pre_trend_p': np.float64(0.0016972214197689696), 'n_pairs': 2820}
+
+=== 비교 (step05b vs step05c enhanced) ===
+  Pre-diff:       -0.3853 → -0.0859
+  DiD estimate:   +0.0837 → +0.0992
+  Pre-trend p:    4.195e-08 → 0.001697

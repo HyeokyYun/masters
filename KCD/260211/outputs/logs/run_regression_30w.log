@@ -1,0 +1,22 @@
+2026-02-16T08:23:52.320852 Merged cluster labels: 44615 stores
+2026-02-16T08:23:52.396979 M0 Ridge — RMSE: 41910.9945, MAE: 20490.7151, R²: -0.0354
+2026-02-16T08:23:52.401104   regression→binary (threshold=0) F1: 0.7520
+2026-02-16T08:23:54.385944 M0 XGBRegressor — RMSE: 42858.0627, MAE: 20450.9513, R²: -0.0828
+2026-02-16T08:23:54.392434   regression→binary (threshold=0) F1: 0.7449
+2026-02-16T08:23:55.340096 M1 Ridge — RMSE: 41743.5300, MAE: 20460.5907, R²: -0.0272
+2026-02-16T08:23:55.345300   regression→binary F1: 0.7508
+2026-02-16T08:23:56.195731 M1 XGBRegressor — RMSE: 42118.3572, MAE: 20224.2025, R²: -0.0457
+2026-02-16T08:23:56.199877   regression→binary F1: 0.7448
+2026-02-16T08:23:56.205964 Saved /home/hyeoky98/kcd/260211/outputs/tables/regression_30w_results.csv
+2026-02-16T08:23:56.453712 Saved /home/hyeoky98/kcd/260211/outputs/figures/regression_30w_r2.png
+2026-02-16T08:30:21.892823 Merged cluster labels: 44615 stores
+2026-02-16T08:30:21.943706 M0 Ridge — RMSE: 41910.9945, MAE: 20490.7151, R²: -0.0354
+2026-02-16T08:30:21.947982   regression→binary (threshold=0) F1: 0.7520
+2026-02-16T08:30:23.006086 M0 XGBRegressor — RMSE: 42858.0627, MAE: 20450.9513, R²: -0.0828
+2026-02-16T08:30:23.010264   regression→binary (threshold=0) F1: 0.7449
+2026-02-16T08:30:23.829229 M1 Ridge — RMSE: 41743.5300, MAE: 20460.5907, R²: -0.0272
+2026-02-16T08:30:23.834471   regression→binary F1: 0.7508
+2026-02-16T08:30:24.524092 M1 XGBRegressor — RMSE: 42118.3572, MAE: 20224.2025, R²: -0.0457
+2026-02-16T08:30:24.527848   regression→binary F1: 0.7448
+2026-02-16T08:30:24.564476 Saved /home/hyeoky98/kcd/260211/outputs/tables/regression_30w_results.csv
+2026-02-16T08:30:24.779695 Saved /home/hyeoky98/kcd/260211/outputs/figures/regression_30w_r2.png

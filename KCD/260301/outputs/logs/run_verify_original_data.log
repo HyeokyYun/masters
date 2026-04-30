@@ -1,0 +1,64 @@
+2026-03-01T12:39:51.217109 ============================================================
+2026-03-01T12:39:51.217395 Step 0: original_data 및 의존성 검증
+2026-03-01T12:39:51.217625 ============================================================
+2026-03-01T12:39:51.614750   original_data/weekly.parquet: rows=6582263, cols_ok=True
+2026-03-01T12:39:51.663467   original_data/weekly_processed.parquet: rows=5686549, cols_ok=True
+2026-03-01T12:39:51.785021   original_data/meta.csv: rows=59089, cols_ok=True
+2026-03-01T12:39:51.831741   original_data/meta_processed.csv: rows=59089, cols_ok=True
+2026-03-01T12:39:51.942330   basic_data/store_features_for_analysis.csv: rows=33514, cols_ok=True
+2026-03-01T12:39:51.967937   260204/outputs/data_features_clean.parquet: rows=33514, cols_ok=True
+2026-03-01T12:39:51.979384   260204/outputs/tables/store_cluster_labels_K6.parquet: rows=55310, cols_ok=True
+2026-03-01T12:39:52.011731   260204_gem/outputs/tables/inflection_p1p2_labels.csv: rows=55310, cols_ok=True
+2026-03-01T12:39:52.042692   260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv: rows=33864, cols_ok=True
+2026-03-01T12:39:52.047739 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260301/outputs/tables/verify_original_data_report.csv
+2026-03-01T12:39:52.047899 ============================================================
+2026-03-01T12:39:52.048296 검증 완료.
+2026-03-01T12:39:52.048537 ============================================================
+2026-03-03T03:22:08.941660 ============================================================
+2026-03-03T03:22:08.941959 Step 0: original_data 및 의존성 검증
+2026-03-03T03:22:08.942019 ============================================================
+2026-03-03T03:22:09.516116   original_data/weekly.parquet: MISSING
+2026-03-03T03:22:09.800593   original_data/weekly_processed.parquet: rows=5686549, cols_ok=True
+2026-03-03T03:22:09.800897   original_data/meta.csv: MISSING
+2026-03-03T03:22:09.918453   original_data/meta_processed.csv: rows=59089, cols_ok=True
+2026-03-03T03:22:10.205295   basic_data/store_features_for_analysis.csv: rows=33514, cols_ok=True
+2026-03-03T03:22:10.259877   260204/outputs/data_features_clean.parquet: rows=33514, cols_ok=True
+2026-03-03T03:22:10.266085   260204/outputs/tables/store_cluster_labels_K6.parquet: rows=55310, cols_ok=True
+2026-03-03T03:22:10.266292   260204_gem/outputs/tables/inflection_p1p2_labels.csv: MISSING
+2026-03-03T03:22:10.266417   260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv: MISSING
+2026-03-03T03:22:10.268895 Saved /home/hyeoky98/kcd/260301/outputs/tables/verify_original_data_report.csv
+2026-03-03T03:22:10.268978 ============================================================
+2026-03-03T03:22:10.269031 일부 파일 누락/오류. 검토 필요.
+2026-03-03T03:22:10.269078 ============================================================
+2026-03-03T03:30:02.615591 ============================================================
+2026-03-03T03:30:02.615707 Step 0: original_data 및 의존성 검증
+2026-03-03T03:30:02.615771 ============================================================
+2026-03-03T03:30:03.152841   original_data/weekly.parquet: MISSING
+2026-03-03T03:30:03.438404   original_data/weekly_processed.parquet: rows=5686549, cols_ok=True
+2026-03-03T03:30:03.438806   original_data/meta.csv: MISSING
+2026-03-03T03:30:03.572668   original_data/meta_processed.csv: rows=59089, cols_ok=True
+2026-03-03T03:30:03.836706   basic_data/store_features_for_analysis.csv: rows=33514, cols_ok=True
+2026-03-03T03:30:03.859999   260204/outputs/data_features_clean.parquet: rows=33514, cols_ok=True
+2026-03-03T03:30:03.866144   260204/outputs/tables/store_cluster_labels_K6.parquet: rows=55310, cols_ok=True
+2026-03-03T03:30:03.918106   260204_gem/outputs/tables/inflection_p1p2_labels.csv: rows=55310, cols_ok=True
+2026-03-03T03:30:03.962870   260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv: rows=33864, cols_ok=True
+2026-03-03T03:30:03.965604 Saved /home/hyeoky98/kcd/260301/outputs/tables/verify_original_data_report.csv
+2026-03-03T03:30:03.965688 ============================================================
+2026-03-03T03:30:03.965739 일부 파일 누락/오류. 검토 필요.
+2026-03-03T03:30:03.965784 ============================================================
+2026-03-03T03:42:54.002563 ============================================================
+2026-03-03T03:42:54.002685 Step 0: original_data 및 의존성 검증
+2026-03-03T03:42:54.002743 ============================================================
+2026-03-03T03:42:55.284054   original_data/weekly.parquet: rows=6582263, cols_ok=True
+2026-03-03T03:42:55.617277   original_data/weekly_processed.parquet: rows=5686549, cols_ok=True
+2026-03-03T03:42:55.929847   original_data/meta.csv: rows=59089, cols_ok=True
+2026-03-03T03:42:56.020674   original_data/meta_processed.csv: rows=59089, cols_ok=True
+2026-03-03T03:42:56.275267   basic_data/store_features_for_analysis.csv: rows=33514, cols_ok=True
+2026-03-03T03:42:56.340912   260204/outputs/data_features_clean.parquet: rows=33514, cols_ok=True
+2026-03-03T03:42:56.347932   260204/outputs/tables/store_cluster_labels_K6.parquet: rows=55310, cols_ok=True
+2026-03-03T03:42:56.402238   260204_gem/outputs/tables/inflection_p1p2_labels.csv: rows=55310, cols_ok=True
+2026-03-03T03:42:56.441269   260204_gem/outputs/tables/final_code_by_store_260121_outlier_removal.csv: rows=33864, cols_ok=True
+2026-03-03T03:42:56.443849 Saved /home/hyeoky98/kcd/260301/outputs/tables/verify_original_data_report.csv
+2026-03-03T03:42:56.443924 ============================================================
+2026-03-03T03:42:56.443972 검증 완료.
+2026-03-03T03:42:56.444015 ============================================================

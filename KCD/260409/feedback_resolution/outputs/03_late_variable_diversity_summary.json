@@ -1,0 +1,90 @@
+{
+  "window_weeks": 30,
+  "segment_length": 10,
+  "n_stores": 49007,
+  "univariate_ranking_by_f1": [
+    {
+      "variable": "late_sales_slope",
+      "macro_f1_mean": 0.36472712893736425,
+      "macro_f1_std": 0.0028736661852361437,
+      "recall_Decline_mean": 0.06054837665007157,
+      "recall_Stable_mean": 0.468977660526397,
+      "recall_Growth_mean": 0.6439000598873403,
+      "auc_ovr_mean": 0.574387898499764
+    },
+    {
+      "variable": "late_nc_rate",
+      "macro_f1_mean": 0.3562923921649476,
+      "macro_f1_std": 0.003236280931438104,
+      "recall_Decline_mean": 0.05972378133395083,
+      "recall_Stable_mean": 0.43787198000555405,
+      "recall_Growth_mean": 0.6496241644984921,
+      "auc_ovr_mean": 0.5631417896262574
+    },
+    {
+      "variable": "late_sales_mean",
+      "macro_f1_mean": 0.35523742602847375,
+      "macro_f1_std": 0.005503756367675884,
+      "recall_Decline_mean": 0.13327775065063202,
+      "recall_Stable_mean": 0.25734646240241904,
+      "recall_Growth_mean": 0.7419727977895834,
+      "auc_ovr_mean": 0.5806088659161113
+    },
+    {
+      "variable": "late_sales_std",
+      "macro_f1_mean": 0.3382646180012772,
+      "macro_f1_std": 0.00110987649130943,
+      "recall_Decline_mean": 0.04451807926384198,
+      "recall_Stable_mean": 0.3661061896386806,
+      "recall_Growth_mean": 0.7070748720625246,
+      "auc_ovr_mean": 0.5463044352996348
+    },
+    {
+      "variable": "late_sales_vol",
+      "macro_f1_mean": 0.33271600637271054,
+      "macro_f1_std": 0.004094088821437313,
+      "recall_Decline_mean": 0.052945420742030916,
+      "recall_Stable_mean": 0.30861368755592583,
+      "recall_Growth_mean": 0.7441125341737636,
+      "auc_ovr_mean": 0.5517843678837803
+    },
+    {
+      "variable": "late_customer_mean",
+      "macro_f1_mean": 0.3325676423246641,
+      "macro_f1_std": 0.005376859478617815,
+      "recall_Decline_mean": 0.06421091887193583,
+      "recall_Stable_mean": 0.3015037643864359,
+      "recall_Growth_mean": 0.7267867288265787,
+      "auc_ovr_mean": 0.5561689549366212
+    }
+  ],
+  "best_univariate": "late_sales_slope",
+  "best_univariate_f1": 0.36472712893736425,
+  "all_six_combined_f1": 0.47919632274610074,
+  "feature_importance_top": [
+    {
+      "feature": "late_customer_mean",
+      "importance": 3393
+    },
+    {
+      "feature": "late_sales_slope",
+      "importance": 3322
+    },
+    {
+      "feature": "late_sales_mean",
+      "importance": 3205
+    },
+    {
+      "feature": "late_nc_rate",
+      "importance": 2977
+    },
+    {
+      "feature": "late_sales_vol",
+      "importance": 2605
+    },
+    {
+      "feature": "late_sales_std",
+      "importance": 2498
+    }
+  ]
+}

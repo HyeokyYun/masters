@@ -1,0 +1,20 @@
+{
+  "windows": [
+    10,
+    20,
+    30,
+    40,
+    50
+  ],
+  "best_window_by_f1": 50,
+  "f1_at_30w": 0.5152736423981523,
+  "feature_set_used": [
+    "sales_full_slope",
+    "sales_full_mean",
+    "sales_full_vol",
+    "sales_full_std",
+    "sales_cv",
+    "nc_rate_mean",
+    "customer_mean"
+  ]
+}

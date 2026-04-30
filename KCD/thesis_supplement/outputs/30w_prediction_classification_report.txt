@@ -1,0 +1,14 @@
+Model B (class_weight=balanced) Classification Report
+==================================================
+              precision    recall  f1-score   support
+
+       쇠퇴(0)       0.85      0.98      0.91      5547
+       성장(1)       0.39      0.07      0.12      1032
+
+    accuracy                           0.84      6579
+   macro avg       0.62      0.53      0.52      6579
+weighted avg       0.78      0.84      0.79      6579
+
+Confusion Matrix:
+[[5430  117]
+ [ 957   75]]

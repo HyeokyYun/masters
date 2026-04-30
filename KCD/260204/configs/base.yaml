@@ -1,0 +1,51 @@
+# Project 260204 base configuration (paths relative to 260204)
+
+data:
+  features_csv: "../basic_data/store_features_for_analysis.csv"
+  var_desc_csv: "../basic_data/variable_description.csv"
+  weekly_parquet_primary: "../original_data/weekly_processed.parquet"
+  weekly_parquet_fallback: "../original_data/weekly.parquet"
+  meta_csv_primary: "../original_data/meta_processed.csv"
+  meta_csv_fallback: "../original_data/meta.csv"
+  id_col_store: "public_id"
+  time_col_week: "week_id"
+  y_col_sales: "sales"
+  cluster_col: "cluster"
+
+preprocess:
+  cat_fill: "Unknown"
+  drop_cols: ["open_month"]
+  num_impute: "median"
+
+targets:
+  success_metric: "growth_rate"
+  success_threshold: 1.0
+
+categoricals:
+  - sigungu
+  - dong
+  - age
+  - depth_1
+  - depth_2
+  - depth_3
+
+prediction:
+  seed: 42
+  test_size: 0.2
+  m0_numeric_cols: [avg_sales_card, std_sales_card, cv_sales_card, max_sales, min_sales, max_min_ratio, trend_slope, total_weeks]
+  x_numeric_cols: [weekend_ratio, avg_customer, new_customer_ratio, delivery_ratio, before_noon_ratio, after_noon_ratio, business_square_size, delivery_link, business_age_months, dong_store_count, dong_avg_sales, sigungu_store_count, sigungu_avg_sales, business_density]
+
+clustering:
+  # k_list: [4, 5, 6, 7, 8]
+  k_list: [1, 2, 3]
+  seed: 42
+  n_seed_runs: 10
+  n_boot: 20
+  sample_frac: 0.8
+  fill_method: "interpolate"
+
+outputs:
+  tables: "outputs/tables"
+  figures: "outputs/figures"
+  logs: "outputs/logs"
+  models: "outputs/models"

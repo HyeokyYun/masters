@@ -1,0 +1,12 @@
+2026-03-20T16:24:32.275470 Volatility column used: cv_resid_linear
+2026-03-20T16:24:32.390999 Regression sample: 26743 rows, 13 regressors (incl. const)
+2026-03-20T16:24:32.791572 OK → multinomial_logit_ext_ref_Stable.txt
+2026-03-20T16:24:32.952539 OK → multinomial_logit_ext_ref_Growth.txt
+2026-03-20T16:24:33.126302 OK → multinomial_logit_ext_ref_Decline.txt
+2026-03-20T16:24:33.126511 Done.
+2026-03-21T16:07:03.942338 Volatility column used: cv_resid_linear
+2026-03-21T16:07:03.981319 Regression sample: 26743 rows, 13 regressors (incl. const)
+2026-03-21T16:07:04.731675 OK → multinomial_logit_ext_ref_Stable.txt
+2026-03-21T16:07:05.433009 OK → multinomial_logit_ext_ref_Growth.txt
+2026-03-21T16:07:06.112830 OK → multinomial_logit_ext_ref_Decline.txt
+2026-03-21T16:07:06.112971 Done.

@@ -1,0 +1,10 @@
+2026-03-20T16:24:19.806294 Loaded merged: 31877 rows
+2026-03-20T16:24:20.359509 Merged owner_age_numeric; non-null: 26743
+2026-03-20T16:24:20.471663 Merged store_trend_residual_cv.csv
+2026-03-20T16:24:21.918530 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260320_codex/outputs/tables/df_extended_for_regression.csv (31877 rows, 42 cols)
+2026-03-20T16:24:21.918809 Done.
+2026-03-21T16:06:57.737908 Loaded merged: 31877 rows
+2026-03-21T16:06:58.228921 Merged owner_age_numeric; non-null: 26743
+2026-03-21T16:06:58.271623 Merged store_trend_residual_cv.csv
+2026-03-21T16:07:01.442193 Saved /home/hyeoky98/kcd/260320_codex/outputs/tables/df_extended_for_regression.csv (31877 rows, 42 cols)
+2026-03-21T16:07:01.442373 Done.

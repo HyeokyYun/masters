@@ -1,0 +1,30 @@
+2026-03-16T05:44:42.821190 260316 Step 1: prepare base panel and store features
+2026-03-16T05:44:42.821481 Loading weekly data: /home/hyeoky98/kcd/original_data/weekly.parquet
+2026-03-16T05:44:43.645919 Loading meta data: /home/hyeoky98/kcd/original_data/meta.csv
+2026-03-16T05:48:52.850018 Prepared panel rows: 6,362,182
+2026-03-16T05:48:52.866478 Prepared stores: 50,635
+2026-03-16T05:49:13.899857 Step 1 completed.
+2026-03-16T06:11:29.553951 260316 Step 1: prepare base panel and store features
+2026-03-16T06:11:29.554177 Loading weekly data: /home/hyeoky98/kcd/original_data/weekly.parquet
+2026-03-16T06:11:30.332311 Loading meta data: /home/hyeoky98/kcd/original_data/meta.csv
+2026-03-16T06:15:47.085940 Prepared panel rows: 6,362,182
+2026-03-16T06:15:47.101840 Prepared stores: 50,635
+2026-03-16T06:16:08.394899 Step 1 completed.
+2026-03-16T08:14:47.895814 260316 Step 1: prepare base panel and store features
+2026-03-16T08:14:47.896043 Loading weekly data: /home/hyeoky98/kcd/original_data/weekly.parquet
+2026-03-16T08:14:48.722808 Loading meta data: /home/hyeoky98/kcd/original_data/meta.csv
+2026-03-16T08:18:51.730118 Prepared panel rows: 6,362,182
+2026-03-16T08:18:51.746476 Prepared stores: 50,635
+2026-03-16T08:19:12.899403 Step 1 completed.
+2026-03-16T12:40:52.439716 260316 Step 1: prepare base panel and store features
+2026-03-16T12:40:52.440352 Loading weekly data: /home/hyeoky98/kcd/original_data/weekly.parquet
+2026-03-16T12:40:53.393114 Loading meta data: /home/hyeoky98/kcd/original_data/meta.csv
+2026-03-16T12:44:58.698880 Prepared panel rows: 6,362,182
+2026-03-16T12:44:58.715332 Prepared stores: 50,635
+2026-03-16T12:45:20.013059 Step 1 completed.
+2026-03-18T06:00:29.108348 260316 Step 1: prepare base panel and store features
+2026-03-18T06:00:29.108578 Loading weekly data: /home/hyeoky98/kcd/original_data/weekly.parquet
+2026-03-18T06:00:30.499786 Loading meta data: /home/hyeoky98/kcd/original_data/meta.csv
+2026-03-18T06:04:41.367626 Prepared panel rows: 6,362,182
+2026-03-18T06:04:41.384771 Prepared stores: 50,635
+2026-03-18T06:05:03.705493 Step 1 completed.

@@ -1,0 +1,58 @@
+/home/hyeoky98/kcd/top_tier/src/audit01_outcome_sanity.py:64: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for q, sub in merged.groupby(pd.qcut(merged["slope_early_mm"], q=5)):
+[audit01] labeled features: (50635, 23), columns include slope_*_mm, cv, outcome_3
+[audit01] outcome_3 distribution:
+outcome_3
+Growth     20273
+Stable     19365
+Decline    10997
+Name: count, dtype: int64
+
+[audit01] slope_all_mm std = 0.00370
+[audit01] slope_all_mm mean = 0.00061
+[audit01] merged: 50,635 stores with both outcome + init_sales
+
+=== (a) 초기 30주 총매출 사분위 × outcome_3 (row %, 비율) ===
+outcome_3            Decline  Growth  Stable
+init_sales_quartile                         
+Q1_low                 0.290   0.256   0.454
+Q2                     0.248   0.389   0.363
+Q3                     0.188   0.455   0.357
+Q4_high                0.143   0.501   0.357
+
+=== (a) 절대 개수 ===
+outcome_3            Decline  Growth  Stable
+init_sales_quartile                         
+Q1_low                  3674    3241    5744
+Q2                      3140    4929    4590
+Q3                      2377    5763    4518
+Q4_high                 1806    6340    4513
+
+=== (a) Baseline outcome_3 비율 (전체) ===
+outcome_3
+Decline    0.217
+Growth     0.400
+Stable     0.382
+
+=== (a) 사분위 - baseline 차이 (percentage point) ===
+outcome_3            Decline  Growth  Stable
+init_sales_quartile                         
+Q1_low                  7.30  -14.44    7.13
+Q2                      3.09   -1.10   -1.99
+Q3                     -2.94    5.49   -2.55
+Q4_high                -7.45   10.05   -2.59
+
+=== (c) slope feature 상관 행렬 ===
+                slope_early_mm  slope_all_mm  slope_late_mm
+slope_early_mm           1.000         0.590          0.052
+slope_all_mm             0.590         1.000          0.621
+slope_late_mm            0.052         0.621          1.000
+
+=== (c) slope_early의 outcome_3 예측력 (signal-only baseline) ===
+  slope_early (-0.0488, -0.00255]: Growth=0.053 Stable=0.272 Decline=0.675  n=10,127
+  slope_early (-0.00255, 0.0]: Growth=0.210 Stable=0.624 Decline=0.166  n=10,365
+  slope_early (0.0, 0.00177]: Growth=0.460 Stable=0.445 Decline=0.095  n=9,889
+  slope_early (0.00177, 0.00385]: Growth=0.621 Stable=0.315 Decline=0.064  n=10,127
+  slope_early (0.00385, 0.0487]: Growth=0.664 Stable=0.252 Decline=0.084  n=10,127
+
+[audit01] saved cross-tab to /home/hyeoky98/kcd/top_tier/outputs/tables/audit01_outcome_sanity.csv

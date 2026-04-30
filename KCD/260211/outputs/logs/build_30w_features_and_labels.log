@@ -1,0 +1,35 @@
+2026-02-11T12:26:53.443495 Loading /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260211/../original_data/weekly_processed.parquet
+2026-02-11T12:26:53.999775 Columns: store=public_id, week=day_after1, sales=sales_card
+2026-02-11T23:39:48.061802 Loading /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260211/../original_data/weekly_processed.parquet
+2026-02-11T23:39:48.632906 Columns: store=public_id, week=day_after1, sales=sales_card
+2026-02-11T23:47:08.520989 Saved /Volumes/SAMSUMG_128/master_graduate/KCD_source_code_from_Yang/26-1/260211/outputs/tables/features_30w_and_labels.parquet — 44615 stores
+2026-02-11T23:47:08.521393 Label distribution: growth=27286, decline=17329
+2026-02-16T07:11:52.188117 Loading /home/hyeoky98/kcd/260211/../original_data/weekly_processed.parquet
+2026-02-16T07:11:52.590414 Columns: store=public_id, week=day_after1, sales=sales_card
+2026-02-16T07:19:29.264584 Loading /home/hyeoky98/kcd/260211/../original_data/weekly_processed.parquet
+2026-02-16T07:19:29.637331 Columns: store=public_id, week=day_after1, sales=sales_card
+2026-02-16T08:18:33.347497 Loading /home/hyeoky98/kcd/260211/../original_data/weekly_processed.parquet
+2026-02-16T08:18:33.740286 Columns: store=public_id, week=day_after1, sales=sales_card
+2026-02-16T08:18:33.740473 데이터 그룹화 및 정렬 중...
+2026-02-16T08:18:38.849263 매장별 피처 및 라벨 생성 중...
+2026-02-16T08:19:01.957312 Merged meta: ['sigungu', 'dong', 'depth_1', 'depth_2', 'depth_3']
+2026-02-16T08:19:02.165386 Saved /home/hyeoky98/kcd/260211/outputs/tables/features_30w_and_labels.parquet — 44615 stores
+2026-02-16T08:19:02.166493 Label distribution: growth=27286, decline=17329
+2026-02-16T08:19:02.168015 slope_after_30w: mean=8604.8821, std=46694.1388 (regression target)
+2026-02-16T08:26:32.238511 Loading /home/hyeoky98/kcd/260211/../original_data/weekly_processed.parquet
+2026-02-16T08:26:32.643166 Columns: store=public_id, week=day_after1, sales=sales_card
+2026-02-16T08:26:32.643397 데이터 그룹화 및 정렬 중...
+2026-02-16T08:26:37.582615 매장별 피처 및 라벨 생성 중...
+2026-02-16T08:27:00.433115 Merged meta: ['sigungu', 'dong', 'depth_1', 'depth_2', 'depth_3']
+2026-02-16T08:27:00.622526 Saved /home/hyeoky98/kcd/260211/outputs/tables/features_30w_and_labels.parquet — 44615 stores
+2026-02-16T08:27:00.623534 Label distribution: growth=27286, decline=17329
+2026-02-16T08:27:00.624809 slope_after_30w: mean=8604.8821, std=46694.1388 (regression target)
+2026-02-16T08:48:50.209805 Loading /home/hyeoky98/kcd/260211/../original_data/weekly_processed.parquet
+2026-02-16T08:48:50.597329 Columns: store=public_id, week=day_after1, sales=sales_card
+2026-02-16T08:48:50.597512 데이터 그룹화 및 정렬 중...
+2026-02-16T08:48:55.669824 매장별 피처 및 라벨 생성 중...
+2026-02-16T08:49:19.275499 Merged meta: ['sigungu', 'dong', 'depth_1', 'depth_2', 'depth_3']
+2026-02-16T08:49:19.444037 Saved /home/hyeoky98/kcd/260211/outputs/tables/features_30w_and_labels.parquet — 44615 stores
+2026-02-16T08:49:19.444969 Label distribution: growth=27286, decline=17329
+2026-02-16T08:49:19.446089 slope_after_30w: mean=8604.8821, std=46694.1388 (regression target)
+2026-02-16T08:49:19.446801 total_sales_after_30w: mean=415519322, std=608719979 (total sales regression target)

@@ -1,0 +1,33 @@
+[13b] device: cpu
+[13b] channels ready, stores=48,918
+[13b] labeled stores: 48,918
+[13b] X shape: (48918, 30, 5)
+
+=== LSTM_mv_5ch ===
+  fold=0  F1=0.516  AUC=0.715  (177.8s)
+  fold=1  F1=0.515  AUC=0.712  (185.3s)
+  fold=2  F1=0.516  AUC=0.713  (176.5s)
+  fold=3  F1=0.513  AUC=0.707  (191.5s)
+  fold=4  F1=0.516  AUC=0.708  (204.1s)
+
+=== Transformer_mv_5ch ===
+  fold=0  F1=0.533  AUC=0.721  (353.7s)
+  fold=1  F1=0.528  AUC=0.721  (350.2s)
+  fold=2  F1=0.534  AUC=0.724  (349.1s)
+  fold=3  F1=0.526  AUC=0.717  (350.1s)
+  fold=4  F1=0.527  AUC=0.720  (353.1s)
+
+=== Multivariate DL Summary ===
+                   macro_f1         auc_ovr
+                       mean     std    mean
+model                                      
+LSTM_mv_5ch          0.5150  0.0014  0.7110
+Transformer_mv_5ch   0.5294  0.0037  0.7206
+
+=== 단변량 vs 다변량 DL 비교 ===
+  LSTM_bi→LSTM_mv_5ch: F1 0.517→0.515 (Δ-0.002), AUC 0.707→0.711 (Δ+0.004)
+  Transformer→Transformer_mv_5ch: F1 0.513→0.529 (Δ+0.016), AUC 0.708→0.721 (Δ+0.013)
+
+=== vs Proposed D (F1 0.648 / AUC 0.830) ===
+  Best MV DL: Transformer_mv_5ch F1=0.529
+  Proposed D still leads by F1 +0.119
