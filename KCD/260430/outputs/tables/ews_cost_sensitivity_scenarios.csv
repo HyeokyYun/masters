@@ -1,0 +1,58 @@
+﻿scenario,benefit_tp,cost_fp,cost_fn,interpretation,threshold,tp,fp,fn,decline_precision,decline_recall,flagged_pct,scenario_net_utility,is_best_in_scenario
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.05,10667.0,22925.0,250.0,0.3175458442486306,0.9770999358798204,0.6854530985369437,-6773.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.1,10256.0,16567.0,661.0,0.3823584237408194,0.9394522304662452,0.5473299732691248,6547.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.15,9749.0,12787.0,1168.0,0.432596734114306,0.8930109004305212,0.4598526741077805,10789.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.2,9164.0,10017.0,1753.0,0.4777644544080079,0.8394247503893011,0.3913930662966515,10909.0,True
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.25,8550.0,7776.0,2367.0,0.523704520396913,0.7831821929101401,0.3331360826004448,9036.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.3,7869.0,6055.0,3048.0,0.5651393277793737,0.720802418246771,0.2841226763523578,4665.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.35,7201.0,4692.0,3716.0,0.6054822164298327,0.6596134469176513,0.2426796171975432,-598.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.4,6535.0,3585.0,4382.0,0.6457509881422925,0.5986076761014931,0.2065011120860285,-6601.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.45,5873.0,2702.0,5044.0,0.6848979591836735,0.5379683063112577,0.1749750035709184,-13220.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.5,5214.0,2054.0,5703.0,0.717391304347826,0.4776037372904644,0.1483053441345114,-20502.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.55,4596.0,1545.0,6321.0,0.7484123106985833,0.4209947787853806,0.1253086293794764,-27627.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.6,3978.0,1106.0,6939.0,0.7824547600314713,0.3643858202802967,0.1037402820005305,-34962.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.65,3369.0,774.0,7548.0,0.8131788559015206,0.3086012640835394,0.0845389434162466,-42492.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.7,2751.0,507.0,8166.0,0.8443830570902394,0.2519923055784556,0.066480298732834,-50343.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.75,2126.0,317.0,8791.0,0.8702415063446582,0.1947421452780068,0.0498500214255106,-58523.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.8,1550.0,175.0,9367.0,0.8985507246376812,0.1419803975451131,0.0351990531964821,-66161.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.85,962.0,81.0,9955.0,0.922339405560882,0.0881194467344508,0.021282673903728,-74111.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.9,520.0,21.0,10397.0,0.9611829944547134,0.0476321333699734,0.0110392392923459,-80119.0,False
+conservative_support,6,3,8,Support resources are expensive; false positives matter more.,0.95,204.0,3.0,10713.0,0.9855072463768116,0.0186864523220665,0.0042238863835778,-84489.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.05,10667.0,22925.0,250.0,0.3175458442486306,0.9770999358798204,0.6854530985369437,58820.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.1,10256.0,16567.0,661.0,0.3823584237408194,0.9394522304662452,0.5473299732691248,64138.0,True
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.15,9749.0,12787.0,1168.0,0.432596734114306,0.8930109004305212,0.4598526741077805,62572.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.2,9164.0,10017.0,1753.0,0.4777644544080079,0.8394247503893011,0.3913930662966515,57582.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.25,8550.0,7776.0,2367.0,0.523704520396913,0.7831821929101401,0.3331360826004448,51012.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.3,7869.0,6055.0,3048.0,0.5651393277793737,0.720802418246771,0.2841226763523578,42196.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.35,7201.0,4692.0,3716.0,0.6054822164298327,0.6596134469176513,0.2426796171975432,32898.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.4,6535.0,3585.0,4382.0,0.6457509881422925,0.5986076761014931,0.2065011120860285,23124.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.45,5873.0,2702.0,5044.0,0.6848979591836735,0.5379683063112577,0.1749750035709184,12974.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.5,5214.0,2054.0,5703.0,0.717391304347826,0.4776037372904644,0.1483053441345114,2408.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.55,4596.0,1545.0,6321.0,0.7484123106985833,0.4209947787853806,0.1253086293794764,-7698.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.6,3978.0,1106.0,6939.0,0.7824547600314713,0.3643858202802967,0.1037402820005305,-17944.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.65,3369.0,774.0,7548.0,0.8131788559015206,0.3086012640835394,0.0845389434162466,-28242.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.7,2751.0,507.0,8166.0,0.8443830570902394,0.2519923055784556,0.066480298732834,-38832.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.75,2126.0,317.0,8791.0,0.8702415063446582,0.1947421452780068,0.0498500214255106,-49702.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.8,1550.0,175.0,9367.0,0.8985507246376812,0.1419803975451131,0.0351990531964821,-59786.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.85,962.0,81.0,9955.0,0.922339405560882,0.0881194467344508,0.021282673903728,-70182.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.9,520.0,21.0,10397.0,0.9611829944547134,0.0476321333699734,0.0110392392923459,-78018.0,False
+balanced_prevention,10,2,8,Baseline policy scenario used for balanced preventive support.,0.95,204.0,3.0,10713.0,0.9855072463768116,0.0186864523220665,0.0042238863835778,-83670.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.05,10667.0,22925.0,250.0,0.3175458442486306,0.9770999358798204,0.6854530985369437,102579.0,True
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.1,10256.0,16567.0,661.0,0.3823584237408194,0.9394522304662452,0.5473299732691248,99895.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.15,9749.0,12787.0,1168.0,0.432596734114306,0.8930109004305212,0.4598526741077805,92521.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.2,9164.0,10017.0,1753.0,0.4777644544080079,0.8394247503893011,0.3913930662966515,82421.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.25,8550.0,7776.0,2367.0,0.523704520396913,0.7831821929101401,0.3331360826004448,71154.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.3,7869.0,6055.0,3048.0,0.5651393277793737,0.720802418246771,0.2841226763523578,57893.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.35,7201.0,4692.0,3716.0,0.6054822164298327,0.6596134469176513,0.2426796171975432,44560.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.4,6535.0,3585.0,4382.0,0.6457509881422925,0.5986076761014931,0.2065011120860285,31015.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.45,5873.0,2702.0,5044.0,0.6848979591836735,0.5379683063112577,0.1749750035709184,17334.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.5,5214.0,2054.0,5703.0,0.717391304347826,0.4776037372904644,0.1483053441345114,3484.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.55,4596.0,1545.0,6321.0,0.7484123106985833,0.4209947787853806,0.1253086293794764,-9603.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.6,3978.0,1106.0,6939.0,0.7824547600314713,0.3643858202802967,0.1037402820005305,-22760.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.65,3369.0,774.0,7548.0,0.8131788559015206,0.3086012640835394,0.0845389434162466,-35826.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.7,2751.0,507.0,8166.0,0.8443830570902394,0.2519923055784556,0.066480298732834,-49155.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.75,2126.0,317.0,8791.0,0.8702415063446582,0.1947421452780068,0.0498500214255106,-62715.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.8,1550.0,175.0,9367.0,0.8985507246376812,0.1419803975451131,0.0351990531964821,-75245.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.85,962.0,81.0,9955.0,0.922339405560882,0.0881194467344508,0.021282673903728,-88087.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.9,520.0,21.0,10397.0,0.9611829944547134,0.0476321333699734,0.0110392392923459,-97751.0,False
+aggressive_prevention,12,1,10,Missing true decline is costly; broad early support is acceptable.,0.95,204.0,3.0,10713.0,0.9855072463768116,0.0186864523220665,0.0042238863835778,-104685.0,False

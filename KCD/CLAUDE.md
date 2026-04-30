@@ -1,65 +1,143 @@
-# KCD 소상공인 라이프사이클 연구 — Claude 작업 가이드
+# KCD Project Agent Instructions
 
-## 연구 맥락
-- **지도교수**: KAIST 김지희 교수
-- **데이터**: KCD(한국신용데이터) — 서울 음식점 59,089개 점포, 주간 매출 2021-01-01 ~ 2023-08-28
-- **투고 타깃**: HICSS 2027 (유력) / ICIS 2026 / DSS 저널 확장판 (2027)
-- **연구 주제**: Data-Driven Early Warning System for Small Business Lifecycle Prediction
-- **데이터 민감성**: KCD 원본은 외부 비공개. 논문/스니펫 공유 전 데이터 출판 허가 여부를 항상 확인할 것.
+This repository is a research workspace for the KCD small-business lifecycle
+project. The user usually wants execution, grounded analysis, and concrete saved
+artifacts, not high-level advice. When in doubt, inspect the actual files first,
+then implement in a contained way.
 
-## 디렉토리 규칙
-- **활성 작업 영역**: `top_tier/` — 코드/출력/논문 드래프트 모두 여기.
-- **레거시 아카이브**: `260121`, `260204`, …, `260409` 등 날짜 폴더는 과거 반복 실험. **수정·삭제 금지**, 참조만.
-- **출력 규약**: 모든 산출물은 `top_tier/outputs/{tables,figures,docs}`에 저장.
-  - `tables/`: parquet, csv
-  - `figures/`: png, pdf
-  - `docs/`: 실행 로그(`stepXX.log`), 보고서 md
-- **논문 드래프트**: `top_tier/paper_draft/0X_*.md` — 섹션 단위로 구성.
-- **지도교수 미팅 메모**: `top_tier/advisor_meeting/`.
+## How To Work With The User
 
-## 실행 환경
-- **Python 인터프리터**: 항상 `/home/hyeoky98/miniforge/bin/python` 사용. `python3` / `.venv` 사용 금지.
-- **주요 패키지**: pandas, numpy, scikit-learn, statsmodels, lightgbm, xgboost, lifelines, shap, torch (CPU 권장 — `FORCE_CPU=1`).
-- **장기 실행 패턴**:
-  ```
-  PYTHONUNBUFFERED=1 nohup /home/hyeoky98/miniforge/bin/python \
-    /home/hyeoky98/kcd/top_tier/src/stepXX_*.py \
-    2>&1 | tee /home/hyeoky98/kcd/top_tier/outputs/docs/stepXX.log &
-  ```
-- **공통 설정**: `top_tier/config.py` — 경로·시드(42)·outcome class 정의를 항상 import해서 재사용. 하드코딩 금지.
+- The user cares strongly whether the right local artifacts were actually
+  checked. Before making claims, inspect the relevant files and name the paths
+  that support the answer.
+- Prefer doing the work over proposing it. If the user says "진행하세요",
+  "해주세요", "가능한 분석을 전부 진행하세요", or "저는 잘 겁니다", implement the
+  requested work end to end when feasible.
+- Report exact saved paths, row counts, metrics, and caveats. Avoid vague
+  progress summaries.
+- If the user says "너무 길다. 짧게. 핵심만.", answer with only the minimum
+  necessary result.
+- If the user asks whether something is meaningful or publishable, give a direct
+  tier/risk judgment first, then explain the reasoning.
+- If schema or data assumptions do not match the requested analysis, stop and
+  state the mismatch. Do not silently substitute a different analysis plan.
 
-## 파이프라인 개요 (참조용)
-- step00–01: 원본 패널 준비, 데이터 기반 통합
-- step02(b): 생존분석 (Kaplan-Meier, Cox PH + 가정 검정)
-- step03: 예측 모델 (XGBoost 베이스라인)
-- step04: 시계열 클러스터링 (K-Means / K-Shape)
-- step05(b,c): 인과 분석 (Granger, DiD event study, 강화 PSM)
-- step06: SHAP 해석
-- step07: 견고성 점검
-- step08–09: figure / report 생성
-- step10(b): hybrid 예측 (leakage-free 변형)
-- step11: 변동성 패러독스 분해
-- step12: Early Warning System 산출
-- step13(b): DL 베이스라인 (LSTM/GRU/Transformer)
-- step14: Figure 1 framework
-- step15: external validation
-- audit01–04: 자기 감사 (outcome sanity, trivial baseline, threshold sensitivity, cluster external validity)
+## File And Output Policy
 
-## 작업 스타일
-- **응답 언어**: 한국어 기본. 코드 주석/논문 본문은 영어.
-- **다중 LLM 병용**: 유저는 GPT/Claude/Gemini를 교차 활용. 초안·outline 형태가 환영됨. "Claude만이 답이다" 식 단정 금지.
-- **논문 톤**: ICIS/HICSS reviewer 가독성 — IS·DSR 어휘, 인용은 author-year placeholder 허용.
-- **수치 인용**: 본문에 등장하는 모든 수치는 `outputs/tables/` 또는 로그에서 출처 확인 후 인용. 추정·반올림 시 명시.
+- Do not overwrite old outputs unless the user explicitly asks.
+- For new analyses, create a new dated folder such as `260430/` and keep it
+  self-contained:
+  - `src/`
+  - `outputs/tables/`
+  - `outputs/figures/`
+  - `docs/`
+- When the user says previous results should not be touched, preserve them and
+  create a new variant, script, or output folder.
+- Prefer standalone reports and interpretation memos in `docs/` in addition to
+  raw tables and figures.
+- For large data tasks, start with file inventory, schemas, compact summaries,
+  and existing result artifacts before opening raw files broadly.
 
-## 가드레일
-- **레거시 폴더 수정 금지**: `260MMDD*` 폴더는 읽기 전용으로 취급.
-- **원본 데이터 덮어쓰기 금지**: `original_data/weekly.parquet`, `original_data/meta.csv`는 read-only.
-- **모델 재학습 전 확인**: step02·03·10·13 등은 수십 분~수 시간 소요. 임의 재실행 전 유저에게 확인.
-- **"논문 작성 시간 부족"을 blocker로 취급하지 말 것**: writing bandwidth는 LLM 지원으로 대체 가능 (단, citation/novelty/이론 framing 한계는 별도 명시).
-- **투고 마감 인지**: ICIS 2026 마감이 임박한 시점에는 HICSS 2027 우선 검토를 제안.
+## KCD Research Direction
 
-## 자주 쓰는 진입점
-- 새로운 분석 추가: `top_tier/src/stepXX_*.py` 신설 → `config.py` import → 출력은 규약대로
-- 논문 본문 수정: `top_tier/paper_draft/0X_*.md`
-- 지도 미팅 자료: `top_tier/advisor_meeting/`
-- 외부 데이터 갱신: `top_tier/run_external_refresh.sh`
+- The core MSc thesis should stay broad and defensible:
+  - store-level lifecycle diagnosis,
+  - post-entry trajectories vs observed-window Growth/Stable/Decline states,
+  - early transaction patterns as predictors of later lifecycle outcomes,
+  - careful caveats about causality and seasonality.
+- Avoid unexplained shorthand such as "two lenses". Write it plainly as
+  "post-entry trajectories vs observed-window states".
+- Do not overclaim forecasting performance. Explain what the baseline is and
+  frame gains as incremental improvement over strict baselines, not simply high
+  accuracy.
+- Cluster, UDX, change-point, LEVI, Golden Cross, and EWS are useful, but their
+  role depends on the deliverable:
+  - thesis: supporting or robustness material unless explicitly adopted,
+  - paper: sharper artifact-driven contribution,
+  - appendix/future work: broader extensions that increase defense burden.
+
+## Current 260430 Direction
+
+- The 260430 personal meeting identified a key seasonality concern:
+  early windows and target windows should be calendar-matched where possible.
+- The current robustness package lives in `260430/`.
+- Important files:
+  - `260430/src/run_seasonal_window_analysis.py`
+  - `260430/src/build_levi_ews_academic_package.py`
+  - `260430/docs/260430_seasonality_analysis_report.md`
+  - `260430/docs/260430_levi_ews_academic_strategy.md`
+  - `260430/docs/260430_levi_ews_paper_outline.md`
+- Treat the seasonal rolling-window result as robustness evidence, not as a
+  replacement for the full `top_tier` hybrid model unless the user asks for that
+  reframing.
+
+## LEVI And EWS Framing
+
+- LEVI is academically meaningful only if framed as construct/external
+  validation of local business vitality, not merely "we made an index".
+- Strong LEVI claims currently supported:
+  - LEVI vs living-population change is strongly positive.
+  - LEVI vs population level is near zero, so the signal is not merely area size.
+  - LEVI vs permit closure rate is directionally negative.
+  - Multiple LEVI formulas are highly correlated, so the result is not tied to
+    one arbitrary formula.
+- Do not claim LEVI is causal.
+- EWS is academically meaningful only if framed as a calibrated,
+  cost-sensitive decision-support artifact, not merely a prediction model.
+- Strong EWS claims currently supported:
+  - Decline AP is far above the baseline decline rate.
+  - Risk deciles show increasing observed decline rates.
+  - Threshold and cost-sensitivity tables translate scores into policy choices.
+  - Hybrid trajectory representation improves the EWS input model.
+- Do not claim EWS has been field deployed unless actual deployment evidence is
+  added.
+
+## Venue Strategy
+
+- HICSS: strongest fit for decision-support / digital trace / public-value
+  analytics framing.
+- DSS: plausible after polishing artifact evaluation, calibration, cost
+  sensitivity, and representation ablation.
+- Information & Management: plausible with managerial/digital trace framing.
+- Small Business Economics: possible with LEVI/local vitality framing, but needs
+  stronger economics language and cautious causal claims.
+- ICIS: possible but risky; requires stronger IS theory and a cleaner artifact
+  narrative.
+- MISQ/ISR/JMIS: not yet realistic without a much stronger theoretical
+  abstraction layer.
+
+## Authoritative Local Anchors
+
+- Raw data anchors:
+  - `original_data/weekly.parquet`
+  - `original_data/meta.csv`
+- Curated orientation files:
+  - `docs/THESIS_DEEP_RESEARCH_FILE_GUIDE.md`
+  - `docs/DEEP_RESEARCH_BRIEF.md`
+  - `docs/thesis_figures/README.md`
+- Main refreshed paper-track pipeline:
+  - `top_tier/src/step00_prepare_original_panel.py`
+  - `top_tier/outputs/tables/`
+  - `top_tier/outputs/docs/top_tier_report.md`
+- Thesis path:
+  - use `thesis/...`
+  - do not revive `thesis_v2`; it was a redundant alias.
+
+## Git / Repository Caution
+
+- Local `/home/hyeoky98/kcd` may not itself be a Git repository.
+- The GitHub `masters` repository stores this project under `KCD/`.
+- If pushing to `git@github.com:HyeokyYun/masters.git`, do not create
+  root-level `thesis/`, `top_tier/`, or dated folders. Place KCD work under
+  `KCD/...`.
+- If uncertain, clone/check the remote structure first and verify `git status`
+  before committing.
+
+## Reporting Style
+
+- Start final answers with what changed and where it was saved.
+- Include the key numbers that answer the user's question.
+- State what was not done, especially if Git push, full rerun, or live
+  deployment was not requested.
+- Use Korean for user-facing research summaries unless the requested artifact is
+  intended as an English paper draft.

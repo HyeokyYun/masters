@@ -1,0 +1,11 @@
+﻿levi_formula_a,levi_formula_b,pearson,spearman,n
+levi_v2_log_odds,levi_v4_trend_median,0.9793735211756462,0.9638461538461539,25
+levi_v1_balance,levi_v4_trend_median,0.9831388480807228,0.9684615384615385,25
+levi_v4_trend_median,levi_v5_shrinkage20,0.9831664518510187,0.9684615384615385,25
+levi_v3_trend_mean,levi_v4_trend_median,0.9851756334206919,0.966923076923077,25
+levi_v2_log_odds,levi_v3_trend_mean,0.9965365783573475,0.9915384615384615,25
+levi_v1_balance,levi_v3_trend_mean,0.9973511315017733,0.9915384615384615,25
+levi_v3_trend_mean,levi_v5_shrinkage20,0.9973907026012714,0.9915384615384615,25
+levi_v1_balance,levi_v2_log_odds,0.9992524530584583,0.9984615384615384,25
+levi_v2_log_odds,levi_v5_shrinkage20,0.9992532973409689,0.9984615384615384,25
+levi_v1_balance,levi_v5_shrinkage20,0.9999900171377615,1.0,25

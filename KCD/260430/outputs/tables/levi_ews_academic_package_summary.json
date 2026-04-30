@@ -1,0 +1,9 @@
+{
+  "levi_validity_rows": 8,
+  "levi_min_formula_corr": 0.9793735211756462,
+  "ews_evaluation_rows": 6,
+  "ews_calibration_bins": 10,
+  "best_ews_threshold": 0.1,
+  "cost_scenarios": 3,
+  "venue_count": 5
+}

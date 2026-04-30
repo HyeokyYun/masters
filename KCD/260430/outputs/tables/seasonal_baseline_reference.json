@@ -1,0 +1,5 @@
+{
+  "top_tier_xgb_macro_f1": 0.548,
+  "top_tier_hybrid_macro_f1": 0.6392,
+  "top_tier_hybrid_auc": 0.8238
+}
