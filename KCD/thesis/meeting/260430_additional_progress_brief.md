@@ -122,11 +122,24 @@ EWS는 점포가 미래에 폐업하거나 쇠퇴할 위험을 미리 경고하�
 | 0.35 | 82.8% | 60.5% | 66.0% | 0.631 | 24.3% |
 | 0.50 | 84.2% | 71.7% | 47.8% | 0.573 | 14.8% |
 
+지표를 쉽게 해석하면:
+
+| 지표 | 쉬운 뜻 |
+|---|---|
+| Threshold | 위험 점포로 표시할 기준선 |
+| Accuracy | 전체 점포 중 위험/비위험 판단이 맞은 비율 |
+| Precision | 위험하다고 표시한 점포 중 실제 Decline이었던 비율 |
+| Recall | 실제 Decline 점포 중 EWS가 잡아낸 비율 |
+| F1 | Precision과 Recall의 균형 점수 |
+| Flagged | 전체 점포 중 위험 점포로 표시된 비율, 즉 실제 관리 대상 규모 |
+
 해석:
 - 단일 accuracy만 보면 threshold에 따라 약 65-84%입니다.
 - 균형적인 기준은 threshold 0.30-0.35입니다. 이때 accuracy는 약 81-83%, F1은 약 0.63입니다.
 - 정책적으로 위험 점포를 놓치는 비용이 크면 threshold 0.10을 쓸 수 있습니다. 이 경우 recall은 93.9%로 높지만, flagged가 54.7%로 넓어집니다.
 - 전체 ranking 성능은 Decline Average Precision 0.688이며, baseline Decline rate 0.223보다 높습니다.
+
+예를 들어 threshold 0.30은 Decline risk가 30% 이상인 점포만 위험 점포로 표시한다는 뜻입니다. 이 기준에서는 전체 점포의 28.4%가 관리 대상으로 올라가고, 실제 Decline 점포의 72.1%를 잡아내며, 위험하다고 표시한 점포 중 56.5%가 실제 Decline입니다.
 
 예시 점포 산출물:
 - 표: `top_tier/outputs/tables/ews_example_stores.csv`
