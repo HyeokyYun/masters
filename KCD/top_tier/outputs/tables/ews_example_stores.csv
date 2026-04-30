@@ -1,0 +1,7 @@
+﻿case_label,case_type,recommended_action,public_id,outcome_3,category,risk_score_decline,opportunity_score_growth,slope_all_mm,mdd,nc_rate,n_observed_weeks_used
+Case A,"High-risk alert, true Decline",Priority monitoring/support candidate,70947602,Decline,분식,98.6,0.6,-0.0057888209761714,0.999999999,0.699036761822803,71
+Case B,"High-risk alert, true Decline",Priority monitoring/support candidate,41497516,Decline,분식,98.5,0.3,-0.0102387043359574,0.999999999,0.7222989666066423,82
+Case C,"Watchlist, actual Stable",Watchlist; avoid treating score as final label,57563696,Stable,카페,96.8,1.0,-0.0011087226617724,0.999999999,0.5327587221173188,108
+Case D,Growth opportunity,Low decline risk; possible growth/opportunity case,26805757,Growth,술집,0.4,97.4,0.0054041919925151,0.955246377790611,0.9459192122904452,108
+Case E,Growth opportunity,Low decline risk; possible growth/opportunity case,7926127,Growth,술집,0.4,97.3,0.0065449642991834,0.9453193955936467,0.8047638001481422,108
+Case F,Missed Decline caveat,Model limitation; inspect raw trajectory before excluding,90087446,Decline,일식,0.6,93.6,-0.002998772897319,0.999999999,0.9581325878833804,83
