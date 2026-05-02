@@ -55,6 +55,10 @@ RQ4. cluster, change-point 등 trajectory representation은 기본 거래 featur
 | 계절성 보정 best Macro-F1 | 0.509 | 260430 rolling-window robustness |
 | 계절성 보정 best AUC | 0.722 | `y2021_m09_w20_lag1y` |
 | 계절성 보정 best Decline recall | 0.663 | 하락 점포 조기 포착 가능성 |
+| Strict rolling 평균 Macro-F1 | 0.407 | 2021->2022 학습, 2022->2023 테스트 |
+| Strict rolling best Macro-F1 | 0.478 | 5월 시작, 12주 window |
+| Strict rolling 평균 AUC | 0.650 | 미래연도 이전 검증 |
+| Strict rolling 평균 Decline recall | 0.357 | majority baseline 0.000 대비 우수 |
 
 ## 본문 작성 원칙
 
@@ -63,4 +67,4 @@ RQ4. cluster, change-point 등 trajectory representation은 기본 거래 featur
 3. LEVI/EWS는 “쓸모 있음”과 “학문적 중심 기여”를 구분해 낮춘다.
 4. 예측 시점 이후 정보를 feature로 사용하지 않았는지 계속 확인한다.
 5. 정책적 함의는 가능성으로만 쓰고, 실제 개입효과를 주장하지 않는다.
-
+6. Strict rolling 결과는 성능 향상 근거가 아니라 가장 보수적인 일반화 검증으로 쓴다.

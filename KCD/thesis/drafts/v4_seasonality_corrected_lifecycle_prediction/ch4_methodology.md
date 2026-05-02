@@ -28,15 +28,24 @@ target window는 예측하고자 하는 이후 기간이다. 기본 label은 tar
 
 260430 분석에서는 136개의 유효 window specification을 평가하였다. 각 specification에 대해 balanced logistic regression과 5-fold cross-validation을 사용하여 Macro-F1, Weighted-F1, one-vs-rest AUC, class별 recall을 계산하였다. 이 결과는 기존 full-window 모델을 대체하는 것이 아니라, 계절성 우려에 대한 robustness evidence로 해석한다.
 
-## 4.5 예측 모델과 평가 지표
+## 4.5 Strict Out-of-Time Rolling 검증
+
+추가로 본 연구는 더 보수적인 strict out-of-time rolling 검증을 수행한다. 이 검증은 같은 calendar window를 유지하되, 학습과 테스트를 서로 다른 미래연도로 분리한다.
+
+| 구분 | 학습 | 테스트 |
+|---|---|---|
+| Strict rolling | 2021년 m월부터 k주 feature -> 2022년 m월부터 k주 label | 2022년 m월부터 k주 feature -> 2023년 m월부터 k주 label |
+
+이 검증은 기존 seasonal CV보다 더 어렵다. Seasonal CV는 같은 specification 안에서 점포를 나누어 cross-validation을 수행하지만, strict rolling은 `2021 -> 2022` 관계가 `2022 -> 2023`으로 이전되는지를 평가한다. 따라서 strict rolling 성능은 본 연구의 conservative lower-bound evidence로 해석한다.
+
+## 4.6 예측 모델과 평가 지표
 
 주요 평가지표는 Macro-F1, Weighted-F1, AUC, class별 recall이다. Macro-F1은 Growth, Stable, Decline 세 class의 성능을 동일한 가중치로 평가하므로 class imbalance 상황에서 중요하다. Decline recall은 하락 점포를 얼마나 놓치지 않는지 보여주므로 조기진단 관점에서 별도로 보고한다.
 
 기본 모델은 거래 feature만 사용한 분류 모델이다. 확장 모델은 cluster와 change-point 등 trajectory representation을 추가한다. 기존 `top_tier` 결과에서는 hybrid representation이 기본 모델보다 높은 Macro-F1과 AUC를 보였다. 다만 이 결과를 본문에 사용할 때에는 feature 계산 시점이 예측 시점 이전으로 제한되었는지 확인하고 명시해야 한다.
 
-## 4.6 해석 전략
+## 4.7 해석 전략
 
-본 연구의 해석은 세 층으로 구성한다. 첫째, full-window 분석을 통해 초기 거래 패턴의 예측 가능성을 제시한다. 둘째, observation window가 길어질수록 특히 Decline 예측 성능이 개선되는지 검토한다. 셋째, 계절성 보정 rolling-window 결과를 통해 예측 신호가 단순한 seasonality artifact가 아님을 보인다.
+본 연구의 해석은 네 층으로 구성한다. 첫째, full-window 분석을 통해 초기 거래 패턴의 예측 가능성을 제시한다. 둘째, observation window가 길어질수록 특히 Decline 예측 성능이 개선되는지 검토한다. 셋째, 계절성 보정 rolling-window 결과를 통해 예측 신호가 단순한 seasonality artifact가 아님을 보인다. 넷째, strict out-of-time rolling 검증을 통해 이 신호가 미래연도 이전에서 얼마나 약화되는지 평가한다.
 
-이 순서는 방어 가능성이 높다. 먼저 예측 문제가 성립함을 보이고, 그 다음 예측 timing의 trade-off를 설명하며, 마지막으로 미팅에서 제기된 가장 중요한 방법론적 우려를 직접 검증하기 때문이다.
-
+이 순서는 방어 가능성이 높다. 먼저 예측 문제가 성립함을 보이고, 그 다음 예측 timing의 trade-off를 설명하며, 마지막으로 미팅에서 제기된 가장 중요한 방법론적 우려를 단계적으로 검증하기 때문이다.
