@@ -17,6 +17,8 @@
    사전 답변(target leakage, 시즈널×코로나 교란 분리 등).
 6. **`05_feedback_traceback.md`** — 04-30 미팅 전사의 모든 피드백 항목과
    현재 자료 매핑.
+7. **`06_thesis_direction_opinion.md`** — 본 폴더 결과를 본 후의 논문
+   방향성 권고 (Option C 메인 + Option A 보조, 베뉴 전략, 1주 산출물).
 
 ## 본 폴더가 다루는 범위
 
