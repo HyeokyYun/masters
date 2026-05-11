@@ -4,6 +4,15 @@
 (`260430_claude/meeting/07_meeting_feedback.md`)에 대응하여 추가로 실행한
 9개 phase의 코드/결과/문서를 별도 폴더로 모아둔 스냅샷이다.
 
+## 트랙 구분 (2026-05-11 추가)
+
+| 트랙 | 위치 | 용도 |
+|---|---|---|
+| **학위논문** | `thesis_track/` | v5_thesis_final 통합 패치 + defense Q&A. 졸업 우선. |
+| **학회/저널** | `paper_track/` | HICSS 2027 / DSS 등 submission 패키지. paper 가속용. |
+| **외부 SOTA 실험** | `phase5_external/` | Phase 5 코드/결과 (foundation + stock SOTA + attention + weighting 14종). thesis/paper 양 트랙의 정량 자료 원천. |
+| **피드백 후속 산출물** | `src/`, `docs/`, `outputs/` | 9개 phase 원본 자료 (260430_claude에서 복사된 스냅샷). |
+
 - 원본은 `260430_claude/`에 보존되어 있다 (v5_thesis_final 경로 인용은 깨지지
   않는다).
 - 본 폴더 안의 스크립트들은 `config.py`가 여전히 `260430_claude/`를
