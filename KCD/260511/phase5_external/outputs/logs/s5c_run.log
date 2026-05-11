@@ -1,0 +1,73 @@
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU0 NVIDIA TITAN Xp which is of cuda capability 6.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (7.0) - (12.0)
+    
+  warnings.warn(
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:304: UserWarning: 
+    Please install PyTorch with a following CUDA
+    configurations:  12.6 following instructions at
+    https://pytorch.org/get-started/locally/
+    
+  warnings.warn(matched_cuda_warn.format(matched_arches))
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU1 NVIDIA TITAN Xp which is of cuda capability 6.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (7.0) - (12.0)
+    
+  warnings.warn(
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU2 NVIDIA TITAN Xp which is of cuda capability 6.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (7.0) - (12.0)
+    
+  warnings.warn(
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU3 NVIDIA TITAN Xp which is of cuda capability 6.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (7.0) - (12.0)
+    
+  warnings.warn(
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:326: UserWarning: 
+NVIDIA TITAN Xp with CUDA capability sm_61 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_70 sm_75 sm_80 sm_86 sm_90 sm_100 sm_120.
+If you want to use the NVIDIA TITAN Xp GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+[5C] === sy2021_sm01_w3m_off1 ===
+[5C] sy2021_sm01_w3m_off1 rf_tabular   F1=0.490
+[5C] sy2021_sm01_w3m_off1 feat_attn_mlp F1=0.438 Δ=-0.0525 p=0.004
+[5C] sy2021_sm01_w3m_off1 time_attn_lstm F1=0.411 Δ=-0.0794 p=0.002
+[5C] sy2021_sm01_w3m_off1 film_tenure_lstm F1=0.432 Δ=-0.0583 p=0.013
+[5C] === sy2021_sm05_w3m_off1 ===
+[5C] sy2021_sm05_w3m_off1 rf_tabular   F1=0.475
+[5C] sy2021_sm05_w3m_off1 feat_attn_mlp F1=0.457 Δ=-0.0184 p=0.004
+[5C] sy2021_sm05_w3m_off1 time_attn_lstm F1=0.407 Δ=-0.0676 p=0.276
+[5C] sy2021_sm05_w3m_off1 film_tenure_lstm F1=0.457 Δ=-0.0180 p=0.107
+[5C] === sy2022_sm01_w3m_off1 ===
+[5C] sy2022_sm01_w3m_off1 rf_tabular   F1=0.498
+[5C] sy2022_sm01_w3m_off1 feat_attn_mlp F1=0.469 Δ=-0.0297 p=0.014
+[5C] sy2022_sm01_w3m_off1 time_attn_lstm F1=0.398 Δ=-0.1009 p=0.154
+[5C] sy2022_sm01_w3m_off1 film_tenure_lstm F1=0.397 Δ=-0.1017 p=0.045
+[5C] === sy2022_sm05_w3m_off1 ===
+[5C] sy2022_sm05_w3m_off1 rf_tabular   F1=0.506
+[5C] sy2022_sm05_w3m_off1 feat_attn_mlp F1=0.481 Δ=-0.0254 p=0.003
+[5C] sy2022_sm05_w3m_off1 time_attn_lstm F1=0.465 Δ=-0.0410 p=0.198
+[5C] sy2022_sm05_w3m_off1 film_tenure_lstm F1=0.497 Δ=-0.0095 p=0.308
+[5C] === sy2021_sm01_w7m_off1 ===
+[5C] sy2021_sm01_w7m_off1 rf_tabular   F1=0.531
+[5C] sy2021_sm01_w7m_off1 feat_attn_mlp F1=0.499 Δ=-0.0323 p=0.003
+[5C] sy2021_sm01_w7m_off1 time_attn_lstm F1=0.378 Δ=-0.1533 p=0.076
+[5C] sy2021_sm01_w7m_off1 film_tenure_lstm F1=0.479 Δ=-0.0519 p=0.012
+[5C] === sy2022_sm01_w7m_off1 ===
+[5C] sy2022_sm01_w7m_off1 rf_tabular   F1=0.483
+[5C] sy2022_sm01_w7m_off1 feat_attn_mlp F1=0.430 Δ=-0.0528 p=0.017
+[5C] sy2022_sm01_w7m_off1 time_attn_lstm F1=0.370 Δ=-0.1128 p=0.076
+[5C] sy2022_sm01_w7m_off1 film_tenure_lstm F1=0.443 Δ=-0.0402 p=0.011
+[5C] saved compare (24 rows), paired (18 rows)
+[5C] avg macro_F1 across panels:
+           model  macro_f1  n_panels
+      rf_tabular  0.497292         6
+feature_attn_mlp  0.462120         6
+film_tenure_lstm  0.450698         6
+  time_attn_lstm  0.404805         6

@@ -1,0 +1,22 @@
+[5A] === sy2021_sm01_w3m_off1 ===
+[5A] sy2021_sm01_w3m_off1 33,117 stores, H=13
+[5A] sy2021_sm01_w3m_off1 moirai_small           F1=0.306 Δ=-0.1873 p=0.000
+[5A] === sy2021_sm05_w3m_off1 ===
+[5A] sy2021_sm05_w3m_off1 35,201 stores, H=13
+[5A] sy2021_sm05_w3m_off1 moirai_small           F1=0.332 Δ=-0.1465 p=0.002
+[5A] === sy2022_sm01_w3m_off1 ===
+[5A] sy2022_sm01_w3m_off1 36,183 stores, H=13
+[5A] sy2022_sm01_w3m_off1 moirai_small           F1=0.236 Δ=-0.2656 p=0.017
+[5A] === sy2022_sm05_w3m_off1 ===
+[5A] sy2022_sm05_w3m_off1 35,989 stores, H=13
+[5A] sy2022_sm05_w3m_off1 moirai_small           F1=0.341 Δ=-0.1663 p=0.000
+[5A] === sy2021_sm01_w7m_off1 ===
+[5A] sy2021_sm01_w7m_off1 35,498 stores, H=30
+[5A] sy2021_sm01_w7m_off1 moirai_small           F1=0.373 Δ=-0.1592 p=0.001
+[5A] === sy2022_sm01_w7m_off1 ===
+[5A] sy2022_sm01_w7m_off1 37,308 stores, H=30
+[5A] sy2022_sm01_w7m_off1 moirai_small           F1=0.360 Δ=-0.1264 p=0.000
+[5A] done. rows=12
+       model  macro_f1  n_panels
+  rf_tabular  0.499910         6
+moirai_small  0.324703         6

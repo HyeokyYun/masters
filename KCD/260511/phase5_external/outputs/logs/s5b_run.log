@@ -1,0 +1,2171 @@
+[5B] === sy2021_sm01_w3m_off1 ===
+[5B] sy2021_sm01_w3m_off1 long df: 459,339 rows, 33,117 stores, H=13
+[5B] sy2021_sm01_w3m_off1 rf_tabular F1=0.493 (paired-RF reference)
+Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+[5B] === sy2021_sm01_w3m_off1 ===
+[5B] === sy2021_sm01_w3m_off1 ===
+[5B] === sy2021_sm01_w3m_off1 ===
+[5B] sy2021_sm01_w3m_off1 long df: 459,339 rows, 33,117 stores, H=13
+[5B] sy2021_sm01_w3m_off1 long df: 459,339 rows, 33,117 stores, H=13
+[5B] sy2021_sm01_w3m_off1 long df: 459,339 rows, 33,117 stores, H=13
+[5B] sy2021_sm01_w3m_off1 rf_tabular F1=0.493 (paired-RF reference)
+[5B] sy2021_sm01_w3m_off1 rf_tabular F1=0.493 (paired-RF reference)
+[rank: 1] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 rf_tabular F1=0.493 (paired-RF reference)
+[rank: 2] Seed set to 42
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+[rank: 3] Seed set to 42
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.4 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.4 M                                                         
+Non-trainable params: 702                                                       
+Total params: 2.4 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 31                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:06 •        35.01it/s v_num: 7.000     
+                                    0:00:00                    train_loss_step: 
+                                                               256474.344       
+                                                               train_loss_epoch:
+                                                               299506.875       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:08 • 0:00:00 122.52it/s 
+[5B] sy2021_sm01_w3m_off1 nbeats     F1=0.251 Δ=-0.2424 p=0.000
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:08 • 0:00:00 121.92it/s 
+[rank: 0] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:08 • 0:00:00 120.62it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:09 • 0:00:00 117.05it/s 
+[5B] sy2021_sm01_w3m_off1 nbeats     F1=0.251 Δ=-0.2424 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 nbeats     F1=0.251 Δ=-0.2424 p=0.000
+[rank: 1] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[5B] sy2021_sm01_w3m_off1 nbeats     F1=0.251 Δ=-0.2424 p=0.000
+[rank: 3] Seed set to 42
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.4 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.4 M                                                         
+Non-trainable params: 0                                                         
+Total params: 2.4 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 34                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:05 •        33.87it/s v_num: 9.000     
+                                    0:00:00                    train_loss_step: 
+                                                               258719.766       
+                                                               train_loss_epoch:
+                                                               302235.188       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:08 • 0:00:00 120.77it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:08 • 0:00:00 120.39it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:08 • 0:00:00 121.89it/s 
+[5B] sy2021_sm01_w3m_off1 nhits      F1=0.242 Δ=-0.2512 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 nhits      F1=0.242 Δ=-0.2512 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 nhits      F1=0.242 Δ=-0.2512 p=0.000
+[rank: 0] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:09 • 0:00:00 113.35it/s 
+[5B] sy2021_sm01_w3m_off1 nhits      F1=0.242 Δ=-0.2512 p=0.000
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ linear_trend  │ Linear        │    182 │ train │     0 │
+│ 5 │ linear_season │ Linear        │    182 │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 364                                                           
+Non-trainable params: 0                                                         
+Total params: 364                                                               
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 8                                                        
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:03 •        52.93it/s v_num: 11.000    
+                                    0:00:00                    train_loss_step: 
+                                                               313081.375       
+                                                               train_loss_epoch:
+                                                               363912.750       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:05 • 0:00:00 173.89it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:06 • 0:00:00 170.98it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:06 • 0:00:00 165.36it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:06 • 0:00:00 174.47it/s 
+[5B] sy2021_sm01_w3m_off1 dlinear    F1=0.311 Δ=-0.1827 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 dlinear    F1=0.311 Δ=-0.1827 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 dlinear    F1=0.311 Δ=-0.1827 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 dlinear    F1=0.311 Δ=-0.1827 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type              ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE               │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d     │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm      │      0 │ train │     0 │
+│ 3 │ model        │ PatchTST_backbone │  401 K │ train │     0 │
+└───┴──────────────┴───────────────────┴────────┴───────┴───────┘
+Trainable params: 401 K                                                         
+Non-trainable params: 3                                                         
+Total params: 401 K                                                             
+Total estimated model params size (MB): 1                                       
+Modules in train mode: 90                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:08 •        24.97it/s v_num: 13.000    
+                                    0:00:00                    train_loss_step: 
+                                                               247539.641       
+                                                               train_loss_epoch:
+                                                               305836.969       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:10 • 0:00:00 94.59it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:11 • 0:00:00 92.56it/s 
+[5B] sy2021_sm01_w3m_off1 patchtst   F1=0.186 Δ=-0.3078 p=0.000
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:11 • 0:00:00 92.85it/s 
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:11 • 0:00:00 90.74it/s 
+[5B] sy2021_sm01_w3m_off1 patchtst   F1=0.186 Δ=-0.3078 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 patchtst   F1=0.186 Δ=-0.3078 p=0.000
+[rank: 0] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 patchtst   F1=0.186 Δ=-0.3078 p=0.000
+[rank: 1] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name                    ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss                    │ MAE                   │      0 │ train │     0 │
+│ 1 │ padder_train            │ ConstantPad1d         │      0 │ train │     0 │
+│ 2 │ scaler                  │ TemporalNorm          │      0 │ train │     0 │
+│ 3 │ embedding               │ TFTEmbedding          │    512 │ train │     0 │
+│ 4 │ temporal_encoder        │ TemporalCovariateEnc… │  613 K │ train │     0 │
+│ 5 │ temporal_fusion_decoder │ TemporalFusionDecoder │  256 K │ train │     0 │
+│ 6 │ output_adapter          │ Linear                │    129 │ train │     0 │
+└───┴─────────────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 870 K                                                         
+Non-trainable params: 0                                                         
+Total params: 870 K                                                             
+Total estimated model params size (MB): 3                                       
+Modules in train mode: 88                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:13 •        14.85it/s v_num: 15.000    
+                                    0:00:00                    train_loss_step: 
+                                                               350170.781       
+                                                               train_loss_epoch:
+                                                               375033.188       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:14 • 0:00:00 72.93it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:14 • 0:00:00 71.71it/s 
+[5B] sy2021_sm01_w3m_off1 tft        F1=0.261 Δ=-0.2320 p=0.000
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:14 • 0:00:00 70.81it/s 
+[5B] sy2021_sm01_w3m_off1 tft        F1=0.261 Δ=-0.2320 p=0.000
+[rank: 3] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:14 • 0:00:00 69.28it/s 
+[5B] sy2021_sm01_w3m_off1 tft        F1=0.261 Δ=-0.2320 p=0.000
+[rank: 0] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 tft        F1=0.261 Δ=-0.2320 p=0.000
+[rank: 1] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 4 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ encoder       │ TransEncoder  │ 54.8 K │ train │     0 │
+│ 6 │ decoder       │ TransDecoder  │ 38.0 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 93.2 K                                                        
+Non-trainable params: 0                                                         
+Total params: 93.2 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 73                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:01:01 • 0:00:00 3.35it/s v_num: 17.000    
+                                                               train_loss_step: 
+                                                               350175.219       
+                                                               train_loss_epoch:
+                                                               375035.125       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:21 • 0:00:00 48.06it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:22 • 0:00:00 47.00it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:22 • 0:00:00 46.60it/s 
+[5B] sy2021_sm01_w3m_off1 informer   F1=0.185 Δ=-0.3086 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 informer   F1=0.185 Δ=-0.3086 p=0.000
+[rank: 1] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:22 • 0:00:00 46.89it/s 
+[5B] sy2021_sm01_w3m_off1 informer   F1=0.185 Δ=-0.3086 p=0.000
+[rank: 0] Seed set to 42
+[5B] sy2021_sm01_w3m_off1 informer   F1=0.185 Δ=-0.3086 p=0.000
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 6 │ encoder       │ Encoder       │ 41.6 K │ train │     0 │
+│ 7 │ decoder       │ Decoder       │ 37.8 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 79.7 K                                                        
+Non-trainable params: 0                                                         
+Total params: 79.7 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 85                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:17 •        11.62it/s v_num: 19.000    
+                                    0:00:00                    train_loss_step: 
+                                                               261074.406       
+                                                               train_loss_epoch:
+                                                               400570.406       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:25 • 0:00:00 40.93it/s 
+[5B] sy2021_sm01_w3m_off1 autoformer F1=0.182 Δ=-0.3113 p=0.000
+[5B] === sy2021_sm05_w3m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:25 • 0:00:00 40.47it/s 
+[5B] sy2021_sm01_w3m_off1 autoformer F1=0.182 Δ=-0.3113 p=0.000
+[5B] === sy2021_sm05_w3m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:26 • 0:00:00 39.32it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1035/1035 0:00:26 • 0:00:00 38.81it/s 
+[5B] sy2021_sm01_w3m_off1 autoformer F1=0.182 Δ=-0.3113 p=0.000
+[5B] === sy2021_sm05_w3m_off1 ===
+[5B] sy2021_sm01_w3m_off1 autoformer F1=0.182 Δ=-0.3113 p=0.000
+[5B] === sy2021_sm05_w3m_off1 ===
+[5B] sy2021_sm05_w3m_off1 long df: 1,053,943 rows, 35,201 stores, H=13
+[5B] sy2021_sm05_w3m_off1 long df: 1,053,943 rows, 35,201 stores, H=13
+[5B] sy2021_sm05_w3m_off1 long df: 1,053,943 rows, 35,201 stores, H=13
+[5B] sy2021_sm05_w3m_off1 long df: 1,053,943 rows, 35,201 stores, H=13
+[5B] sy2021_sm05_w3m_off1 rf_tabular F1=0.479 (paired-RF reference)
+[rank: 2] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 rf_tabular F1=0.479 (paired-RF reference)
+[rank: 3] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 rf_tabular F1=0.479 (paired-RF reference)
+[rank: 0] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 rf_tabular F1=0.479 (paired-RF reference)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[rank: 1] Seed set to 42
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.4 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.4 M                                                         
+Non-trainable params: 702                                                       
+Total params: 2.4 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 31                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:06 •        31.56it/s v_num: 21.000    
+                                    0:00:00                    train_loss_step: 
+                                                               51378.527        
+                                                               train_loss_epoch:
+                                                               91691.938        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:08 • 0:00:00 122.34it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:09 • 0:00:00 120.15it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:09 • 0:00:00 117.36it/s 
+[5B] sy2021_sm05_w3m_off1 nbeats     F1=0.269 Δ=-0.2094 p=0.002
+[rank: 2] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 nbeats     F1=0.269 Δ=-0.2094 p=0.002
+[rank: 1] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:09 • 0:00:00 117.70it/s 
+[5B] sy2021_sm05_w3m_off1 nbeats     F1=0.269 Δ=-0.2094 p=0.002
+[rank: 3] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 nbeats     F1=0.269 Δ=-0.2094 p=0.002
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.4 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.4 M                                                         
+Non-trainable params: 0                                                         
+Total params: 2.4 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 34                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:05 •        34.86it/s v_num: 23.000    
+                                    0:00:00                    train_loss_step: 
+                                                               51221.512        
+                                                               train_loss_epoch:
+                                                               92959.188        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:09 • 0:00:00 120.83it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:09 • 0:00:00 116.57it/s 
+[5B] sy2021_sm05_w3m_off1 nhits      F1=0.343 Δ=-0.1355 p=0.001
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:09 • 0:00:00 117.43it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:09 • 0:00:00 115.77it/s 
+[5B] sy2021_sm05_w3m_off1 nhits      F1=0.343 Δ=-0.1355 p=0.001
+[rank: 1] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 nhits      F1=0.343 Δ=-0.1355 p=0.001
+[rank: 0] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 nhits      F1=0.343 Δ=-0.1355 p=0.001
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ linear_trend  │ Linear        │    182 │ train │     0 │
+│ 5 │ linear_season │ Linear        │    182 │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 364                                                           
+Non-trainable params: 0                                                         
+Total params: 364                                                               
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 8                                                        
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:03 •        56.67it/s v_num: 25.000    
+                                    0:00:00                    train_loss_step: 
+                                                               60503.602        
+                                                               train_loss_epoch:
+                                                               106437.297       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:06 • 0:00:00 169.09it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:06 • 0:00:00 169.02it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:06 • 0:00:00 163.00it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:06 • 0:00:00 171.15it/s 
+[5B] sy2021_sm05_w3m_off1 dlinear    F1=0.430 Δ=-0.0489 p=0.006
+[5B] sy2021_sm05_w3m_off1 dlinear    F1=0.430 Δ=-0.0489 p=0.006
+[rank: 1] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 dlinear    F1=0.430 Δ=-0.0489 p=0.006
+[rank: 2] Seed set to 42
+[rank: 3] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 dlinear    F1=0.430 Δ=-0.0489 p=0.006
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type              ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE               │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d     │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm      │      0 │ train │     0 │
+│ 3 │ model        │ PatchTST_backbone │  401 K │ train │     0 │
+└───┴──────────────┴───────────────────┴────────┴───────┴───────┘
+Trainable params: 401 K                                                         
+Non-trainable params: 3                                                         
+Total params: 401 K                                                             
+Total estimated model params size (MB): 1                                       
+Modules in train mode: 90                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:08 •        24.76it/s v_num: 27.000    
+                                    0:00:00                    train_loss_step: 
+                                                               49780.480        
+                                                               train_loss_epoch:
+                                                               93414.383        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:11 • 0:00:00 92.09it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:12 • 0:00:00 90.89it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:12 • 0:00:00 88.82it/s 
+[5B] sy2021_sm05_w3m_off1 patchtst   F1=0.272 Δ=-0.2067 p=0.001
+[rank: 2] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 patchtst   F1=0.272 Δ=-0.2067 p=0.001
+[rank: 0] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:12 • 0:00:00 87.98it/s 
+[5B] sy2021_sm05_w3m_off1 patchtst   F1=0.272 Δ=-0.2067 p=0.001
+[rank: 3] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 patchtst   F1=0.272 Δ=-0.2067 p=0.001
+[rank: 1] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name                    ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss                    │ MAE                   │      0 │ train │     0 │
+│ 1 │ padder_train            │ ConstantPad1d         │      0 │ train │     0 │
+│ 2 │ scaler                  │ TemporalNorm          │      0 │ train │     0 │
+│ 3 │ embedding               │ TFTEmbedding          │    512 │ train │     0 │
+│ 4 │ temporal_encoder        │ TemporalCovariateEnc… │  613 K │ train │     0 │
+│ 5 │ temporal_fusion_decoder │ TemporalFusionDecoder │  256 K │ train │     0 │
+│ 6 │ output_adapter          │ Linear                │    129 │ train │     0 │
+└───┴─────────────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 870 K                                                         
+Non-trainable params: 0                                                         
+Total params: 870 K                                                             
+Total estimated model params size (MB): 3                                       
+Modules in train mode: 88                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:15 •        13.15it/s v_num: 29.000    
+                                    0:00:00                    train_loss_step: 
+                                                               65521.820        
+                                                               train_loss_epoch:
+                                                               108433.812       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:15 • 0:00:00 72.14it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:15 • 0:00:00 71.32it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:15 • 0:00:00 71.62it/s 
+[5B] sy2021_sm05_w3m_off1 tft        F1=0.266 Δ=-0.2127 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 tft        F1=0.266 Δ=-0.2127 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 tft        F1=0.266 Δ=-0.2127 p=0.000
+[rank: 0] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:15 • 0:00:00 69.72it/s 
+[5B] sy2021_sm05_w3m_off1 tft        F1=0.266 Δ=-0.2127 p=0.000
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 4 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ encoder       │ TransEncoder  │ 54.8 K │ train │     0 │
+│ 6 │ decoder       │ TransDecoder  │ 38.0 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 93.2 K                                                        
+Non-trainable params: 0                                                         
+Total params: 93.2 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 73                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:56 • 0:00:00 3.53it/s v_num: 31.000    
+                                                               train_loss_step: 
+                                                               65522.297        
+                                                               train_loss_epoch:
+                                                               108434.203       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:21 • 0:00:00 50.21it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:22 • 0:00:00 49.43it/s 
+[5B] sy2021_sm05_w3m_off1 informer   F1=0.272 Δ=-0.2067 p=0.001
+[rank: 0] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:22 • 0:00:00 48.94it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:22 • 0:00:00 48.56it/s 
+[5B] sy2021_sm05_w3m_off1 informer   F1=0.272 Δ=-0.2067 p=0.001
+[rank: 2] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 informer   F1=0.272 Δ=-0.2067 p=0.001
+[rank: 1] Seed set to 42
+[5B] sy2021_sm05_w3m_off1 informer   F1=0.272 Δ=-0.2067 p=0.001
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 6 │ encoder       │ Encoder       │ 41.6 K │ train │     0 │
+│ 7 │ decoder       │ Decoder       │ 37.8 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 79.7 K                                                        
+Non-trainable params: 0                                                         
+Total params: 79.7 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 85                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:17 •        11.51it/s v_num: 33.000    
+                                    0:00:00                    train_loss_step: 
+                                                               55466.195        
+                                                               train_loss_epoch:
+                                                               120818.953       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:26 • 0:00:00 41.47it/s 
+[5B] sy2021_sm05_w3m_off1 autoformer F1=0.269 Δ=-0.2096 p=0.006
+[5B] === sy2022_sm01_w3m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:27 • 0:00:00 39.93it/s 
+[5B] sy2021_sm05_w3m_off1 autoformer F1=0.269 Δ=-0.2096 p=0.006
+[5B] === sy2022_sm01_w3m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:28 • 0:00:00 38.87it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1101/1101 0:00:28 • 0:00:00 38.83it/s 
+[5B] sy2021_sm05_w3m_off1 autoformer F1=0.269 Δ=-0.2096 p=0.006
+[5B] === sy2022_sm01_w3m_off1 ===
+[5B] sy2021_sm05_w3m_off1 autoformer F1=0.269 Δ=-0.2096 p=0.006
+[5B] === sy2022_sm01_w3m_off1 ===
+[5B] sy2022_sm01_w3m_off1 long df: 2,225,735 rows, 36,183 stores, H=13
+[5B] sy2022_sm01_w3m_off1 long df: 2,225,735 rows, 36,183 stores, H=13
+[5B] sy2022_sm01_w3m_off1 long df: 2,225,735 rows, 36,183 stores, H=13
+[5B] sy2022_sm01_w3m_off1 long df: 2,225,735 rows, 36,183 stores, H=13
+[5B] sy2022_sm01_w3m_off1 rf_tabular F1=0.502 (paired-RF reference)
+[5B] sy2022_sm01_w3m_off1 rf_tabular F1=0.502 (paired-RF reference)
+[5B] sy2022_sm01_w3m_off1 rf_tabular F1=0.502 (paired-RF reference)
+[rank: 2] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 rf_tabular F1=0.502 (paired-RF reference)
+[rank: 0] Seed set to 42
+[rank: 1] Seed set to 42
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.4 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.4 M                                                         
+Non-trainable params: 702                                                       
+Total params: 2.4 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 31                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:05 •        33.73it/s v_num: 35.000    
+                                    0:00:00                    train_loss_step: 
+                                                               44683.023        
+                                                               train_loss_epoch:
+                                                               43924.578        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:09 • 0:00:00 122.98it/s 
+[5B] sy2022_sm01_w3m_off1 nbeats     F1=0.222 Δ=-0.2799 p=0.000
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:09 • 0:00:00 118.13it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:09 • 0:00:00 119.02it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:09 • 0:00:00 119.53it/s 
+[5B] sy2022_sm01_w3m_off1 nbeats     F1=0.222 Δ=-0.2799 p=0.000
+[rank: 0] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 nbeats     F1=0.222 Δ=-0.2799 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 nbeats     F1=0.222 Δ=-0.2799 p=0.000
+[rank: 1] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.4 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.4 M                                                         
+Non-trainable params: 0                                                         
+Total params: 2.4 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 34                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:05 •        34.30it/s v_num: 37.000    
+                                    0:00:00                    train_loss_step: 
+                                                               44809.566        
+                                                               train_loss_epoch:
+                                                               43873.016        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:09 • 0:00:00 119.86it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:09 • 0:00:00 117.49it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:09 • 0:00:00 114.54it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:09 • 0:00:00 112.64it/s 
+[5B] sy2022_sm01_w3m_off1 nhits      F1=0.243 Δ=-0.2591 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 nhits      F1=0.243 Δ=-0.2591 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 nhits      F1=0.243 Δ=-0.2591 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 nhits      F1=0.243 Δ=-0.2591 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ linear_trend  │ Linear        │    182 │ train │     0 │
+│ 5 │ linear_season │ Linear        │    182 │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 364                                                           
+Non-trainable params: 0                                                         
+Total params: 364                                                               
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 8                                                        
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:03 •        51.87it/s v_num: 39.000    
+                                    0:00:00                    train_loss_step: 
+                                                               45081.828        
+                                                               train_loss_epoch:
+                                                               49457.273        
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:06 • 0:00:00 173.78it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:06 • 0:00:00 169.92it/s 
+[5B] sy2022_sm01_w3m_off1 dlinear    F1=0.321 Δ=-0.1810 p=0.000
+[rank: 0] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:06 • 0:00:00 174.90it/s 
+[5B] sy2022_sm01_w3m_off1 dlinear    F1=0.321 Δ=-0.1810 p=0.000
+[rank: 1] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:06 • 0:00:00 167.15it/s 
+[5B] sy2022_sm01_w3m_off1 dlinear    F1=0.321 Δ=-0.1810 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 dlinear    F1=0.321 Δ=-0.1810 p=0.000
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type              ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE               │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d     │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm      │      0 │ train │     0 │
+│ 3 │ model        │ PatchTST_backbone │  401 K │ train │     0 │
+└───┴──────────────┴───────────────────┴────────┴───────┴───────┘
+Trainable params: 401 K                                                         
+Non-trainable params: 3                                                         
+Total params: 401 K                                                             
+Total estimated model params size (MB): 1                                       
+Modules in train mode: 90                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:08 •        23.77it/s v_num: 41.000    
+                                    0:00:00                    train_loss_step: 
+                                                               49568.176        
+                                                               train_loss_epoch:
+                                                               44555.516        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:12 • 0:00:00 93.10it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:12 • 0:00:00 89.57it/s 
+[5B] sy2022_sm01_w3m_off1 patchtst   F1=0.216 Δ=-0.2854 p=0.000
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:12 • 0:00:00 90.51it/s 
+[5B] sy2022_sm01_w3m_off1 patchtst   F1=0.216 Δ=-0.2854 p=0.000
+[rank: 1] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:12 • 0:00:00 87.19it/s 
+[5B] sy2022_sm01_w3m_off1 patchtst   F1=0.216 Δ=-0.2854 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 patchtst   F1=0.216 Δ=-0.2854 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name                    ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss                    │ MAE                   │      0 │ train │     0 │
+│ 1 │ padder_train            │ ConstantPad1d         │      0 │ train │     0 │
+│ 2 │ scaler                  │ TemporalNorm          │      0 │ train │     0 │
+│ 3 │ embedding               │ TFTEmbedding          │    512 │ train │     0 │
+│ 4 │ temporal_encoder        │ TemporalCovariateEnc… │  613 K │ train │     0 │
+│ 5 │ temporal_fusion_decoder │ TemporalFusionDecoder │  256 K │ train │     0 │
+│ 6 │ output_adapter          │ Linear                │    129 │ train │     0 │
+└───┴─────────────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 870 K                                                         
+Non-trainable params: 0                                                         
+Total params: 870 K                                                             
+Total estimated model params size (MB): 3                                       
+Modules in train mode: 88                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:13 •        14.56it/s v_num: 43.000    
+                                    0:00:00                    train_loss_step: 
+                                                               39056.086        
+                                                               train_loss_epoch:
+                                                               48877.695        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:15 • 0:00:00 72.21it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:15 • 0:00:00 71.18it/s 
+[5B] sy2022_sm01_w3m_off1 tft        F1=0.213 Δ=-0.2889 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 tft        F1=0.213 Δ=-0.2889 p=0.000
+[rank: 1] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:16 • 0:00:00 67.91it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:15 • 0:00:00 70.45it/s 
+[5B] sy2022_sm01_w3m_off1 tft        F1=0.213 Δ=-0.2889 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 tft        F1=0.213 Δ=-0.2889 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 4 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ encoder       │ TransEncoder  │ 54.8 K │ train │     0 │
+│ 6 │ decoder       │ TransDecoder  │ 38.0 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 93.2 K                                                        
+Non-trainable params: 0                                                         
+Total params: 93.2 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 73                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:58 • 0:00:00 3.36it/s v_num: 45.000    
+                                                               train_loss_step: 
+                                                               39056.262        
+                                                               train_loss_epoch:
+                                                               48877.801        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:22 • 0:00:00 49.36it/s 
+[5B] sy2022_sm01_w3m_off1 informer   F1=0.217 Δ=-0.2843 p=0.003
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:23 • 0:00:00 48.16it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:23 • 0:00:00 48.36it/s 
+[5B] sy2022_sm01_w3m_off1 informer   F1=0.217 Δ=-0.2843 p=0.003
+[rank: 1] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:23 • 0:00:00 47.48it/s 
+[5B] sy2022_sm01_w3m_off1 informer   F1=0.217 Δ=-0.2843 p=0.003
+[rank: 0] Seed set to 42
+[5B] sy2022_sm01_w3m_off1 informer   F1=0.217 Δ=-0.2843 p=0.003
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 6 │ encoder       │ Encoder       │ 41.6 K │ train │     0 │
+│ 7 │ decoder       │ Decoder       │ 37.8 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 79.7 K                                                        
+Non-trainable params: 0                                                         
+Total params: 79.7 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 85                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:17 •        11.45it/s v_num: 47.000    
+                                    0:00:00                    train_loss_step: 
+                                                               45535.980        
+                                                               train_loss_epoch:
+                                                               57508.430        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:28 • 0:00:00 39.61it/s 
+[5B] sy2022_sm01_w3m_off1 autoformer F1=0.212 Δ=-0.2900 p=0.000
+[5B] === sy2022_sm05_w3m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:29 • 0:00:00 38.62it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:29 • 0:00:00 38.09it/s 
+[5B] sy2022_sm01_w3m_off1 autoformer F1=0.212 Δ=-0.2900 p=0.000
+[5B] === sy2022_sm05_w3m_off1 ===
+[5B] sy2022_sm01_w3m_off1 autoformer F1=0.212 Δ=-0.2900 p=0.000
+[5B] === sy2022_sm05_w3m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1131/1131 0:00:29 • 0:00:00 38.65it/s 
+[5B] sy2022_sm01_w3m_off1 autoformer F1=0.212 Δ=-0.2900 p=0.000
+[5B] === sy2022_sm05_w3m_off1 ===
+[5B] sy2022_sm05_w3m_off1 long df: 2,740,202 rows, 35,989 stores, H=13
+[5B] sy2022_sm05_w3m_off1 long df: 2,740,202 rows, 35,989 stores, H=13
+[5B] sy2022_sm05_w3m_off1 long df: 2,740,202 rows, 35,989 stores, H=13
+[5B] sy2022_sm05_w3m_off1 long df: 2,740,202 rows, 35,989 stores, H=13
+[5B] sy2022_sm05_w3m_off1 rf_tabular F1=0.507 (paired-RF reference)
+[5B] sy2022_sm05_w3m_off1 rf_tabular F1=0.507 (paired-RF reference)
+[5B] sy2022_sm05_w3m_off1 rf_tabular F1=0.507 (paired-RF reference)
+[rank: 2] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 rf_tabular F1=0.507 (paired-RF reference)
+[rank: 0] Seed set to 42
+[rank: 1] Seed set to 42
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.4 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.4 M                                                         
+Non-trainable params: 702                                                       
+Total params: 2.4 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 31                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:05 •        33.46it/s v_num: 49.000    
+                                    0:00:00                    train_loss_step: 
+                                                               40350.176        
+                                                               train_loss_epoch:
+                                                               41520.621        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:09 • 0:00:00 119.15it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:09 • 0:00:00 119.10it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:09 • 0:00:00 116.29it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:09 • 0:00:00 117.13it/s 
+[5B] sy2022_sm05_w3m_off1 nbeats     F1=0.298 Δ=-0.2091 p=0.000
+[5B] sy2022_sm05_w3m_off1 nbeats     F1=0.298 Δ=-0.2091 p=0.000
+[rank: 1] Seed set to 42
+[rank: 2] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 nbeats     F1=0.298 Δ=-0.2091 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 nbeats     F1=0.298 Δ=-0.2091 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.4 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.4 M                                                         
+Non-trainable params: 0                                                         
+Total params: 2.4 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 34                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:05 •        33.79it/s v_num: 51.000    
+                                    0:00:00                    train_loss_step: 
+                                                               38893.047        
+                                                               train_loss_epoch:
+                                                               41237.539        
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:09 • 0:00:00 118.10it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:09 • 0:00:00 117.15it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:09 • 0:00:00 117.47it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:09 • 0:00:00 116.97it/s 
+[5B] sy2022_sm05_w3m_off1 nhits      F1=0.314 Δ=-0.1929 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 nhits      F1=0.314 Δ=-0.1929 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 nhits      F1=0.314 Δ=-0.1929 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 nhits      F1=0.314 Δ=-0.1929 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ linear_trend  │ Linear        │    182 │ train │     0 │
+│ 5 │ linear_season │ Linear        │    182 │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 364                                                           
+Non-trainable params: 0                                                         
+Total params: 364                                                               
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 8                                                        
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:03 •        51.36it/s v_num: 53.000    
+                                    0:00:00                    train_loss_step: 
+                                                               37413.465        
+                                                               train_loss_epoch:
+                                                               45718.164        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:06 • 0:00:00 176.90it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:06 • 0:00:00 165.37it/s 
+[5B] sy2022_sm05_w3m_off1 dlinear    F1=0.415 Δ=-0.0923 p=0.001
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:06 • 0:00:00 165.95it/s 
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:06 • 0:00:00 161.93it/s 
+[5B] sy2022_sm05_w3m_off1 dlinear    F1=0.415 Δ=-0.0923 p=0.001
+[rank: 1] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 dlinear    F1=0.415 Δ=-0.0923 p=0.001
+[rank: 0] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 dlinear    F1=0.415 Δ=-0.0923 p=0.001
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type              ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE               │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d     │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm      │      0 │ train │     0 │
+│ 3 │ model        │ PatchTST_backbone │  401 K │ train │     0 │
+└───┴──────────────┴───────────────────┴────────┴───────┴───────┘
+Trainable params: 401 K                                                         
+Non-trainable params: 3                                                         
+Total params: 401 K                                                             
+Total estimated model params size (MB): 1                                       
+Modules in train mode: 90                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:08 •        22.38it/s v_num: 55.000    
+                                    0:00:00                    train_loss_step: 
+                                                               39192.004        
+                                                               train_loss_epoch:
+                                                               41884.594        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:12 • 0:00:00 92.01it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:12 • 0:00:00 89.21it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:12 • 0:00:00 88.45it/s 
+[5B] sy2022_sm05_w3m_off1 patchtst   F1=0.276 Δ=-0.2312 p=0.000
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:12 • 0:00:00 87.76it/s 
+[5B] sy2022_sm05_w3m_off1 patchtst   F1=0.276 Δ=-0.2312 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 patchtst   F1=0.276 Δ=-0.2312 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 patchtst   F1=0.276 Δ=-0.2312 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name                    ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss                    │ MAE                   │      0 │ train │     0 │
+│ 1 │ padder_train            │ ConstantPad1d         │      0 │ train │     0 │
+│ 2 │ scaler                  │ TemporalNorm          │      0 │ train │     0 │
+│ 3 │ embedding               │ TFTEmbedding          │    512 │ train │     0 │
+│ 4 │ temporal_encoder        │ TemporalCovariateEnc… │  613 K │ train │     0 │
+│ 5 │ temporal_fusion_decoder │ TemporalFusionDecoder │  256 K │ train │     0 │
+│ 6 │ output_adapter          │ Linear                │    129 │ train │     0 │
+└───┴─────────────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 870 K                                                         
+Non-trainable params: 0                                                         
+Total params: 870 K                                                             
+Total estimated model params size (MB): 3                                       
+Modules in train mode: 88                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:13 •        14.50it/s v_num: 57.000    
+                                    0:00:00                    train_loss_step: 
+                                                               35166.801        
+                                                               train_loss_epoch:
+                                                               43821.934        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:15 • 0:00:00 72.02it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:15 • 0:00:00 70.28it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:15 • 0:00:00 69.73it/s 
+[5B] sy2022_sm05_w3m_off1 tft        F1=0.323 Δ=-0.1847 p=0.000
+[rank: 0] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 tft        F1=0.323 Δ=-0.1847 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 tft        F1=0.323 Δ=-0.1847 p=0.000
+[rank: 1] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:16 • 0:00:00 68.13it/s 
+[5B] sy2022_sm05_w3m_off1 tft        F1=0.323 Δ=-0.1847 p=0.000
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 4 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ encoder       │ TransEncoder  │ 54.8 K │ train │     0 │
+│ 6 │ decoder       │ TransDecoder  │ 38.0 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 93.2 K                                                        
+Non-trainable params: 0                                                         
+Total params: 93.2 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 73                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:01:01 • 0:00:00 3.23it/s v_num: 59.000    
+                                                               train_loss_step: 
+                                                               35166.887        
+                                                               train_loss_epoch:
+                                                               43822.012        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:22 • 0:00:00 49.22it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:23 • 0:00:00 48.90it/s 
+[5B] sy2022_sm05_w3m_off1 informer   F1=0.264 Δ=-0.2434 p=0.000
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:23 • 0:00:00 48.55it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:23 • 0:00:00 47.80it/s 
+[5B] sy2022_sm05_w3m_off1 informer   F1=0.264 Δ=-0.2434 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 informer   F1=0.264 Δ=-0.2434 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm05_w3m_off1 informer   F1=0.264 Δ=-0.2434 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 6 │ encoder       │ Encoder       │ 41.6 K │ train │     0 │
+│ 7 │ decoder       │ Decoder       │ 37.8 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 79.7 K                                                        
+Non-trainable params: 0                                                         
+Total params: 79.7 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 85                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:18 •        11.09it/s v_num: 61.000    
+                                    0:00:00                    train_loss_step: 
+                                                               37552.031        
+                                                               train_loss_epoch:
+                                                               52630.160        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:27 • 0:00:00 40.89it/s 
+[5B] sy2022_sm05_w3m_off1 autoformer F1=0.264 Δ=-0.2431 p=0.000
+[5B] === sy2021_sm01_w7m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:28 • 0:00:00 40.23it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:28 • 0:00:00 39.22it/s 
+[5B] sy2022_sm05_w3m_off1 autoformer F1=0.264 Δ=-0.2431 p=0.000
+[5B] === sy2021_sm01_w7m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1125/1125 0:00:28 • 0:00:00 38.74it/s 
+[5B] sy2022_sm05_w3m_off1 autoformer F1=0.264 Δ=-0.2431 p=0.000
+[5B] === sy2021_sm01_w7m_off1 ===
+[5B] sy2022_sm05_w3m_off1 autoformer F1=0.264 Δ=-0.2431 p=0.000
+[5B] === sy2021_sm01_w7m_off1 ===
+[5B] sy2021_sm01_w7m_off1 long df: 1,079,038 rows, 35,498 stores, H=30
+[5B] sy2021_sm01_w7m_off1 long df: 1,079,038 rows, 35,498 stores, H=30
+[5B] sy2021_sm01_w7m_off1 long df: 1,079,038 rows, 35,498 stores, H=30
+[5B] sy2021_sm01_w7m_off1 long df: 1,079,038 rows, 35,498 stores, H=30
+[5B] sy2021_sm01_w7m_off1 rf_tabular F1=0.532 (paired-RF reference)
+[5B] sy2021_sm01_w7m_off1 rf_tabular F1=0.532 (paired-RF reference)
+[rank: 2] Seed set to 42
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[5B] sy2021_sm01_w7m_off1 rf_tabular F1=0.532 (paired-RF reference)
+[rank: 3] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 rf_tabular F1=0.532 (paired-RF reference)
+[rank: 1] Seed set to 42
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.5 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.5 M                                                         
+Non-trainable params: 3.7 K                                                     
+Total params: 2.5 M                                                             
+Total estimated model params size (MB): 10                                      
+Modules in train mode: 31                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:06 •        32.41it/s v_num: 63.000    
+                                    0:00:00                    train_loss_step: 
+                                                               96734.438        
+                                                               train_loss_epoch:
+                                                               154180.875       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:08 • 0:00:00 124.48it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:09 • 0:00:00 118.17it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:09 • 0:00:00 118.62it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:09 • 0:00:00 119.22it/s 
+[5B] sy2021_sm01_w7m_off1 nbeats     F1=0.212 Δ=-0.3198 p=0.006
+[rank: 2] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 nbeats     F1=0.212 Δ=-0.3198 p=0.006
+[rank: 1] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 nbeats     F1=0.212 Δ=-0.3198 p=0.006
+[rank: 0] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 nbeats     F1=0.212 Δ=-0.3198 p=0.006
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.5 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.5 M                                                         
+Non-trainable params: 0                                                         
+Total params: 2.5 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 34                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:05 •        34.64it/s v_num: 65.000    
+                                    0:00:00                    train_loss_step: 
+                                                               95426.242        
+                                                               train_loss_epoch:
+                                                               155123.219       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:08 • 0:00:00 123.18it/s 
+[5B] sy2021_sm01_w7m_off1 nhits      F1=0.208 Δ=-0.3243 p=0.000
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:09 • 0:00:00 119.03it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:09 • 0:00:00 116.50it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:09 • 0:00:00 115.32it/s 
+[5B] sy2021_sm01_w7m_off1 nhits      F1=0.208 Δ=-0.3243 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 nhits      F1=0.208 Δ=-0.3243 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 nhits      F1=0.208 Δ=-0.3243 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ linear_trend  │ Linear        │    930 │ train │     0 │
+│ 5 │ linear_season │ Linear        │    930 │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 1.9 K                                                         
+Non-trainable params: 0                                                         
+Total params: 1.9 K                                                             
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 8                                                        
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:03 •        54.48it/s v_num: 67.000    
+                                    0:00:00                    train_loss_step: 
+                                                               92980.422        
+                                                               train_loss_epoch:
+                                                               175206.984       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:06 • 0:00:00 167.08it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:06 • 0:00:00 162.21it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:06 • 0:00:00 160.23it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:06 • 0:00:00 165.46it/s 
+[5B] sy2021_sm01_w7m_off1 dlinear    F1=0.332 Δ=-0.2005 p=0.001
+[rank: 3] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 dlinear    F1=0.332 Δ=-0.2005 p=0.001
+[rank: 2] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 dlinear    F1=0.332 Δ=-0.2005 p=0.001
+[5B] sy2021_sm01_w7m_off1 dlinear    F1=0.332 Δ=-0.2005 p=0.001
+[rank: 0] Seed set to 42
+[rank: 1] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type              ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE               │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d     │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm      │      0 │ train │     0 │
+│ 3 │ model        │ PatchTST_backbone │  411 K │ train │     0 │
+└───┴──────────────┴───────────────────┴────────┴───────┴───────┘
+Trainable params: 411 K                                                         
+Non-trainable params: 3                                                         
+Total params: 411 K                                                             
+Total estimated model params size (MB): 1                                       
+Modules in train mode: 90                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:08 •        22.90it/s v_num: 69.000    
+                                    0:00:00                    train_loss_step: 
+                                                               95571.156        
+                                                               train_loss_epoch:
+                                                               156469.172       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:12 • 0:00:00 89.36it/s 
+[5B] sy2021_sm01_w7m_off1 patchtst   F1=0.194 Δ=-0.3379 p=0.000
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:13 • 0:00:00 83.25it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:13 • 0:00:00 85.35it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:13 • 0:00:00 83.71it/s 
+[5B] sy2021_sm01_w7m_off1 patchtst   F1=0.194 Δ=-0.3379 p=0.000
+[rank: 0] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 patchtst   F1=0.194 Δ=-0.3379 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 patchtst   F1=0.194 Δ=-0.3379 p=0.000
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name                    ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss                    │ MAE                   │      0 │ train │     0 │
+│ 1 │ padder_train            │ ConstantPad1d         │      0 │ train │     0 │
+│ 2 │ scaler                  │ TemporalNorm          │      0 │ train │     0 │
+│ 3 │ embedding               │ TFTEmbedding          │    512 │ train │     0 │
+│ 4 │ temporal_encoder        │ TemporalCovariateEnc… │  613 K │ train │     0 │
+│ 5 │ temporal_fusion_decoder │ TemporalFusionDecoder │  256 K │ train │     0 │
+│ 6 │ output_adapter          │ Linear                │    129 │ train │     0 │
+└───┴─────────────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 870 K                                                         
+Non-trainable params: 0                                                         
+Total params: 870 K                                                             
+Total estimated model params size (MB): 3                                       
+Modules in train mode: 88                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:24 • 0:00:00 8.23it/s v_num: 71.000    
+                                                               train_loss_step: 
+                                                               107406.922       
+                                                               train_loss_epoch:
+                                                               180844.000       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:17 • 0:00:00 63.08it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:17 • 0:00:00 65.08it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:17 • 0:00:00 62.71it/s 
+[5B] sy2021_sm01_w7m_off1 tft        F1=0.193 Δ=-0.3397 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 tft        F1=0.193 Δ=-0.3397 p=0.000
+[rank: 1] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:18 • 0:00:00 60.58it/s 
+[5B] sy2021_sm01_w7m_off1 tft        F1=0.193 Δ=-0.3397 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 tft        F1=0.193 Δ=-0.3397 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 4 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ encoder       │ TransEncoder  │ 54.8 K │ train │     0 │
+│ 6 │ decoder       │ TransDecoder  │ 38.0 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 93.2 K                                                        
+Non-trainable params: 0                                                         
+Total params: 93.2 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 73                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:01:19 • 0:00:00 2.62it/s v_num: 73.000    
+                                                               train_loss_step: 
+                                                               107407.805       
+                                                               train_loss_epoch:
+                                                               180844.594       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:23 • 0:00:00 48.40it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:23 • 0:00:00 48.39it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:23 • 0:00:00 47.53it/s 
+[5B] sy2021_sm01_w7m_off1 informer   F1=0.190 Δ=-0.3425 p=0.000
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:23 • 0:00:00 47.72it/s 
+[rank: 2] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 informer   F1=0.190 Δ=-0.3425 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 informer   F1=0.190 Δ=-0.3425 p=0.000
+[rank: 0] Seed set to 42
+[5B] sy2021_sm01_w7m_off1 informer   F1=0.190 Δ=-0.3425 p=0.000
+[rank: 1] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 6 │ encoder       │ Encoder       │ 41.6 K │ train │     0 │
+│ 7 │ decoder       │ Decoder       │ 37.8 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 79.7 K                                                        
+Non-trainable params: 0                                                         
+Total params: 79.7 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 85                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:21 • 0:00:00 9.44it/s v_num: 75.000    
+                                                               train_loss_step: 
+                                                               124642.672       
+                                                               train_loss_epoch:
+                                                               229628.266       
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:29 • 0:00:00 37.06it/s 
+[5B] sy2021_sm01_w7m_off1 autoformer F1=0.207 Δ=-0.3253 p=0.001
+[5B] === sy2022_sm01_w7m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:31 • 0:00:00 35.76it/s 
+[5B] sy2021_sm01_w7m_off1 autoformer F1=0.207 Δ=-0.3253 p=0.001
+[5B] === sy2022_sm01_w7m_off1 ===
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:32 • 0:00:00 34.43it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1110/1110 0:00:32 • 0:00:00 33.90it/s 
+[5B] sy2021_sm01_w7m_off1 autoformer F1=0.207 Δ=-0.3253 p=0.001
+[5B] === sy2022_sm01_w7m_off1 ===
+[5B] sy2021_sm01_w7m_off1 autoformer F1=0.207 Δ=-0.3253 p=0.001
+[5B] === sy2022_sm01_w7m_off1 ===
+[5B] sy2022_sm01_w7m_off1 long df: 2,881,268 rows, 37,308 stores, H=30
+[5B] sy2022_sm01_w7m_off1 long df: 2,881,268 rows, 37,308 stores, H=30
+[5B] sy2022_sm01_w7m_off1 long df: 2,881,268 rows, 37,308 stores, H=30
+[5B] sy2022_sm01_w7m_off1 long df: 2,881,268 rows, 37,308 stores, H=30
+[5B] sy2022_sm01_w7m_off1 rf_tabular F1=0.486 (paired-RF reference)
+[5B] sy2022_sm01_w7m_off1 rf_tabular F1=0.486 (paired-RF reference)
+[5B] sy2022_sm01_w7m_off1 rf_tabular F1=0.486 (paired-RF reference)
+[5B] sy2022_sm01_w7m_off1 rf_tabular F1=0.486 (paired-RF reference)
+[rank: 0] Seed set to 42
+[rank: 2] Seed set to 42
+[rank: 3] Seed set to 42
+[rank: 1] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.5 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.5 M                                                         
+Non-trainable params: 3.7 K                                                     
+Total params: 2.5 M                                                             
+Total estimated model params size (MB): 10                                      
+Modules in train mode: 31                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:05 •        34.18it/s v_num: 77.000    
+                                    0:00:00                    train_loss_step: 
+                                                               38014.484        
+                                                               train_loss_epoch:
+                                                               46727.094        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:10 • 0:00:00 113.37it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:10 • 0:00:00 116.37it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:10 • 0:00:00 114.40it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:10 • 0:00:00 114.71it/s 
+[5B] sy2022_sm01_w7m_off1 nbeats     F1=0.269 Δ=-0.2176 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 nbeats     F1=0.269 Δ=-0.2176 p=0.000
+[rank: 0] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 nbeats     F1=0.269 Δ=-0.2176 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 nbeats     F1=0.269 Δ=-0.2176 p=0.000
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ blocks       │ ModuleList    │  2.5 M │ train │     0 │
+└───┴──────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 2.5 M                                                         
+Non-trainable params: 0                                                         
+Total params: 2.5 M                                                             
+Total estimated model params size (MB): 9                                       
+Modules in train mode: 34                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:06 •        31.26it/s v_num: 79.000    
+                                    0:00:00                    train_loss_step: 
+                                                               38755.484        
+                                                               train_loss_epoch:
+                                                               46568.656        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:09 • 0:00:00 116.86it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:09 • 0:00:00 116.06it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:10 • 0:00:00 112.61it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:09 • 0:00:00 118.71it/s 
+[5B] sy2022_sm01_w7m_off1 nhits      F1=0.322 Δ=-0.1644 p=0.000
+[rank: 2] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 nhits      F1=0.322 Δ=-0.1644 p=0.000
+[rank: 1] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 nhits      F1=0.322 Δ=-0.1644 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 nhits      F1=0.322 Δ=-0.1644 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ linear_trend  │ Linear        │    930 │ train │     0 │
+│ 5 │ linear_season │ Linear        │    930 │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 1.9 K                                                         
+Non-trainable params: 0                                                         
+Total params: 1.9 K                                                             
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 8                                                        
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:03 •        53.48it/s v_num: 81.000    
+                                    0:00:00                    train_loss_step: 
+                                                               44648.238        
+                                                               train_loss_epoch:
+                                                               50230.711        
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:06 • 0:00:00 173.19it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:07 • 0:00:00 163.27it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:06 • 0:00:00 169.17it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:06 • 0:00:00 169.65it/s 
+[5B] sy2022_sm01_w7m_off1 dlinear    F1=0.359 Δ=-0.1272 p=0.001
+[rank: 0] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 dlinear    F1=0.359 Δ=-0.1272 p=0.001
+[rank: 3] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 dlinear    F1=0.359 Δ=-0.1272 p=0.001
+[5B] sy2022_sm01_w7m_off1 dlinear    F1=0.359 Δ=-0.1272 p=0.001
+[rank: 1] Seed set to 42
+[rank: 2] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name         ┃ Type              ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss         │ MAE               │      0 │ train │     0 │
+│ 1 │ padder_train │ ConstantPad1d     │      0 │ train │     0 │
+│ 2 │ scaler       │ TemporalNorm      │      0 │ train │     0 │
+│ 3 │ model        │ PatchTST_backbone │  411 K │ train │     0 │
+└───┴──────────────┴───────────────────┴────────┴───────┴───────┘
+Trainable params: 411 K                                                         
+Non-trainable params: 3                                                         
+Total params: 411 K                                                             
+Total estimated model params size (MB): 1                                       
+Modules in train mode: 90                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:08 •        22.92it/s v_num: 83.000    
+                                    0:00:00                    train_loss_step: 
+                                                               40728.613        
+                                                               train_loss_epoch:
+                                                               46992.488        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:13 • 0:00:00 87.33it/s 
+[5B] sy2022_sm01_w7m_off1 patchtst   F1=0.309 Δ=-0.1770 p=0.001
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:14 • 0:00:00 84.34it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:14 • 0:00:00 83.56it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:14 • 0:00:00 82.26it/s 
+[5B] sy2022_sm01_w7m_off1 patchtst   F1=0.309 Δ=-0.1770 p=0.001
+[5B] sy2022_sm01_w7m_off1 patchtst   F1=0.309 Δ=-0.1770 p=0.001
+[rank: 1] Seed set to 42
+[rank: 0] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 patchtst   F1=0.309 Δ=-0.1770 p=0.001
+[rank: 3] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name                    ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss                    │ MAE                   │      0 │ train │     0 │
+│ 1 │ padder_train            │ ConstantPad1d         │      0 │ train │     0 │
+│ 2 │ scaler                  │ TemporalNorm          │      0 │ train │     0 │
+│ 3 │ embedding               │ TFTEmbedding          │    512 │ train │     0 │
+│ 4 │ temporal_encoder        │ TemporalCovariateEnc… │  613 K │ train │     0 │
+│ 5 │ temporal_fusion_decoder │ TemporalFusionDecoder │  256 K │ train │     0 │
+│ 6 │ output_adapter          │ Linear                │    129 │ train │     0 │
+└───┴─────────────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 870 K                                                         
+Non-trainable params: 0                                                         
+Total params: 870 K                                                             
+Total estimated model params size (MB): 3                                       
+Modules in train mode: 88                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:25 • 0:00:00 7.70it/s v_num: 85.000    
+                                                               train_loss_step: 
+                                                               36978.438        
+                                                               train_loss_epoch:
+                                                               50058.781        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:16 • 0:00:00 68.68it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:17 • 0:00:00 66.02it/s 
+[5B] sy2022_sm01_w7m_off1 tft        F1=0.315 Δ=-0.1715 p=0.000
+[rank: 2] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:17 • 0:00:00 65.38it/s 
+[5B] sy2022_sm01_w7m_off1 tft        F1=0.315 Δ=-0.1715 p=0.000
+[rank: 1] Seed set to 42
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:18 • 0:00:00 63.85it/s 
+[5B] sy2022_sm01_w7m_off1 tft        F1=0.315 Δ=-0.1715 p=0.000
+[rank: 3] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 tft        F1=0.315 Δ=-0.1715 p=0.000
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 4 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ encoder       │ TransEncoder  │ 54.8 K │ train │     0 │
+│ 6 │ decoder       │ TransDecoder  │ 38.0 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 93.2 K                                                        
+Non-trainable params: 0                                                         
+Total params: 93.2 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 73                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:01:21 • 0:00:00 2.50it/s v_num: 87.000    
+                                                               train_loss_step: 
+                                                               36978.535        
+                                                               train_loss_epoch:
+                                                               50058.922        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:25 • 0:00:00 46.16it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:24 • 0:00:00 46.61it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:25 • 0:00:00 47.07it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:25 • 0:00:00 46.44it/s 
+[5B] sy2022_sm01_w7m_off1 informer   F1=0.311 Δ=-0.1752 p=0.006
+[5B] sy2022_sm01_w7m_off1 informer   F1=0.311 Δ=-0.1752 p=0.006
+[rank: 3] Seed set to 42
+[rank: 0] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 informer   F1=0.311 Δ=-0.1752 p=0.006
+[rank: 2] Seed set to 42
+[5B] sy2022_sm01_w7m_off1 informer   F1=0.311 Δ=-0.1752 p=0.006
+[rank: 1] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name          ┃ Type          ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ loss          │ MAE           │      0 │ train │     0 │
+│ 1 │ padder_train  │ ConstantPad1d │      0 │ train │     0 │
+│ 2 │ scaler        │ TemporalNorm  │      0 │ train │     0 │
+│ 3 │ decomp        │ SeriesDecomp  │      0 │ train │     0 │
+│ 4 │ enc_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 5 │ dec_embedding │ DataEmbedding │    192 │ train │     0 │
+│ 6 │ encoder       │ Encoder       │ 41.6 K │ train │     0 │
+│ 7 │ decoder       │ Decoder       │ 37.8 K │ train │     0 │
+└───┴───────────────┴───────────────┴────────┴───────┴───────┘
+Trainable params: 79.7 K                                                        
+Non-trainable params: 0                                                         
+Total params: 79.7 K                                                            
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 85                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+`Trainer.fit` stopped: `max_steps=200` reached.
+Epoch 0/-2 ━━━━━━━━━━━━━━━━ 200/200 0:00:21 • 0:00:00 9.37it/s v_num: 89.000    
+                                                               train_loss_step: 
+                                                               51595.680        
+                                                               train_loss_epoch:
+                                                               64953.719        
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:32 • 0:00:00 35.93it/s 
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:32 • 0:00:00 35.71it/s 
+[5B] sy2022_sm01_w7m_off1 autoformer F1=0.302 Δ=-0.1843 p=0.000
+[5B] sy2022_sm01_w7m_off1 autoformer F1=0.302 Δ=-0.1843 p=0.000
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:33 • 0:00:00 35.31it/s 
+[5B] done. compare=48 paired=42
+[5B] avg macro_F1 across panels:
+     model  macro_f1  n_panels
+rf_tabular  0.499910         6
+   dlinear  0.361161         6
+     nhits  0.278673         6
+       tft  0.261656         6
+    nbeats  0.253550         6
+  patchtst  0.242260         6
+  informer  0.239778         6
+autoformer  0.239295         6
+[5B] done. compare=48 paired=42
+[5B] avg macro_F1 across panels:
+     model  macro_f1  n_panels
+rf_tabular  0.499910         6
+   dlinear  0.361161         6
+     nhits  0.278673         6
+       tft  0.261656         6
+    nbeats  0.253550         6
+  patchtst  0.242260         6
+  informer  0.239778         6
+autoformer  0.239295         6
+[5B] sy2022_sm01_w7m_off1 autoformer F1=0.302 Δ=-0.1843 p=0.000
+Predicting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1166/1166 0:00:34 • 0:00:00 33.79it/s 
+[5B] done. compare=48 paired=42
+[5B] avg macro_F1 across panels:
+     model  macro_f1  n_panels
+rf_tabular  0.499910         6
+   dlinear  0.361161         6
+     nhits  0.278673         6
+       tft  0.261656         6
+    nbeats  0.253550         6
+  patchtst  0.242260         6
+  informer  0.239778         6
+autoformer  0.239295         6
+[5B] sy2022_sm01_w7m_off1 autoformer F1=0.302 Δ=-0.1843 p=0.000
+[5B] done. compare=48 paired=42
+[5B] avg macro_F1 across panels:
+     model  macro_f1  n_panels
+rf_tabular  0.499910         6
+   dlinear  0.361161         6
+     nhits  0.278673         6
+       tft  0.261656         6
+    nbeats  0.253550         6
+  patchtst  0.242260         6
+  informer  0.239778         6
+autoformer  0.239295         6

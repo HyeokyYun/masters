@@ -1,0 +1,22 @@
+[5A] === sy2021_sm01_w3m_off1 ===
+[5A] sy2021_sm01_w3m_off1 33,117 stores, H=13
+[5A] sy2021_sm01_w3m_off1 chronos_bolt_small     F1=0.191 Δ=-0.3022 p=0.000
+[5A] === sy2021_sm05_w3m_off1 ===
+[5A] sy2021_sm05_w3m_off1 35,201 stores, H=13
+[5A] sy2021_sm05_w3m_off1 chronos_bolt_small     F1=0.317 Δ=-0.1613 p=0.001
+[5A] === sy2022_sm01_w3m_off1 ===
+[5A] sy2022_sm01_w3m_off1 36,183 stores, H=13
+[5A] sy2022_sm01_w3m_off1 chronos_bolt_small     F1=0.253 Δ=-0.2488 p=0.000
+[5A] === sy2022_sm05_w3m_off1 ===
+[5A] sy2022_sm05_w3m_off1 35,989 stores, H=13
+[5A] sy2022_sm05_w3m_off1 chronos_bolt_small     F1=0.334 Δ=-0.1729 p=0.000
+[5A] === sy2021_sm01_w7m_off1 ===
+[5A] sy2021_sm01_w7m_off1 35,498 stores, H=30
+[5A] sy2021_sm01_w7m_off1 chronos_bolt_small     F1=0.327 Δ=-0.2051 p=0.000
+[5A] === sy2022_sm01_w7m_off1 ===
+[5A] sy2022_sm01_w7m_off1 37,308 stores, H=30
+[5A] sy2022_sm01_w7m_off1 chronos_bolt_small     F1=0.314 Δ=-0.1729 p=0.001
+[5A] done. rows=12
+             model  macro_f1  n_panels
+        rf_tabular  0.499910         6
+chronos_bolt_small  0.289368         6

@@ -1,0 +1,94 @@
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU0 NVIDIA TITAN Xp which is of cuda capability 6.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (7.0) - (12.0)
+    
+  warnings.warn(
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:304: UserWarning: 
+    Please install PyTorch with a following CUDA
+    configurations:  12.6 following instructions at
+    https://pytorch.org/get-started/locally/
+    
+  warnings.warn(matched_cuda_warn.format(matched_arches))
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU1 NVIDIA TITAN Xp which is of cuda capability 6.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (7.0) - (12.0)
+    
+  warnings.warn(
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU2 NVIDIA TITAN Xp which is of cuda capability 6.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (7.0) - (12.0)
+    
+  warnings.warn(
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU3 NVIDIA TITAN Xp which is of cuda capability 6.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (7.0) - (12.0)
+    
+  warnings.warn(
+/home/hyeoky98/miniforge/lib/python3.12/site-packages/torch/cuda/__init__.py:326: UserWarning: 
+NVIDIA TITAN Xp with CUDA capability sm_61 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_70 sm_75 sm_80 sm_86 sm_90 sm_100 sm_120.
+If you want to use the NVIDIA TITAN Xp GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+[5D] === sy2021_sm01_w3m_off1 ===
+[5D] sy2021_sm01_w3m_off1 rf_tabular             F1=0.490 (baseline)
+[5D] sy2021_sm01_w3m_off1 rf_shap_weighted       F1=0.488 Δ=-0.0022 p=0.060
+[5D] sy2021_sm01_w3m_off1 rf_decline_x2          F1=0.441 Δ=-0.0490 p=0.004
+[5D] sy2021_sm01_w3m_off1 rf_decline_x3          F1=0.407 Δ=-0.0834 p=0.000
+[5D] sy2021_sm01_w3m_off1 lgbm_tabular           F1=0.490 Δ=-0.0002 p=0.968
+[5D] sy2021_sm01_w3m_off1 lgbm_shap_weighted     F1=0.491 Δ=+0.0012 p=0.758
+[5D] sy2021_sm01_w3m_off1 lgbm_decline_x2        F1=0.494 Δ=+0.0036 p=0.287
+[5D] === sy2021_sm05_w3m_off1 ===
+[5D] sy2021_sm05_w3m_off1 rf_tabular             F1=0.475 (baseline)
+[5D] sy2021_sm05_w3m_off1 rf_shap_weighted       F1=0.474 Δ=-0.0007 p=0.091
+[5D] sy2021_sm05_w3m_off1 rf_decline_x2          F1=0.420 Δ=-0.0552 p=0.003
+[5D] sy2021_sm05_w3m_off1 rf_decline_x3          F1=0.375 Δ=-0.0995 p=0.004
+[5D] sy2021_sm05_w3m_off1 lgbm_tabular           F1=0.476 Δ=+0.0007 p=0.887
+[5D] sy2021_sm05_w3m_off1 lgbm_shap_weighted     F1=0.475 Δ=-0.0002 p=0.940
+[5D] sy2021_sm05_w3m_off1 lgbm_decline_x2        F1=0.459 Δ=-0.0164 p=0.005
+[5D] === sy2022_sm01_w3m_off1 ===
+[5D] sy2022_sm01_w3m_off1 rf_tabular             F1=0.498 (baseline)
+[5D] sy2022_sm01_w3m_off1 rf_shap_weighted       F1=0.500 Δ=+0.0016 p=0.274
+[5D] sy2022_sm01_w3m_off1 rf_decline_x2          F1=0.481 Δ=-0.0175 p=0.002
+[5D] sy2022_sm01_w3m_off1 rf_decline_x3          F1=0.465 Δ=-0.0337 p=0.004
+[5D] sy2022_sm01_w3m_off1 lgbm_tabular           F1=0.505 Δ=+0.0068 p=0.084
+[5D] sy2022_sm01_w3m_off1 lgbm_shap_weighted     F1=0.504 Δ=+0.0052 p=0.211
+[5D] sy2022_sm01_w3m_off1 lgbm_decline_x2        F1=0.503 Δ=+0.0047 p=0.322
+[5D] === sy2022_sm05_w3m_off1 ===
+[5D] sy2022_sm05_w3m_off1 rf_tabular             F1=0.506 (baseline)
+[5D] sy2022_sm05_w3m_off1 rf_shap_weighted       F1=0.505 Δ=-0.0007 p=0.535
+[5D] sy2022_sm05_w3m_off1 rf_decline_x2          F1=0.465 Δ=-0.0414 p=0.010
+[5D] sy2022_sm05_w3m_off1 rf_decline_x3          F1=0.427 Δ=-0.0787 p=0.002
+[5D] sy2022_sm05_w3m_off1 lgbm_tabular           F1=0.518 Δ=+0.0118 p=0.018
+[5D] sy2022_sm05_w3m_off1 lgbm_shap_weighted     F1=0.516 Δ=+0.0095 p=0.007
+[5D] sy2022_sm05_w3m_off1 lgbm_decline_x2        F1=0.500 Δ=-0.0063 p=0.214
+[5D] === sy2021_sm01_w7m_off1 ===
+[5D] sy2021_sm01_w7m_off1 rf_tabular             F1=0.531 (baseline)
+[5D] sy2021_sm01_w7m_off1 rf_shap_weighted       F1=0.529 Δ=-0.0017 p=0.190
+[5D] sy2021_sm01_w7m_off1 rf_decline_x2          F1=0.510 Δ=-0.0207 p=0.001
+[5D] sy2021_sm01_w7m_off1 rf_decline_x3          F1=0.496 Δ=-0.0345 p=0.005
+[5D] sy2021_sm01_w7m_off1 lgbm_tabular           F1=0.542 Δ=+0.0108 p=0.004
+[5D] sy2021_sm01_w7m_off1 lgbm_shap_weighted     F1=0.542 Δ=+0.0108 p=0.004
+[5D] sy2021_sm01_w7m_off1 lgbm_decline_x2        F1=0.543 Δ=+0.0119 p=0.014
+[5D] === sy2022_sm01_w7m_off1 ===
+[5D] sy2022_sm01_w7m_off1 rf_tabular             F1=0.483 (baseline)
+[5D] sy2022_sm01_w7m_off1 rf_shap_weighted       F1=0.484 Δ=+0.0013 p=0.611
+[5D] sy2022_sm01_w7m_off1 rf_decline_x2          F1=0.460 Δ=-0.0232 p=0.040
+[5D] sy2022_sm01_w7m_off1 rf_decline_x3          F1=0.435 Δ=-0.0478 p=0.012
+[5D] sy2022_sm01_w7m_off1 lgbm_tabular           F1=0.498 Δ=+0.0151 p=0.052
+[5D] sy2022_sm01_w7m_off1 lgbm_shap_weighted     F1=0.499 Δ=+0.0161 p=0.072
+[5D] sy2022_sm01_w7m_off1 lgbm_decline_x2        F1=0.501 Δ=+0.0183 p=0.027
+[5D] saved compare (42 rows)
+[5D] avg macro_F1 across panels:
+             model  macro_f1  n_panels
+      lgbm_tabular  0.504791         6
+lgbm_shap_weighted  0.504392         6
+   lgbm_decline_x2  0.499937         6
+        rf_tabular  0.497292         6
+  rf_shap_weighted  0.496899         6
+     rf_decline_x2  0.462785         6
+     rf_decline_x3  0.434354         6
