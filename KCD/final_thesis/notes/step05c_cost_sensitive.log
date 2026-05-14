@@ -1,0 +1,9 @@
+[05c] sy2021_sm01_w3m_off1 R1_none              n=33,998 macroF1=0.425 dec_rec=0.035 dec_prec=0.582 dec_f1=0.065
+[05c] sy2021_sm01_w3m_off1 R2_balanced          n=33,998 macroF1=0.502 dec_rec=0.352 dec_prec=0.257 dec_f1=0.297
+[05c] sy2021_sm01_w3m_off1 R3_cost_decline3     n=33,998 macroF1=0.479 dec_rec=0.212 dec_prec=0.317 dec_f1=0.254
+[05c] sy2021_sm03_w3m_off1 R1_none              n=34,884 macroF1=0.430 dec_rec=0.000 dec_prec=0.200 dec_f1=0.001
+[05c] sy2021_sm03_w3m_off1 R2_balanced          n=34,884 macroF1=0.499 dec_rec=0.329 dec_prec=0.197 dec_f1=0.246
+[05c] sy2021_sm03_w3m_off1 R3_cost_decline3     n=34,884 macroF1=0.471 dec_rec=0.090 dec_prec=0.234 dec_f1=0.129
+[05c] sy2022_sm03_w3m_off1 R1_none              n=35,984 macroF1=0.338 dec_rec=0.025 dec_prec=0.367 dec_f1=0.047
+[05c] sy2022_sm03_w3m_off1 R2_balanced          n=35,984 macroF1=0.473 dec_rec=0.304 dec_prec=0.280 dec_f1=0.291
+[05c] sy2022_sm03_w3m_off1 R3_cost_decline3     n=35,984 macroF1=0.392 dec_rec=0.246 dec_prec=0.303 dec_f1=0.272

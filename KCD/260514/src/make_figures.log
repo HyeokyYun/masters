@@ -1,0 +1,9 @@
+/home/hyeoky98/kcd/260514/src/make_figures.py:192: UserWarning: Glyph 45733 (\N{HANGUL SYLLABLE NEUNG}) missing from font(s) DejaVu Sans.
+  fig.savefig(out)
+/home/hyeoky98/kcd/260514/src/make_figures.py:192: UserWarning: Glyph 44032 (\N{HANGUL SYLLABLE GA}) missing from font(s) DejaVu Sans.
+  fig.savefig(out)
+[fig01] /home/hyeoky98/kcd/260514/figures/fig01_three_contributions.png
+[fig02] /home/hyeoky98/kcd/260514/figures/fig02_seasonal_amplitude.png
+[fig03] /home/hyeoky98/kcd/260514/figures/fig03_three_improvement_ladder.png
+[fig04] /home/hyeoky98/kcd/260514/figures/fig04_cohort_cluster_lift.png
+[done] 4 figures saved to /home/hyeoky98/kcd/260514/figures
