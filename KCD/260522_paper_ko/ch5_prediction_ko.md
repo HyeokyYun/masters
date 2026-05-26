@@ -5,23 +5,23 @@
 
 # Chapter 5 — Prediction Models (국문 번역)
 
-본 장은 예측 스토리를 하나의 흐름으로 전개한다. 서로 관련되나 구별되는 두 라벨 정의(§3.3) — 메인 삼항 G/S/D 상태와 보완적 이항 고성장 타깃 — 를 쓰며, 둘의 절대 수치는 직접 비교 불가다. §§5.1–5.2 는 매출 곡선 형상(inflection-point + UDX) feature가 가장 강력한 고성장 식별을, §5.3 이후는 cluster + change-point hybrid 와 Random Forest vs LightGBM 비교를 통한 시즌 정렬 삼항 G/S/D 예측을 보고한다.
+본 장은 예측 스토리를 하나의 흐름으로 전개한다. 서로 관련되나 구별되는 두 라벨 정의(§3.3) — 메인 삼항 G/S/D 상태와 보완적 이항 큰 폭 성장 타깃 — 를 쓰며, 둘의 절대 수치는 직접 비교 불가다. §§5.1–5.2 는 매출 곡선 형상(inflection-point + UDX) feature가 가장 강력한 큰 폭 성장 식별을, §5.3 이후는 cluster + change-point hybrid 와 Random Forest vs LightGBM 비교를 통한 시즌 정렬 삼항 G/S/D 예측을 보고한다.
 
 **Figure 5.9 (Improvement ladder)** 는 본 논문 전체 모델 비교의 단일 시각화이다: G/S/D baseline Random Forest (macro-$F_1 \approx 0.50$), 세 비교 branch (representation hybrid, cost-sensitive weighting, external 모델 benchmarking), 총 **17 모델 변형**. LightGBM 계열 3종만 Random Forest baseline 위에 있고, 14개 비-LightGBM 비교 변형(2 foundation, 7 neural forecasting, 3 SMB-attention, 2 cost-sensitive)은 모두 아래.
 
 ---
 
-## §5.1 고성장 식별을 위한 Baseline
+## §5.1 큰 폭 성장 식별을 위한 Baseline
 
-**Input (`base_only`)**: 17 운영 변수 — 신규 고객 비율, 매출 변동계수, 영업 개월 수, 사업 밀도, 평방미터, 평균 매출, 추세 슬로프, 총 관찰 주, 주말 매출 비율, 평균 고객 수, max/min 매출, max/min 비율, 동·시군구 점포 수와 평균 매출 — + `sigungu`·`depth_2` 더미. **Models**: RF, XGBoost, LightGBM. **Target**: `growth_type` ∈ {0,1}. **Metric**: binary $F_1$ (양성 = 고성장). **Split**: stratified 80/20, single seed=42.
+**Input (`base_only`)**: 17 운영 변수 — 신규 고객 비율, 매출 변동계수, 영업 개월 수, 사업 밀도, 평방미터, 평균 매출, 추세 슬로프, 총 관찰 주, 주말 매출 비율, 평균 고객 수, max/min 매출, max/min 비율, 동·시군구 점포 수와 평균 매출 — + `sigungu`·`depth_2` 더미. **Models**: RF, XGBoost, LightGBM. **Target**: `growth_type` ∈ {0,1}. **Metric**: binary $F_1$ (양성 = 큰 폭 성장). **Split**: stratified 80/20, single seed=42.
 
-**Performance**: RF binary $F_1$ = **0.539** (accuracy 0.896), XGBoost = **0.681** (accuracy 0.909). accuracy ≥ 0.9 와 $F_1$ 사이의 간극이 클래스 불균형(양성 고성장 클래스가 얇음) 을 반영하며 macro/binary-$F_1$ 채택의 정량 근거가 된다.
+**Performance**: RF binary $F_1$ = **0.539** (accuracy 0.896), XGBoost = **0.681** (accuracy 0.909). accuracy ≥ 0.9 와 $F_1$ 사이의 간극이 클래스 불균형(양성 큰 폭 성장 클래스가 얇음) 을 반영하며 macro/binary-$F_1$ 채택의 정량 근거가 된다.
 
 baseline 은 매출 시계열의 *shape* 신호(변곡점 위치, 세그먼트 슬로프, Up/Down 패턴)를 받지 않는다. 다음 절은 이 shape 신호를 representation 에 결합했을 때 $F_1$ 의 변화를 본다.
 
 ---
 
-## §5.2 고성장 식별을 위한 Inflection-Point + UDX Representation
+## §5.2 큰 폭 성장 식별을 위한 Inflection-Point + UDX Representation
 
 ### 설계 원리
 
@@ -62,7 +62,7 @@ baseline 은 매출 시계열의 *shape* 신호(변곡점 위치, 세그먼트 �
 세 관찰:
 
 1. **shape 신호의 강한 explanatory power.** 매출 곡선 *shape* 의 압축 representation(변곡점, 세그먼트 슬로프, Up/Down 패턴)이 17-변수 baseline 의 binary $F_1$ 을 크게 향상(RF +0.256, XGB +0.163).
-2. **UDX 코드의 post-hoc summary 성질.** `final_code` (DUY, DDZ 등 12 코드 중 하나)는 본질적으로 매출 패턴 *shape* 의 사후 요약이므로 — 특히 X/Y/Z 글자가 전체 시계열을 본 K-Shape 클러스터에서 오므로, 고성장 패턴(UU 등)과 강하게 연관됨. 따라서 이 $\Delta F_1$ 은 *forward predictive power* 의 직접 향상이 아닌 **explanatory ablation** 으로 해석되어야 함 — 매출 곡선 shape 이 장기 매출 성장과 강하게 연결된다는 의미. caveat 은 §\ref{sec:limitations} 에서 재논의.
+2. **UDX 코드의 post-hoc summary 성질.** `final_code` (DUY, DDZ 등 12 코드 중 하나)는 본질적으로 매출 패턴 *shape* 의 사후 요약이므로 — 특히 X/Y/Z 글자가 전체 시계열을 본 K-Shape 클러스터에서 오므로, 큰 폭 성장 패턴(UU 등)과 강하게 연관됨. 따라서 이 $\Delta F_1$ 은 *forward predictive power* 의 직접 향상이 아닌 **explanatory ablation** 으로 해석되어야 함 — 매출 곡선 shape 이 장기 매출 성장과 강하게 연결된다는 의미. caveat 은 §\ref{sec:limitations} 에서 재논의.
 3. **모델 비교.** 동일 representation 에서 XGBoost (0.844) 가 RF (0.795) 를 상회. 단 단일 80/20 holdout, single seed 평가는 모델 비교 주장을 통계적으로 검증하지 않음 — 그 검증은 G/S/D 14-패널 paired 비교(§\ref{sec:rf_vs_lgbm})로 위임.
 
 **SHAP feature contributions.** XGBoost `base_udx_inflection` 의 SHAP summary (Figure 5.8) 에서 양성 클래스 예측 기여 최상위는 특정 `final_code` (UDX) 더미와 `cv_sales_card`, `slope_P1`, `new_customer_ratio` — §\ref{sec:significant_vars} 회귀 결과 (신규 고객 비율·매출 변동성 의 강한 효과) 와 정합.
@@ -93,7 +93,7 @@ A vs D paired 비교:
 
 ### 두 타깃의 비교 불가
 
-고성장 타깃의 $\Delta F_1 \approx +0.16 \sim +0.26$ (이항, 단일 holdout) 와 G/S/D 상태의 $\Delta F_1 \approx +0.0017$ (macro, 14-패널 평균) 의 차이는 representation 효력 차이가 아니라 *label 정의·평가 지표·split 프로토콜의 차이*. 본 논문은 타깃 내 향상만 주장.
+큰 폭 성장 타깃의 $\Delta F_1 \approx +0.16 \sim +0.26$ (이항, 단일 holdout) 와 G/S/D 상태의 $\Delta F_1 \approx +0.0017$ (macro, 14-패널 평균) 의 차이는 representation 효력 차이가 아니라 *label 정의·평가 지표·split 프로토콜의 차이*. 본 논문은 타깃 내 향상만 주장.
 
 ---
 
@@ -280,11 +280,11 @@ cost-sensitive (decline_x2/x3) + 6-변형 manual 의 null 결과는, 본 데이�
 
 본 장은 두 prediction 타깃에 걸쳐 여섯 가지를 확립.
 
-1. **고성장 식별.** 1년 후 매출 100% 이상 성장 이항 분류에서 inflection + UDX 결합 representation 이 17-변수 baseline 의 binary $F_1$ 을 RF 0.539→0.795, XGB 0.681→0.844로 향상 (§\ref{sec:taskA_ablation}). UDX 의 post-hoc summary 성질로 *explanatory ablation* 으로 해석.
+1. **큰 폭 성장 식별.** 점포 관측구간 첫 분기 대비 마지막 분기 평균 매출 2배 이상(=100% 이상 성장) 이항 분류에서 inflection + UDX 결합 representation 이 17-변수 baseline 의 binary $F_1$ 을 RF 0.539→0.795, XGB 0.681→0.844로 향상 (§\ref{sec:taskA_ablation}). full-span 라벨이고 UDX·변곡점 feature가 실현 궤적을 사후 요약하므로, forward 예측이 아니라 *explanatory ablation* 으로 해석.
 2. **G/S/D baseline vs hybrid.** 14 시즌 정렬 패널에서 RF baseline (A) macro-$F_1 \approx 0.50$ (패널 범위 **0.467–0.546**), cluster+CP hybrid (D) 와의 paired 비교 평균 $\Delta F_1 = +0.0017$, Bonferroni 후 14 패널 중 0개 유의 — *조건부* 개선 (§\ref{sec:taskB_main}).
 3. **G/S/D 모델 비교.** 동일 representation 에서 LightGBM 이 RF 상회 (평균 $\Delta F_1 = +0.0075$, 6 패널 중 5승, 6 중 2에서 $p < 0.05$) — 본 데이터의 *feature 이질성 + 강한 소수 클래스 신호 + 큰 categorical cardinality* 와 LightGBM 구조 특성의 적합으로 해석 (§\ref{sec:rf_vs_lgbm}).
 4. **G/S/D 코호트 분해.** 영업기간 사분위 코호트 분석은 신규 고객 → Growth 효과가 모든 코호트에서 일관, 효과 크기는 Q1·Q4 양끝에서 최대 (§5.4).
 5. **G/S/D cluster 분해.** KMeans cluster 분해는 *fragile cluster* (Decline 35–45%) 를 분리, 이 안에서 hybrid representation 의 마진이 가장 두드러짐 (§5.6).
 6. **G/S/D 외부 비교 · cost-sensitive.** 14 비-LightGBM 비교 모델 중 RF를 상회하는 것은 없고, 우리 LightGBM 계열 3종만 상회 (lgbm_tabular +0.0075, 5/6 승); 14 비-LightGBM 변형 모두 일관된 음의 마진 (−0.0345 ~ −0.2705). cost-sensitive 가중 (rf_decline_x2/x3) 은 macro-$F_1$ 단조 감소 (§\ref{sec:phase5}, §5.8).
 
-다음 장은 G/S/D 결과가 시즌·외부 비교·공간 그래프 모델에 걸쳐 안정적인지 검증. 고성장 단일 holdout 의 external validity 는 한계·향후 연구 (§\ref{sec:limitations}) 로.
+다음 장은 G/S/D 결과가 시즌·외부 비교·공간 그래프 모델에 걸쳐 안정적인지 검증. 큰 폭 성장 단일 holdout 의 external validity 는 한계·향후 연구 (§\ref{sec:limitations}) 로.

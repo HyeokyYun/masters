@@ -35,9 +35,9 @@
 
 ---
 
-## §3.3 라벨 정의: G/S/D 상태와 고성장 타깃
+## §3.3 라벨 정의: G/S/D 상태와 큰 폭 성장 타깃
 
-본 논문은 서로 관련되나 구별되는 두 라벨 정의를 사용한다. 메인 라벨은 시즌 정렬 예측에 쓰는 삼항 Growth/Stable/Decline(G/S/D) 상태이며, 더 엄격한 이항 고성장 타깃은 보완적 설명적 ablation으로 사용한다. 두 라벨은 정의·평가 지표·split 프로토콜이 달라 결과를 분리 보고하며 절대 수치를 직접 비교할 수 없다. 본문 각 인용 시점에 어느 타깃인지 명시한다.
+본 논문은 서로 관련되나 구별되는 두 라벨 정의를 사용한다. 메인 라벨은 시즌 정렬 예측에 쓰는 삼항 Growth/Stable/Decline(G/S/D) 상태이며, 더 엄격한 이항 큰 폭 성장 타깃은 보완적 설명적 ablation으로 사용한다. 두 라벨은 정의·평가 지표·split 프로토콜이 달라 결과를 분리 보고하며 절대 수치를 직접 비교할 수 없다. 본문 각 인용 시점에 어느 타깃인지 명시한다.
 
 ### G/S/D 상태 — 삼항 단기 예측
 
@@ -57,7 +57,7 @@
 | **0.5** | **0.4945** |
 | 0.7 | 0.4867 |
 
-세 값 중 $k = 0.5$가 macro-$F_1$에서 가장 안정적이다. $k = 0.3$은 Growth를 키우고 Decline을 줄이며, $k = 0.7$은 Stable을 과대 표현한다. 모든 삼항 G/S/D 결과는 $k = 0.5$로 보고한다. (고성장 `growth_type` 임계값은 1.0으로 고정되며 본 sweep에 포함되지 않는다.)
+세 값 중 $k = 0.5$가 macro-$F_1$에서 가장 안정적이다. $k = 0.3$은 Growth를 키우고 Decline을 줄이며, $k = 0.7$은 Stable을 과대 표현한다. 모든 삼항 G/S/D 결과는 $k = 0.5$로 보고한다. (큰 폭 성장 `growth_type` 임계값은 1.0으로 고정되며 본 sweep에 포함되지 않는다.)
 
 #### 라벨이 크기로 무엇을 뜻하는가
 
@@ -75,25 +75,25 @@ worked-example 라벨링 패널 `sy2021_sm01_w3m_off1` ($n = 34{,}274$, 대표 �
 
 라벨링 윈도우는 시즌 정렬을 위해 동일 길이 분기(약 13주)로 설정하며, 윈도우 길이 변형(4·6·7개월)은 §6.1 robustness에서 함께 검증한다.
 
-### 고성장 타깃 — 이항 분류 (보완적)
+### 큰 폭 성장 타깃 — 이항 분류 (보완적)
 
-보완적 설명 ablation으로서, 라벨은 윈도우 내 매출 성장률 `growth_rate`(1년 후 매출 ÷ baseline 매출)이 임계값 1.0(즉, 매출이 두 배 이상) 을 초과하는지의 이항 변수:
+보완적 설명 ablation으로서, 라벨은 `growth_rate` — 점포 관측구간 첫 분기 대비 마지막 분기 평균 주간 카드 매출의 상대 변화율 $(\text{late\_avg}-\text{early\_avg})/\text{early\_avg}$ — 이 1.0 이상인지(즉, 마지막 분기 평균이 첫 분기 평균의 2배 이상)의 이항 변수:
 $$\texttt{growth\_type} = \mathbb{1}[\texttt{growth\_rate} \geq 1.0] \in \{0, 1\}.$$
 
-고성장 타깃은 **binary $F_1$** (양성 = 고성장)을 평가 지표로, **stratified 80/20 holdout (single seed = 42)** 을 split으로 사용한다.
+큰 폭 성장 타깃은 **binary $F_1$** (양성 = 큰 폭 성장)을 평가 지표로, **stratified 80/20 holdout (single seed = 42)** 을 split으로 사용한다.
 
 ### 평가 프로토콜 차이 요약
 
 두 타깃은 *설계상* 다르며 절대 수치를 직접 비교해서는 안 된다.
 
-**Table 3.3 — 고성장 타깃 vs G/S/D 상태 평가 프로토콜**
+**Table 3.3 — 큰 폭 성장 타깃 vs G/S/D 상태 평가 프로토콜**
 
-| 항목 | 고성장 타깃 | G/S/D 상태 |
+| 항목 | 큰 폭 성장 타깃 | G/S/D 상태 |
 |---|---|---|
 | Label | binary (`growth_rate ≥ 1.0`) | 3-class (G/S/D, $\pm 0.5\sigma$) |
-| Input window | store-level cumulative operational vars | same-calendar 3 months |
-| Target window | one-year-ahead sales vs baseline | same 3 months one year later |
-| Metric | binary $F_1$ (positive = 고성장) | macro-$F_1$ |
+| Input window | 전체 관측 시계열의 운영·shape feature | same-calendar 3 months |
+| Target window | 마지막 관측 분기 vs 첫 관측 분기(점포별 span) | same 3 months one year later |
+| Metric | binary $F_1$ (positive = 큰 폭 성장) | macro-$F_1$ |
 | Split | stratified 80/20 (single seed) | store-grouped 5-fold × **14 panels** |
 | Used in | §§5.1–5.2 | §5.3 onward + Chapter 6 |
 
@@ -154,7 +154,7 @@ Decline 클래스가 약 **7.8%** 로 가장 얇다. 단순 accuracy로 평가�
 
 ### K-Shape 매출 시계열 클러스터
 
-점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. K-Shape 알고리즘 \cite{paparrizos2015kshape}을 $K = 6$으로 적용하면 6개의 인식 가능한 궤적 형상이 산출된다(Figure 3.2): 고점→**급락(sharp-drop)**, **지속 고수준(sustained-high)**(주기적 dip), **완만한 하락(gradual-decline)**, **지속 하락(sustained-decline)**, **상승/회복(rising/recovery)**, **완만한 상승(gentle-rise)** 클러스터. $K = 6$은 더 잘게 나누기보다 질적으로 구분되는 소수의 해석 가능한 형상을 얻기 위한 의도적 선택이며, 그 결과 `cluster` 라벨은 모델에 보조 feature 하나로만 들어가고 — Ch5에서 보듯 — 그 증분 기여가 제한적이라 핵심 결론이 클러스터 수에 의존하지 않는다. 이 `cluster` 라벨은 고성장 변곡점 + UDX representation (§5.2)과 G/S/D hybrid representation (§5.3) 양쪽에서 feature로 직접 사용된다. UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z.
+점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. K-Shape 알고리즘 \cite{paparrizos2015kshape}을 $K = 6$으로 적용하면 6개의 인식 가능한 궤적 형상이 산출된다(Figure 3.2): 고점→**급락(sharp-drop)**, **지속 고수준(sustained-high)**(주기적 dip), **완만한 하락(gradual-decline)**, **지속 하락(sustained-decline)**, **상승/회복(rising/recovery)**, **완만한 상승(gentle-rise)** 클러스터. $K = 6$은 더 잘게 나누기보다 질적으로 구분되는 소수의 해석 가능한 형상을 얻기 위한 의도적 선택이며, 그 결과 `cluster` 라벨은 모델에 보조 feature 하나로만 들어가고 — Ch5에서 보듯 — 그 증분 기여가 제한적이라 핵심 결론이 클러스터 수에 의존하지 않는다. 이 `cluster` 라벨은 큰 폭 성장 변곡점 + UDX representation (§5.2)과 G/S/D hybrid representation (§5.3) 양쪽에서 feature로 직접 사용된다. UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z.
 
 **Figure 3.2** — 6개 K-Shape 클러스터: 멤버 시계열(회색) 위에 클러스터 평균(빨강), 관측 주 전체에 대해 $[0,1]$로 정규화. 각 패턴은 두 예측 타깃의 representation에 `cluster` feature로 들어간다.
 

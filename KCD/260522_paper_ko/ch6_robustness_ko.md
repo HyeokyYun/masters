@@ -5,7 +5,7 @@
 
 # Chapter 6 — Robustness (국문 번역)
 
-본 장의 모든 결과는 **G/S/D 상태** (삼항 단기 예측, 시즌 정렬 패널 위 store-grouped 5-fold, macro-$F_1$) 상에서 보고된다. 고성장 타깃(이항)의 external validity는 별도 평가 프로토콜을 요하며 향후 연구로 미룬다 (§\ref{sec:limitations}). 본 장은 §\ref{sec:rf_vs_lgbm}·§\ref{sec:phase5}의 메인 G/S/D 결과의 robustness를 평가한다: (i) 시즌·시기를 변화시켜도 안정적인지, (ii) 14 비-LightGBM 비교 모델 및 예비 GNN 대비 경쟁력을 유지하는지.
+본 장의 모든 결과는 **G/S/D 상태** (삼항 단기 예측, 시즌 정렬 패널 위 store-grouped 5-fold, macro-$F_1$) 상에서 보고된다. 큰 폭 성장 타깃(이항)의 external validity는 별도 평가 프로토콜을 요하며 향후 연구로 미룬다 (§\ref{sec:limitations}). 본 장은 §\ref{sec:rf_vs_lgbm}·§\ref{sec:phase5}의 메인 G/S/D 결과의 robustness를 평가한다: (i) 시즌·시기를 변화시켜도 안정적인지, (ii) 14 비-LightGBM 비교 모델 및 예비 GNN 대비 경쟁력을 유지하는지.
 
 ---
 
@@ -55,7 +55,7 @@ macro-$F_1$ 분산을 start-month 성분과 window-length 성분으로 분해하
 
 두 함의:
 
-1. **두 prediction 타깃은 직접 비교 불가.** 고성장 binary $F_1$ 0.795 ~ 0.844 (§5.2, 단일 80/20 holdout) 와 G/S/D macro-$F_1$ 0.43–0.54 (본 절, 19 시즌 정렬 패널 store-grouped 5-fold) 는 label·metric·split 이 다름. 직접 비교 금지. 본 논문은 타깃 내 향상·안정성만 주장.
+1. **두 prediction 타깃은 직접 비교 불가.** 큰 폭 성장 binary $F_1$ 0.795 ~ 0.844 (§5.2, 단일 80/20 holdout) 와 G/S/D macro-$F_1$ 0.43–0.54 (본 절, 19 시즌 정렬 패널 store-grouped 5-fold) 는 label·metric·split 이 다름. 직접 비교 금지. 본 논문은 타깃 내 향상·안정성만 주장.
 2. 그 한계 내에서, G/S/D 의 LightGBM vs RF 상대 순위는 시즌·시기 변화에 걸쳐 일관됨.
 
 ---
@@ -121,4 +121,4 @@ G/S/D 에 대해 세 가지 확립:
 2. 더 넓은 외부 비교에서 LightGBM 계열 3종만 RF 상회, 14 비-LightGBM 비교 변형은 모두 성능 하락 — *데이터 특성 mismatch* 로 해석. 본 논문의 데이터 특화 representation 설계의 정당성 뒷받침.
 3. 동-업종 결합 그래프 + SHAP-가중 GNN 은 본 데이터에서 추가 마진 없음. 공간 신호가 무의미하다는 결론이 아니라 현재 그래프 구성·가중치 학습이 불충분함을 시사 — *시공간 확장을 향후 연구로* 동기 부여.
 
-고성장 타깃의 external validity(inflection + UDX representation 의 $\Delta F_1$ 이 타 도시·업종에서 재현되는지) 는 향후 연구 항목 (§\ref{sec:limitations}).
+큰 폭 성장 타깃의 external validity(inflection + UDX representation 의 $\Delta F_1$ 이 타 도시·업종에서 재현되는지) 는 향후 연구 항목 (§\ref{sec:limitations}).
