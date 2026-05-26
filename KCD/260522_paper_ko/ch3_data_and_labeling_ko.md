@@ -31,20 +31,13 @@
 3. **충분한 cell 두께.** 업종 × 동 조합 수준 분석(Chapter 4)에서, 통계적 유의성 임계값 이상의 점포 수를 가지는 cell이 충분히 많다. 서울의 약 425개 행정동과 본 논문이 식별하는 약 30개 외식 세부 업종의 조합은 $n \geq 100$ 점포를 갖는 다수의 cell을 산출한다.
 4. **외식업의 계절·충격 민감성.** 외식업은 계절성, 이벤트(공휴일, 연말연시), 외부 충격(감염병, 사회적 거리두기)에 가장 민감한 업종이다. 본 G/S/D 분류 문제의 *signal-to-noise ratio* 가 가장 또렷이 드러나는 도메인이며, 시즌 정렬 실험(§6.1)이 가장 큰 의미를 갖는 도메인이다.
 
-본 논문은 각 점포 거래의 **캘린더 정렬된 1–7개월 feature 윈도우** 를 입력으로 삼고, 이후 target 윈도우의 G/S/D 매출 동태를 예측·설명하는 setting을 채택한다. 윈도우 길이 변형은 §6.1의 window-extension robustness 검증 대상이다.
+본 논문은 이 범위 안에서, 캘린더 정렬된 이전 feature 윈도우로부터 이후 target 윈도우의 G/S/D 매출 동태를 예측·설명한다. feature/target 윈도우 구성·offset·누수 방지 split의 구체적 내용은 §3.7에서 다룬다.
 
 ---
 
 ## §3.3 라벨 정의: G/S/D 상태와 고성장 타깃
 
 본 논문은 서로 관련되나 구별되는 두 라벨 정의를 사용한다. 메인 라벨은 시즌 정렬 예측에 쓰는 삼항 Growth/Stable/Decline(G/S/D) 상태이며, 더 엄격한 이항 고성장 타깃은 보완적 설명적 ablation으로 사용한다. 두 라벨은 정의·평가 지표·split 프로토콜이 달라 결과를 분리 보고하며 절대 수치를 직접 비교할 수 없다. 본문 각 인용 시점에 어느 타깃인지 명시한다.
-
-### 고성장 타깃 — 이항 분류
-
-라벨은 윈도우 내 매출 성장률 `growth_rate`(1년 후 매출 ÷ baseline 매출)이 임계값 1.0(즉, 매출이 두 배 이상) 을 초과하는지의 이항 변수:
-$$\texttt{growth\_type} = \mathbb{1}[\texttt{growth\_rate} \geq 1.0] \in \{0, 1\}.$$
-
-고성장 타깃은 **binary $F_1$** (양성 = 고성장)을 평가 지표로, **stratified 80/20 holdout (single seed = 42)** 을 split으로 사용한다. 정량 결과는 `260224/05_prediction_ablation/prediction_metrics.csv` 에서 보고하며, 생성 스크립트는 `260223/04_prediction/run_step4_ml_shap.py` 이다.
 
 ### G/S/D 상태 — 삼항 단기 예측
 
@@ -56,7 +49,7 @@ $$\texttt{growth\_type} = \mathbb{1}[\texttt{growth\_rate} \geq 1.0] \in \{0, 1\
 
 임계값은 **각 패널 내** 정규화 슬로프의 *표준편차* $\sigma$ 의 $k$ 배($\pm k\sigma$)로 설정한다. $\sigma$ 가 패널별로 계산되므로 cutoff는 각 패널의 분산에 적응한다. 기본값은 $k = 0.5$이며, "대부분 점포가 Stable로 뭉치지 않으면서 Growth·Decline의 정의가 통계적으로 안정적인" 영역이다. 임계값 민감도는 Table 3.1에 요약한다.
 
-**Table 3.1 — Label threshold sensitivity** (삼항 분류기 macro-$F_1$, 라벨링 패널; `260430_claude/outputs/tables/label_definition_sweep_summary.csv`)
+**Table 3.1 — Label threshold sensitivity** (삼항 분류기 macro-$F_1$, 라벨링 패널; 여기서 $k$는 정규화 슬로프의 패널별 표준편차 $\sigma$에 곱하는 배수로, Growth/Decline cutoff는 $\pm k\sigma$)
 
 | $k$ | 삼항 macro-$F_1$ |
 |---|---|
@@ -68,7 +61,7 @@ $$\texttt{growth\_type} = \mathbb{1}[\texttt{growth\_rate} \geq 1.0] \in \{0, 1\
 
 #### 라벨이 크기로 무엇을 뜻하는가
 
-라벨링 패널 `sy2021_sm01_w3m_off1` ($n = 34{,}274$) 에서 슬로프 표준편차는 $\sigma = 0.042$, 따라서 임계값은 주당 $\pm 0.5\sigma = \pm 0.021$. 클래스별 슬로프 분포와 그것이 함의하는 13주(분기) 누적 매출 변화폭(슬로프 × 13, 점포 평균 매출 대비)은 다음과 같다. **Growth 점포는 분기에 중앙값 약 +54%, Decline 점포는 약 −47%** 변하며 Stable은 거의 평탄 — 세 클래스가 marginal한 차이가 아니라 경제적으로 실질적인 궤적 차이에 대응함을 보인다.
+worked-example 라벨링 패널 `sy2021_sm01_w3m_off1` ($n = 34{,}274$, 대표 패널이 아니라 예시용)에서 슬로프 표준편차는 $\sigma = 0.042$, 따라서 임계값은 주당 $\pm 0.5\sigma = \pm 0.021$. 클래스별 슬로프 분포와 그것이 함의하는 13주(분기) 누적 매출 변화폭(슬로프 × 13, 점포 평균 매출 대비)은 다음과 같다. **Growth 점포는 분기에 중앙값 약 +54%, Decline 점포는 약 −47%** 변하며 Stable은 거의 평탄 — 세 클래스가 marginal한 차이가 아니라 경제적으로 실질적인 궤적 차이에 대응함을 보인다.
 
 **Table 3.2 — 클래스별 슬로프 크기** (라벨링 패널, $\sigma=0.042$, 임계값 $\pm0.021$/주)
 
@@ -81,6 +74,13 @@ $$\texttt{growth\_type} = \mathbb{1}[\texttt{growth\_rate} \geq 1.0] \in \{0, 1\
 이 크기는 패널마다 다르며(패널별 $\sigma$·클래스 구성 상이; §6.1), 라벨링 패널은 scale 감을 주기 위한 예시일 뿐이다. 이 패널의 Growth 편중은 해당 캘린더 비교가 post-COVID 회복기에 걸친 결과이며, 다른 패널은 다른 클래스 구성을 보인다(Figure 3.1). 이것이 Chapter 6에서 시즌 정렬 rolling robustness를 보고하는 이유다.
 
 라벨링 윈도우는 시즌 정렬을 위해 동일 길이 분기(약 13주)로 설정하며, 윈도우 길이 변형(4·6·7개월)은 §6.1 robustness에서 함께 검증한다.
+
+### 고성장 타깃 — 이항 분류 (보완적)
+
+보완적 설명 ablation으로서, 라벨은 윈도우 내 매출 성장률 `growth_rate`(1년 후 매출 ÷ baseline 매출)이 임계값 1.0(즉, 매출이 두 배 이상) 을 초과하는지의 이항 변수:
+$$\texttt{growth\_type} = \mathbb{1}[\texttt{growth\_rate} \geq 1.0] \in \{0, 1\}.$$
+
+고성장 타깃은 **binary $F_1$** (양성 = 고성장)을 평가 지표로, **stratified 80/20 holdout (single seed = 42)** 을 split으로 사용한다.
 
 ### 평가 프로토콜 차이 요약
 
@@ -154,9 +154,9 @@ Decline 클래스가 약 **7.8%** 로 가장 얇다. 단순 accuracy로 평가�
 
 ### K-Shape 매출 시계열 클러스터
 
-점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. K-Shape 알고리즘 \cite{paparrizos2015kshape}을 $K = 6$으로 적용하면 6개의 해석 가능한 패턴이 산출된다: (i) stable rising, (ii) plateau, (iii) gentle decline, (iv) sharp drop, (v) volatile recovery, (vi) discontinuous (Figure 3.2). 이 `cluster` 라벨은 고성장 변곡점 + UDX representation (§5.2)과 G/S/D hybrid representation (§5.3) 양쪽에서 feature로 직접 사용된다. UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z.
+점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. K-Shape 알고리즘 \cite{paparrizos2015kshape}을 $K = 6$으로 적용하면 6개의 인식 가능한 궤적 형상이 산출된다(Figure 3.2): 고점→**급락(sharp-drop)**, **지속 고수준(sustained-high)**(주기적 dip), **완만한 하락(gradual-decline)**, **지속 하락(sustained-decline)**, **상승/회복(rising/recovery)**, **완만한 상승(gentle-rise)** 클러스터. $K = 6$은 더 잘게 나누기보다 질적으로 구분되는 소수의 해석 가능한 형상을 얻기 위한 의도적 선택이며, 그 결과 `cluster` 라벨은 모델에 보조 feature 하나로만 들어가고 — Ch5에서 보듯 — 그 증분 기여가 제한적이라 핵심 결론이 클러스터 수에 의존하지 않는다. 이 `cluster` 라벨은 고성장 변곡점 + UDX representation (§5.2)과 G/S/D hybrid representation (§5.3) 양쪽에서 feature로 직접 사용된다. UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z.
 
-**Figure 3.2** — 6개 K-Shape 클러스터의 평균 시계열 shape.
+**Figure 3.2** — 6개 K-Shape 클러스터: 멤버 시계열(회색) 위에 클러스터 평균(빨강), 관측 주 전체에 대해 $[0,1]$로 정규화. 각 패턴은 두 예측 타깃의 representation에 `cluster` feature로 들어간다.
 
 ---
 
@@ -170,7 +170,7 @@ Decline 클래스가 약 **7.8%** 로 가장 얇다. 단순 accuracy로 평가�
 - **점포 단위 정규화.** 점포별 매출 수준 차를 제거하기 위해 매출 시계열을 within-store 또는 within-quarter 평균으로 정규화한다.
 - **outlier 처리.** 0 매출 또는 비현실적으로 큰 값(예: 단일 주 매출이 점포 평균의 100배 초과)은 winsorize 또는 마스킹한다.
 
-시즌 정렬은 "기간별 성능이 비슷하다"라는 robustness 주장의 핵심 전처리 단계이며 \cite{bergmeir2012use,hyndman2021forecasting}, 통제 변수가 아닌 **설계로** 계절성을 제거하는 방법론적 선택이다. 이 단계들은 패널 구성·라벨링 스크립트 `260430_claude/src/step00_prepare_original_panel.py` 와 `step02_relabel_gsd_calendar.py` 에 구현되며, 특히 점포별 평균 정규화는 라벨링 시점(§3.3)에 적용된다.
+시즌 정렬은 "기간별 성능이 비슷하다"라는 robustness 주장의 핵심 전처리 단계이며 \cite{bergmeir2012use,hyndman2021forecasting}, 통제 변수가 아닌 **설계로** 계절성을 제거하는 방법론적 선택이다. 특히 점포별 평균 정규화는 라벨링 시점(§3.3)에 적용된다.
 
 ---
 
@@ -182,7 +182,7 @@ temporal leakage 방지를 위해 split 시점 기반의 future-hold-out 평가�
 - **Target window.** 설정된 offset 위치의 같은 길이 윈도우(기본값: 1년 후 동일 캘린더 윈도우; 아래 Offset 참조). G/S/D 라벨은 `target_start` – `target_end` 사이 매출 추세 슬로프로 정의.
 - **Offset.** 1 = 다음 해 동일 캘린더 윈도우; 2 = 2년 후 동일 캘린더 윈도우. 시즌 정렬의 핵심 설계 변수.
 
-동일 split 프로토콜이 baseline·hybrid representation·14개 비-LightGBM 비교 모델·GNN 모두에 일관되게 적용되어, 모델 간 비교가 평가 프로토콜 차이로 왜곡되지 않도록 보장한다. 모든 패널 메타데이터(`n_stores`, 기간, 윈도우 길이)는 `260430_claude/outputs/tables/panel_summary.csv` 에서 재생산 가능하다.
+동일 split 프로토콜이 baseline·hybrid representation·14개 비-LightGBM 비교 모델·GNN 모두에 일관되게 적용되어, 모델 간 비교가 평가 프로토콜 차이로 왜곡되지 않도록 보장한다.
 
 ### Train/validation/evaluation 분할
 

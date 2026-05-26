@@ -39,7 +39,7 @@
 
 트리 기반 앙상블은 tabular feature와 시계열 통계량을 함께 사용하는 본 연구 setting에 부합한다. Random Forest \cite{breiman2001random}는 깊은 트리의 bagging 앙상블로, feature 간 비선형 상호작용을 안정적으로 포착한다. LightGBM \cite{ke2017lightgbm}은 boosting에 leaf-wise growth와 histogram-based splitting을 결합한 모델로, 다수의 약한 신호와 상호작용이 누적될 때 효율적이다. XGBoost \cite{chen2016xgboost}는 같은 계열의 대표 알고리즘이다.
 
-M5 \cite{makridakis2022m5}와 같은 대규모 예측 경진의 실증적 합의 — 트리-부스팅 계열이 신경망 시계열 모델을 능가 — 는 *tabular representation이 충분히 풍부할 때* gradient-boosted tree가 매우 강한 baseline이라는 점이다. 이 문헌은 본 논문이 트리 기반 앙상블을 강한 tabular baseline으로 삼아, 소상공인 특화 hybrid representation이 예측 가치를 더하는지 평가하도록 동기를 부여한다 (§5.7).
+M5 \cite{makridakis2022m5}와 같은 대규모 예측 경진의 실증 결과 — 트리-부스팅 계열이 신경망 시계열 모델을 능가 — 는 *tabular representation이 충분히 풍부할 때* gradient-boosted tree가 매우 강한 baseline임을 시사한다. 이 문헌은 본 논문이 트리 기반 앙상블을 강한 tabular baseline으로 삼아, 소상공인 특화 hybrid representation이 예측 가치를 더하는지 평가하도록 동기를 부여한다 (§5.7).
 
 이는 Random Forest와 LightGBM을 동일 평가 프로토콜 하에서 비교하도록 동기를 부여하며, 상세는 Chapter 5(§\ref{sec:rf_vs_lgbm})에서 전개한다.
 
@@ -53,7 +53,7 @@ RNN은 순차 의존성 학습의 고전적 접근이며, 그 확률적 확장 D
 
 Transformer 아키텍처 \cite{vaswani2017attention}의 도입 이후, self-attention 기반 시계열 예측 모델이 다수 개발되었다. TFT \cite{lim2021tft}는 정적·동적 공변량과 시간 feature를 gating과 attention으로 통합하여 해석 가능성을 제공한다. PatchTST \cite{nie2023patchtst}는 시계열을 patch로 토큰화하여 NLP 스타일 Transformer 아키텍처를 적용한다. Informer \cite{zhou2021informer}는 ProbSparse self-attention으로 장기 시계열의 시간 복잡도를 감소시킨다. Autoformer \cite{wu2021autoformer}는 auto-correlation decomposition 블록을 도입하여 추세와 계절성을 직접 학습 가능한 성분으로 통합한다.
 
-이 모델들은 본 논문의 14-모델 외부 비교(§6.2)에 포함되며, *주간* 데이터에서 일관된 음의 마진을 보였다. 이는 규칙적 시퀀스 학습을 위해 설계된 모델이 추가적 도메인 특화 표현 없이 주간 소상공인 매출의 이질적·불연속적 구조를 직접 포착할 수 있는지를 검증할 동기를 부여한다.
+이 모델들은 본 논문의 14-모델 외부 비교(§6.2)에서 추후 평가되며, 규칙적 시퀀스 학습을 위해 설계된 모델이 추가적 도메인 특화 표현 없이 주간 소상공인 매출의 이질적·불연속적 구조를 직접 포착할 수 있는지를 검증한다.
 
 ### §2.2.4 Foundation 모델 (Chronos, Moirai)
 
@@ -89,8 +89,8 @@ representation learning의 일반 원리 \cite{bengio2013representation}는 *입
 
 본 논문에서 "hybrid representation"은 (i) 시계열 통계량, (ii) tabular 메타데이터, (iii) 도메인 신호를 단일 feature 벡터로 결합하여 예측 모델에 투입하는 접근을 의미한다 \cite{fawaz2019deeplearning,salinas2020deepar}. 본 논문은 두 라벨 정의에 대해 두 가지 구분되는 hybrid 형태를 평가한다:
 
-- **고성장 변곡점 + UDX representation**: 17개 운영 baseline 변수(신규 고객 비율, 매출 변동계수, 영업 개월 수, 사업 밀도, 평방미터, 평균 매출, 추세 슬로프, 총 관찰 주, 주말 매출 비율, 평균 고객 수, 최대/최소 매출, 동·시군구 카운트와 평균) + `sigungu`·`depth_2` 더미에, K-Shape cluster 라벨, 변곡점 슬로프(`slope_P1`, `slope_P2`), 변곡 주차, UDX 코드 더미(`final_code` — DUY/DDZ/UU 등)를 추가 (§5.2).
-- **G/S/D hybrid representation**: 매출 시계열 통계량, 점포 메타데이터, 고객 구성 신호, KMeans cluster 라벨, change-point feature를 결합하여 A_baseline / B_base+cluster / C_base+cp / D_full 의 hybrid feature set 구성 (§5.3).
+- **G/S/D hybrid representation** (주 과제): 매출 시계열 통계량, 점포 메타데이터, 고객 구성 신호, KMeans cluster 라벨, change-point feature를 결합하여 A_baseline / B_base+cluster / C_base+cp / D_full 의 hybrid feature set 구성 (§5.3).
+- **고성장 변곡점 + UDX representation** (보완적): 17개 운영 baseline 변수(신규 고객 비율, 매출 변동계수, 영업 개월 수, 사업 밀도, 평방미터, 평균 매출, 추세 슬로프, 총 관찰 주, 주말 매출 비율, 평균 고객 수, 최대/최소 매출, 동·시군구 카운트와 평균) + `sigungu`·`depth_2` 더미에, K-Shape cluster 라벨, 변곡점 슬로프(`slope_P1`, `slope_P2`), 변곡 주차, UDX 코드 더미(`final_code` — DUY/DDZ/UU 등)를 추가 (§5.2).
 
 이 구성은 *현상 분석에서 식별된 요인*과 *매출 곡선 형상 신호*를 직접 반영할 수 있어, 단일 모달 입력(예: 매출 시계열만) 대비 우위를 가진다. 또한 더 풍부한 표현은 macro-$F_1$ 평가 하에서 소수 클래스 경계를 더 분리 가능하게 만들 수 있으나, 클래스 불균형 \cite{chawla2002smote,johnson2019survey}은 실증 분석에서 여전히 핵심 과제로 남는다.
 
