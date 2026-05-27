@@ -117,7 +117,7 @@ Figure 4.2의 이벤트 스터디는 매출 반등(DUY) 점포에서 신규 고�
 
 19패널 풀링 기준 업종 수준 Growth 비율은 **0.18~0.32** 범위(Table 4.3). 주류 제공 업종 — 생맥주 전문점(Growth 0.32)·기타 주점(0.29) — 과 한식 면류가 Growth로 기울고, 중식·제과점·피자/버거는 가장 두꺼운 Stable과 가장 낮은 Growth(≈0.18)를 가진다. Decline 비율은 업종 간 비교적 고르다(0.16~0.23).
 
-**Table 4.3 — 업종 수준 G/S/D 분포** (19 시즌 정렬 distribution 패널 풀링, store-panel 관측)
+**Table 4.3 — 업종 수준 G/S/D 분포** (주요 10개 외식 업종, 19 시즌 정렬 distribution 패널 풀링, store-panel 관측)
 
 | Industry | Growth | Stable | Decline | $n$ |
 |---|---|---|---|---|
