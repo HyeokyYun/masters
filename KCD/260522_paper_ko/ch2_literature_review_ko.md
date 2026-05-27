@@ -15,7 +15,7 @@
 
 ### §2.1.1 조직 생태학과 사업체 생존
 
-조직 생태학은 새롭게 설립된 조직의 생존 또는 실패를 결정하는 요인에 대한 사회학·경제학 이론으로, *liability of newness* \cite{stinchcombe1965social}와 *density dependence* \cite{hannan1989organizational} 같은 가설을 발전시켜 왔다. liability-of-newness 가설은 *기업이 설립 직후 외부 충격에 더 취약하다*는 입장으로, 본 논문에서 Q1_short(단기 영업기간) 코호트에서 Decline 비중이 두꺼운 결과(§\ref{sec:significant_vars})와 정합한다. density-dependence 가설은 *같은 업종·지역의 기업 밀도가 개별 생존율에 영향을 미친다*는 입장으로, 본 논문의 업종 × 동 G/S/D 분포 이질성(§\ref{sec:industry_dong})의 이론적 배경을 제공한다.
+조직 생태학은 새롭게 설립된 조직의 생존 또는 실패를 결정하는 요인에 대한 사회학·경제학 이론으로, *liability of newness* \cite{stinchcombe1965social}와 *density dependence* \cite{hannan1989organizational} 같은 가설을 발전시켜 왔다. liability-of-newness 가설은 *기업이 설립 직후 외부 충격에 더 취약하다*는 입장으로, 본 논문에서 Q1_short(단기 영업기간) 코호트에서 Decline 비중이 두꺼운 결과(§\ref{sec:significant_vars})와 정합한다. density-dependence 가설은 *같은 업종·지역의 기업 밀도가 개별 생존율에 영향을 미친다*는 입장으로, 본 논문의 업종 × 구 G/S/D 분포 이질성(§\ref{sec:industry_dong})의 이론적 배경을 제공한다.
 
 ### §2.1.2 생존 분석 기반 폐업·생존 예측
 
