@@ -49,7 +49,7 @@
 
 임계값은 **각 패널 내** 정규화 슬로프의 *표준편차* $\sigma$ 의 $k$ 배($\pm k\sigma$)로 설정한다. $\sigma$ 가 패널별로 계산되므로 cutoff는 각 패널의 분산에 적응한다. 기본값은 $k = 0.5$이며, "대부분 점포가 Stable로 뭉치지 않으면서 Growth·Decline의 정의가 통계적으로 안정적인" 영역이다. 임계값 민감도는 Table 3.1에 요약한다.
 
-**Table 3.1 — Label threshold sensitivity** (삼항 분류기 macro-$F_1$, 라벨링 패널; 여기서 $k$는 정규화 슬로프의 패널별 표준편차 $\sigma$에 곱하는 배수로, Growth/Decline cutoff는 $\pm k\sigma$)
+**Table 3.1 — Label threshold sensitivity** (삼항 분류기 macro-$F_1$, 라벨 선택용 $k\sigma$ 임계값 설정별; 여기서 $k$는 정규화 슬로프의 패널별 표준편차 $\sigma$에 곱하는 배수로, Growth/Decline cutoff는 $\pm k\sigma$)
 
 | $k$ | 삼항 macro-$F_1$ |
 |---|---|

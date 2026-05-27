@@ -99,7 +99,7 @@ A vs D paired 비교:
 
 ## §5.4 Model Selection: Random Forest vs LightGBM
 
-이 절 및 §5.5–§5.7, §5.8 까지의 모든 결과는 시즌 정렬 삼항 G/S/D (14 패널 store-grouped 5-fold, macro-$F_1$) 상.
+이 절 및 이후 비교 절들(§5.7·§5.8까지)은 시즌 정렬 삼항 G/S/D (store-grouped 5-fold, macro-$F_1$)를 보고하며 큰 폭 성장 타깃과 직접 비교 불가. **패널 세트는 실험마다 다르다**: A/B/C/D 하이브리드 평가는 14개 main panel, RF vs LightGBM·외부모델·cost-sensitive 비교는 6-panel subset.
 
 ### 동일 representation 비교
 
@@ -176,11 +176,11 @@ nc_slope 계수가 모든 코호트에서 양 (Q1 +2.026, Q2 +1.255, Q3 +1.286, 
 두 cluster가 본 논문의 핵심 분리점:
 
 - **Stable-dominant cluster (4).** Stable 비중 46.2% (가장 두꺼움), 내부 macro-$F_1$ 0.464 (가장 높음). 중수준 매출, 낮은 변동성, 낮은 신규 고객 비율 특성.
-- **Fragile cluster (3).** Decline 비중 35.9% 누적, 내부 macro-$F_1$ 0.337 (가장 낮음). $n=744$ 의 작은 cell — 높은 변동성, 낮은 객단가, 정체된 신규 고객 유입 공존. 패널 `sy2021_sm05_w3m_off1` 의 cluster 5 에서 Decline 비중이 **45.2%** 로 상승 → *fragile cluster* 식별 자체가 패널에 걸쳐 안정적.
+- **Fragile cluster (3).** Decline 비중 35.9% 누적, 내부 macro-$F_1$ 0.337 (가장 낮음). $n=744$ 의 작은 cell — 높은 변동성, 낮은 객단가, 정체된 신규 고객 유입 공존. 클러스터는 패널마다 재적합되어 **인덱스는 패널 간 비교 불가**; 재현되는 건 *패턴* — 고-Decline cluster가 매 패널 등장(예: `sy2021_sm05_w3m_off1` 45.2%, `sy2021_sm09_w3m_off1` ~0.60).
 
 ### Per-Cluster Feature Importance
 
-LightGBM top-importance feature 는 cluster 별로 다름. 특히 *fragile cluster* 에서 신규 고객 비율과 객단가 추세가 가장 중요 — §\ref{sec:cohort_lgbm} 코호트 결과와 정합.
+LightGBM top-importance feature 는 cluster 별로 다름. 특히 *fragile cluster* 에서 **고객수 변동성·관측 coverage·신규 고객 동태**가 최상위 — §\ref{sec:cohort_lgbm} 신규 고객 신호와 대체로 정합.
 
 ### 함의
 

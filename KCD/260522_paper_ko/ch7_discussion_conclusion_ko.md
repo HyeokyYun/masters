@@ -147,6 +147,6 @@ fragile cluster 식별(§5.6) 과 cost-sensitive 보조 실험(§5.8) 은 그 �
 
 큰 폭 성장 식별(이항 분류) 에서 변곡점·UDX 코드 feature 를 17-변수 운영 baseline 에 결합하면 binary $F_1$ 이 0.539→0.642 (RF), 0.681→0.818 (XGBoost). UDX 코드가 사후 요약이므로 단일 80/20 holdout 위의 explanatory ablation; external validity 는 향후 연구(§\ref{sec:taskA_caveats}).
 
-시즌 정렬 14-패널 G/S/D 단기 예측 에서 A_baseline macro-$F_1 \approx 0.50$, cluster + change-point hybrid 평균 $\Delta F_1 = +0.0017$ (Bonferroni 후 0/14 유의) — *조건부* 개선. 동일 representation 에서 LightGBM 이 RF 대비 작지만 일관된 우위(6 패널 평균 $\Delta F_1 = +0.0075$, 5/6 승, 2/6 $p<0.05$), 원인은 본 데이터의 *feature 이질성 + 강한 소수 클래스 신호 + 큰 categorical cardinality* 와 LightGBM 구조 특성의 적합으로 해석. 19 시즌 정렬 패널 macro-$F_1$ 0.43–0.54, 14-모델 외부 비교에서 LightGBM 계열 3종만 우위·14 비-LightGBM 모델 모두 일관된 음의 마진, 본 구성 GNN 의 음의 마진이 함께 G/S/D 결과의 안정성과 향후 시공간 확장 동기를 제공.
+시즌 정렬 14-패널 G/S/D 단기 예측 에서 A_baseline macro-$F_1 \approx 0.50$, cluster + change-point hybrid 평균 $\Delta F_1 = +0.0017$ (Bonferroni 후 0/14 유의) — *조건부* 개선. 동일 representation 에서 LightGBM 이 RF 대비 작지만 일관된 우위(6 패널 평균 $\Delta F_1 = +0.0075$, 5/6 승, 2/6 $p<0.05$); 이는 본 데이터의 *feature 이질성 + 강한 소수 클래스 신호 + 큰 categorical cardinality* 와 LightGBM 구조 특성의 적합과 부합한다. 19 시즌 정렬 패널 macro-$F_1$ 0.43–0.54, 14-모델 외부 비교에서 LightGBM 계열 3종만 우위·14 비-LightGBM 모델 모두 일관된 음의 마진, 본 구성 GNN 의 음의 마진이 함께 G/S/D 결과의 안정성과 향후 시공간 확장 동기를 제공.
 
 본 논문이 제안한 *현상 분석에 근거한 representation 설계* 와 *데이터 특성 기반 모델 선택 해석* 이 후속 거래 기반 점포 분류 연구에 채택되면, 이 프로토콜은 그러한 연구와 신중한 정책 적용에 더 투명한 근거를 제공할 수 있다.
