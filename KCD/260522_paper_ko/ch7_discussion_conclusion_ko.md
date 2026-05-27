@@ -23,7 +23,7 @@ Chapter 1의 네 RQ(RQ1–RQ4)에 다음과 같이 답한다.
 
 ### §7.1.3 RQ3 (i) — 큰 폭 성장 식별: inflection + UDX representation 의 설명력
 
-점포 관측구간 첫 분기 대비 마지막 분기 평균 매출 2배 이상(=100% 이상 성장) 이항 분류에서, 17-변수 운영 feature set 의 baseline binary $F_1$ 은 RF 0.539 / XGBoost 0.681; 변곡점 feature(P1/P2 슬로프) + UDX 코드 더미 + cluster 라벨 결합으로 동일 80/20 holdout 에서 0.795 / 0.844 로 상승. 매출 곡선 *shape* 이 관측구간 큰 폭 성장에 강한 설명력을 가짐을 보임. UDX 코드가 매출 궤적의 사후 요약이므로 forward predictive power 의 직접 향상이 아닌 *explanatory ablation* 으로 해석(§\ref{sec:limitations}); external validity 는 향후 연구.
+점포 관측구간 첫 분기 대비 마지막 분기 평균 매출 2배 이상(=100% 이상 성장) 이항 분류에서, 17-변수 운영 feature set 의 baseline binary $F_1$ 은 RF 0.539 / XGBoost 0.681; 변곡점 feature(P1/P2 슬로프) + UDX 코드 더미 + cluster 라벨 결합으로 동일 80/20 holdout 에서 0.642 / 0.818 로 상승. 매출 곡선 *shape* 이 관측구간 큰 폭 성장에 강한 설명력을 가짐을 보임. UDX 코드가 매출 궤적의 사후 요약이므로 forward predictive power 의 직접 향상이 아닌 *explanatory ablation* 으로 해석(§\ref{sec:limitations}); external validity 는 향후 연구.
 
 ### §7.1.4 RQ3 (ii) — 시즌 정렬 G/S/D 예측의 representation·모델 선택
 
@@ -73,7 +73,7 @@ Chapter 6 은 G/S/D 결과가 세 차원에서 안정적임을 검증: (i) 시�
 
 ### §7.3.3 KCD 플랫폼 운영자
 
-KCD 같은 카드 매출 SaaS 운영자는 본 논문 hybrid representation 의 구성 요소를 점포주 대시보드·사업 분석 리포트에 직접 통합 가능. 특히 매출 곡선 *형상(shape)* feature가 큰 폭 성장 점포 식별에 가장 크게 기여(이항 $F_1$ 최대 +0.26 향상; §\ref{sec:taskA_ablation}) 한다는 결과는 가능한 제품 방향을 시사: 기존 평면 매출 추세 리포트를 *shape 기반 진단* 으로 확장.
+KCD 같은 카드 매출 SaaS 운영자는 본 논문 hybrid representation 의 구성 요소를 점포주 대시보드·사업 분석 리포트에 직접 통합 가능. 특히 매출 곡선 *형상(shape)* feature가 큰 폭 성장 점포 식별에 가장 크게 기여(이항 $F_1$ 최대 +0.14 향상; §\ref{sec:taskA_ablation}) 한다는 결과는 가능한 제품 방향을 시사: 기존 평면 매출 추세 리포트를 *shape 기반 진단* 으로 확장.
 
 ---
 
@@ -104,7 +104,7 @@ Chapter 6 의 GNN 비교는 (i) 동·업종 결합 정적 이종 그래프, (ii)
 
 본 논문의 두 prediction 타깃은 *별개* 로 직접 비교 불가.
 
-- 큰 폭 성장 binary $F_1$ 0.539–0.844 (큰 폭 성장 baseline · inflection + UDX) 는 (i) 이항 라벨(`growth_rate ≥ 1.0`), (ii) binary $F_1$(양성=큰 폭 성장), (iii) 단일 80/20 stratified holdout, (iv) 점포 누적 운영 변수 + 사후 요약 UDX 코드 입력 위의 평가.
+- 큰 폭 성장 binary $F_1$ 0.539–0.818 (큰 폭 성장 baseline · inflection + UDX) 는 (i) 이항 라벨(`growth_rate ≥ 1.0`), (ii) binary $F_1$(양성=큰 폭 성장), (iii) 단일 80/20 stratified holdout, (iv) 점포 누적 운영 변수 + 사후 요약 UDX 코드 입력 위의 평가.
 - G/S/D macro-$F_1$ 0.43–0.54 (시즌 정렬 패널 rolling) 는 (i) 3-class G/S/D 라벨($\pm 0.5\sigma$ 슬로프), (ii) macro-$F_1$, (iii) 14 패널 × store-grouped 5-fold CV, (iv) 동일 캘린더 3개월 입력 → 1년 후 3개월 target 의 *forward prediction* 평가.
 
 두 타깃의 절대 수치는 합산·평균·동일 지표 비교를 해서는 안 되며, 본 논문은 타깃 내 향상·안정성만 주장.
@@ -112,7 +112,7 @@ Chapter 6 의 GNN 비교는 (i) 동·업종 결합 정적 이종 그래프, (ii)
 ### §7.4.6 큰 폭 성장 단일 holdout · 사후 요약 변수 의존
 (`sec:taskA_caveats`)
 
-큰 폭 성장 binary $F_1$ 0.795 / 0.844 향상은 다음 두 한계 안에서 해석.
+큰 폭 성장 binary $F_1$ 0.642 / 0.818 향상은 다음 두 한계 안에서 해석.
 
 1. **사후 요약 변수의 설명력.** 결합 representation 의 `final_code` (UDX: DUY, DDZ 등) 는 점포 매출 패턴 shape 의 사후 압축이며, 구성상 큰 폭 성장 패턴(UU 등) 과 강하게 연관. 따라서 여기의 $\Delta F_1$ 은 *매출 곡선 shape 이 장기 매출 성장과 강하게 연결됨* 을 보이는 *explanatory ablation* 이며, *forward predictive power 의 직접 향상* 으로 번역하려면 변곡점/UDX 정의 윈도우를 라벨 정의 윈도우와 분리해야 함 (예: 변곡점 정의 윈도우 이후 미래 기간에서 `growth_rate` 산출).
 2. **단일 holdout · 단일 seed 평가.** 큰 폭 성장 결과는 stratified 80/20 holdout, seed=42 의 단일 시행; store-grouped 5-fold 또는 시즌 정렬 rolling 하의 안정성은 본 논문에서 미검증. 따라서 큰 폭 성장 task 의 XGBoost > RF 순위는 통계적으로 검증된 모델 비교가 아니라 서술적으로 해석해야 한다.
@@ -145,7 +145,7 @@ fragile cluster 식별(§5.6) 과 cost-sensitive 보조 실험(§5.8) 은 그 �
 
 본 석사학위논문은 KCD 가 제공한 서울 외식업 약 59,000 점포 주간 카드 매출 데이터 위에서 *현상 분석 → 예측 representation → 모델 비교 → robustness* 흐름을 통해 다음을 입증했다. 점포 수준에서 신규 고객 동태와 영업기간이 G/S/D Growth 클래스의 일관된 신호를 제공하고, 보조 큰 폭 성장 회귀에서는 신규 고객 비율과 매출 변동성이 관측구간 첫/끝 분기 매출 2배와 연관되며, 업종 × 동 조합 수준에서 G/S/D 비율 이질성이 분명하다.
 
-큰 폭 성장 식별(이항 분류) 에서 변곡점·UDX 코드 feature 를 17-변수 운영 baseline 에 결합하면 binary $F_1$ 이 0.539→0.795 (RF), 0.681→0.844 (XGBoost). UDX 코드가 사후 요약이므로 단일 80/20 holdout 위의 explanatory ablation; external validity 는 향후 연구(§\ref{sec:taskA_caveats}).
+큰 폭 성장 식별(이항 분류) 에서 변곡점·UDX 코드 feature 를 17-변수 운영 baseline 에 결합하면 binary $F_1$ 이 0.539→0.642 (RF), 0.681→0.818 (XGBoost). UDX 코드가 사후 요약이므로 단일 80/20 holdout 위의 explanatory ablation; external validity 는 향후 연구(§\ref{sec:taskA_caveats}).
 
 시즌 정렬 14-패널 G/S/D 단기 예측 에서 A_baseline macro-$F_1 \approx 0.50$, cluster + change-point hybrid 평균 $\Delta F_1 = +0.0017$ (Bonferroni 후 0/14 유의) — *조건부* 개선. 동일 representation 에서 LightGBM 이 RF 대비 작지만 일관된 우위(6 패널 평균 $\Delta F_1 = +0.0075$, 5/6 승, 2/6 $p<0.05$), 원인은 본 데이터의 *feature 이질성 + 강한 소수 클래스 신호 + 큰 categorical cardinality* 와 LightGBM 구조 특성의 적합으로 해석. 19 시즌 정렬 패널 macro-$F_1$ 0.43–0.54, 14-모델 외부 비교에서 LightGBM 계열 3종만 우위·14 비-LightGBM 모델 모두 일관된 음의 마진, 본 구성 GNN 의 음의 마진이 함께 G/S/D 결과의 안정성과 향후 시공간 확장 동기를 제공.
 

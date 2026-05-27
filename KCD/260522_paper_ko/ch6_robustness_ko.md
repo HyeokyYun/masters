@@ -55,7 +55,7 @@ macro-$F_1$ 분산을 start-month 성분과 window-length 성분으로 분해하
 
 두 함의:
 
-1. **두 prediction 타깃은 직접 비교 불가.** 큰 폭 성장 binary $F_1$ 0.795 ~ 0.844 (§5.2, 단일 80/20 holdout) 와 G/S/D macro-$F_1$ 0.43–0.54 (본 절, 19 시즌 정렬 패널 store-grouped 5-fold) 는 label·metric·split 이 다름. 직접 비교 금지. 본 논문은 타깃 내 향상·안정성만 주장.
+1. **두 prediction 타깃은 직접 비교 불가.** 큰 폭 성장 binary $F_1$ 0.642 ~ 0.818 (§5.2, 단일 80/20 holdout) 와 G/S/D macro-$F_1$ 0.43–0.54 (본 절, 19 시즌 정렬 패널 store-grouped 5-fold) 는 label·metric·split 이 다름. 직접 비교 금지. 본 논문은 타깃 내 향상·안정성만 주장.
 2. 그 한계 내에서, G/S/D 의 LightGBM vs RF 상대 순위는 시즌·시기 변화에 걸쳐 일관됨.
 
 ---
