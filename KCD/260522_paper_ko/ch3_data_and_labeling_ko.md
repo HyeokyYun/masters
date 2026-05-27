@@ -154,9 +154,9 @@ G/S/D 세 클래스는 비대칭이며, 불균형은 **패널 내부**에도 **�
 
 ### 매출 궤적 클러스터
 
-점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. 정규화된 주간 매출 궤적을 $K = 6$개의 cluster로 묶으면 6개의 인식 가능한 궤적 형상이 산출된다(Figure 3.2): 고점→**급락(sharp-drop)**, **지속 고수준(sustained-high)**(주기적 dip), **완만한 하락(gradual-decline)**, **지속 하락(sustained-decline)**, **상승/회복(rising/recovery)**, **완만한 상승(gentle-rise)** 클러스터. $K = 6$은 더 잘게 나누기보다 질적으로 구분되는 소수의 해석 가능한 형상을 얻기 위한 의도적 선택이다. clustering 알고리즘 자체는 본 논문의 방법론적 기여가 아니며, 그 결과 `cluster` 라벨은 보조적인 매출 궤적 descriptor 하나로만 모델에 들어간다. Ch5에서 보듯 그 증분 기여가 제한적이므로, 핵심 결론은 특정 clustering 절차에 의존하지 않는다. 이 `cluster` 라벨은 큰 폭 성장 변곡점 + UDX representation (§5.2)과 G/S/D hybrid representation (§5.3) 양쪽에서 feature로 직접 사용된다. UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z.
+점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. 정규화된 주간 매출 궤적을 $K = 6$개의 cluster로 묶으면 6개의 인식 가능한 궤적 형상이 산출된다(Figure 3.2): 고점→**급락(sharp-drop)**, **지속 고수준(sustained-high)**(주기적 dip), **완만한 하락(gradual-decline)**, **지속 하락(sustained-decline)**, **상승/회복(rising/recovery)**, **완만한 상승(gentle-rise)** 클러스터. $K = 6$은 더 잘게 나누기보다 질적으로 구분되는 소수의 해석 가능한 형상을 얻기 위한 의도적 선택이다. clustering 알고리즘 자체는 본 논문의 방법론적 기여가 아니며, 그 결과 `cluster` 라벨은 보조적인 매출 궤적 descriptor 하나로만 모델에 들어간다. Ch5에서 보듯 그 증분 기여가 제한적이므로, 핵심 결론은 특정 clustering 절차에 의존하지 않는다. 여기 보인 full-span 군집은 기술용(descriptive)이다; 이는 큰 폭 성장 UDX representation (§5.2)에 feature로 쓰이며, UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z. G/S/D forward 모델은 이 full-span 라벨을 재사용하지 *않는다*: 각 시즌 정렬 패널 안에서 feature window 매출 시퀀스만으로 6개 `cluster` feature를 다시 계산하므로(§5.3) feature가 forward-valid하게 유지된다. 그 패널별 구성은 §5.6에서 보고한다.
 
-**Figure 3.2** — 6개 매출 궤적 클러스터: 멤버 시계열(회색) 위에 클러스터 평균(빨강), 관측 주 전체에 대해 $[0,1]$로 정규화. 각 패턴은 두 예측 타깃의 representation에 `cluster` feature로 들어간다.
+**Figure 3.2** — 6개 매출 궤적 클러스터: 멤버 시계열(회색) 위에 클러스터 평균(빨강), 관측 주 전체에 대해 $[0,1]$로 정규화. 이 full-span 형상들은 큰 폭 성장 UDX 코드에 쓰이고, G/S/D 모델은 별도의 forward-valid 패널별 `cluster` feature를 사용한다(§5.6).
 
 ---
 

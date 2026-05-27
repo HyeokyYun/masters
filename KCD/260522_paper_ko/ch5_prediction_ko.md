@@ -156,13 +156,13 @@ nc_slope 계수가 모든 코호트에서 양 (Q1 +2.026, Q2 +1.255, Q3 +1.286, 
 
 ---
 
-## §5.6 매출 궤적 Cluster Factor Decomposition
+## §5.6 패널 내부(Panel-Internal) Cluster 분해
 
-매출 패턴 기반 6개 trajectory cluster로 점포를 분해하고 cluster 별 G/S/D 결과와 feature importance 를 보고.
+점포를 6개 *패널 내부(panel-internal)* cluster로 분해하고 cluster 별 G/S/D 결과와 feature importance 를 보고. 이 cluster들은 각 시즌 정렬 패널 안에서 feature window의 정규화 매출 시퀀스만으로 적합되며 — G/S/D 모델이 쓰는 forward-valid `cluster` feature와 동일(§5.3) — Figure 3.2의 full-span 기술용(descriptive) 궤적 클러스터와는 다른 객체다. 따라서 여기 cluster 크기 합은 단일 패널의 점포 수(33,998)이며 Figure 3.2의 full-span 전체 점포 수가 아니다.
 
 ### Cluster × G/S/D 분포
 
-**Table 5.4 — 6개 매출 궤적 clusters (panel `sy2021_sm01_w3m_off1`)**
+**Table 5.4 — 6개 패널 내부 clusters (panel `sy2021_sm01_w3m_off1`)**
 
 | Cluster | $n$ | Growth | Stable | Decline | macro-$F_1$ |
 |---|---|---|---|---|---|
@@ -284,7 +284,7 @@ cost-sensitive (decline_x2/x3) + 6-변형 manual 의 null 결과는, 본 데이�
 2. **G/S/D baseline vs hybrid.** 14 시즌 정렬 패널에서 RF baseline (A) macro-$F_1 \approx 0.50$ (패널 범위 **0.467–0.546**), cluster+CP hybrid (D) 와의 paired 비교 평균 $\Delta F_1 = +0.0017$, Bonferroni 후 14 패널 중 0개 유의 — *조건부* 개선 (§\ref{sec:taskB_main}).
 3. **G/S/D 모델 비교.** 동일 representation 에서 LightGBM 이 RF 상회 (평균 $\Delta F_1 = +0.0075$, 6 패널 중 5승, 6 중 2에서 $p < 0.05$) — 본 데이터의 *feature 이질성 + 강한 소수 클래스 신호 + 큰 categorical cardinality* 와 LightGBM 구조 특성의 적합으로 해석 (§\ref{sec:rf_vs_lgbm}).
 4. **G/S/D 코호트 분해.** 영업기간 사분위 코호트 분석은 신규 고객 → Growth 효과가 모든 코호트에서 일관, 효과 크기는 Q1·Q4 양끝에서 최대 (§5.4).
-5. **G/S/D cluster 분해.** 매출 궤적 cluster 분해는 *fragile cluster* (Decline 35–45%) 를 분리, 이 안에서 hybrid representation 의 마진이 가장 두드러짐 (§5.6).
+5. **G/S/D cluster 분해.** 패널 내부 cluster 분해는 *fragile cluster* (Decline 35–45%) 를 분리, 이 안에서 hybrid representation 의 마진이 가장 두드러짐 (§5.6).
 6. **G/S/D 외부 비교 · cost-sensitive.** 14 비-LightGBM 비교 모델 중 RF를 상회하는 것은 없고, 우리 LightGBM 계열 3종만 상회 (lgbm_tabular +0.0075, 5/6 승); 14 비-LightGBM 변형 모두 일관된 음의 마진 (−0.0345 ~ −0.2705). cost-sensitive 가중 (rf_decline_x2/x3) 은 macro-$F_1$ 단조 감소 (§\ref{sec:phase5}, §5.8).
 
 다음 장은 G/S/D 결과가 시즌·외부 비교·공간 그래프 모델에 걸쳐 안정적인지 검증. 큰 폭 성장 단일 holdout 의 external validity 는 한계·향후 연구 (§\ref{sec:limitations}) 로.
