@@ -35,8 +35,6 @@
 
 **Figure 6.1** — 19 시즌 정렬 패널(3개월, offset 1) 위 LightGBM·RF macro-$F_1$. 범위 약 0.435 ~ 0.541.
 
-**Figure 6.4** — start-month × window-length 평면의 LightGBM macro-$F_1$ heatmap (보조).
-
 #### 엄격한 out-of-time (OOT) 검증
 
 14-패널 시즌 정렬 rolling 프로토콜은 각 패널 *내부* store-grouped 5-fold CV 사용. 추가적인 더 엄격한 robustness 층으로 **strict out-of-time (OOT) split** 을 평가: 2021 패널로 학습하고 *다음 해* 같은 캘린더 윈도우로 테스트 (예: Jan–Mar 2021→2022 학습, Jan–Mar 2022→2023 테스트), train/test 패널 시간 slice 간 점포 공유 없음. 이는 메인 LightGBM 파이프라인의 재현이 아니라 전이성(transferability) 스트레스 테스트이므로, balanced-logistic baseline 을 `most_frequent` dummy 에 견주어 사용한다. Figure 6.5 는 start month (1~12) × window length (4,8,12,16,20,30주) 모든 조합의 macro-$F_1$ 을 보고한다.
@@ -64,17 +62,7 @@ macro-$F_1$ 분산을 start-month 성분과 window-length 성분으로 분해하
 
 §\ref{sec:phase5}의 경계 조건 비교를 동일 매출 데이터·라벨·split 위에서 robustness 재확인으로 재검토한다. 결론은 동일하다: LightGBM 계열 3종만 Random Forest reference를 상회하고(+0.003 ~ +0.0075, 최대 6패널 중 5승), 14개 비-LightGBM 비교 변형(cost-sensitive RF 2, SMB-attention 3, foundation 2, neural forecasting 7)은 모두 일관된 음의 마진(−0.0345 ~ −0.2705)을 보인다. 모델별 값은 Table 5.6 참조.
 
-### 데이터 특성 해석
-
-이는 예측 모델 자체의 결함이 아니라 *데이터 특성 mismatch*:
-
-- **빈도·샘플링.** 이 모델들은 규칙적으로 샘플링된, 안정적·균등 간격의 신호에 대한 장기 예측 벤치마크에서 강점을 보인다. 본 데이터는 주간 점포 매출로, noise 구조·정상성·자기상관 구조가 그런 벤치마크 환경과 다름.
-- **단면 이질성.** 이 모델들이 강한 벤치마크는 보통 비교적 동질적인 단면을 다룬다. 본 점포는 업종·구·영업기간·고객 구성이 이질, 점포별 *수준* 차이 큼.
-- **불연속.** 점포는 빈번한 불연속(휴무, 영업시간 변경, 부분 상호 변경)을 가지나, 이 모델들은 일반적으로 그런 불연속이 드문 연속적 시계열을 가정.
-
-### 함의
-
-이 결과는 본 논문의 *현상 분석 + 도메인 신호 통합* 접근의 정당성을 뒷받침한다. 외부 예측 모델의 단순 이식이 작동하지 않는 영역에서는 *데이터 특성을 반영한 representation 설계* 가 1차이며, 본 논문의 hybrid representation 이 그 대안.
+전체 데이터 특성 해석(빈도·샘플링, 단면 이질성, 불연속)은 §\ref{sec:phase5}에 있다. 이 robustness 재확인은, off-the-shelf 비교 모델이 in-domain baseline을 못 넘는 영역에서는 데이터 특성을 반영한 representation 설계가 1차임을 다시 확인한다.
 
 ---
 

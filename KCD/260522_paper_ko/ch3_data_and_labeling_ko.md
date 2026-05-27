@@ -122,16 +122,7 @@ G/S/D 세 클래스는 비대칭이며, 불균형은 **패널 내부**에도 **�
 
 ### §3.4.2 지표 선택: Macro-$F_1$
 
-따라서 평가 지표로 **macro-$F_1$** 을 사용한다. macro-$F_1$은 각 클래스의 precision/recall 균형($F_1$)을 클래스당 동일 가중치로 평균하여, 클래스 불균형 하에서 어느 한 클래스도 무시되지 않게 보장한다. 후보 지표 비교는 Table 3.5에 정리한다.
-
-**Table 3.5 — Metric comparison under class imbalance**
-
-| Metric | Property | Suitability |
-|---|---|---|
-| Accuracy | 강한 다수 클래스 편향 | 부적합 |
-| Weighted-$F_1$ | 클래스 크기 가중 | Decline 무시 가능 → 부적합 |
-| **Macro-$F_1$** | 클래스 동일 가중 | **본 논문 main metric** |
-| Balanced accuracy | recall 동일 가중만 | precision 손실 가능 → 보조 |
+따라서 평가 지표로 **macro-$F_1$** 을 사용한다. macro-$F_1$은 각 클래스의 precision/recall 균형($F_1$)을 클래스당 동일 가중치로 평균하여, 클래스 불균형 하에서 어느 한 클래스도 무시되지 않게 보장한다 (accuracy는 다수 클래스 편향이 강하고, weighted-$F_1$은 Decline을 무시할 수 있어 부적합).
 
 **Figure 3.1 — G/S/D label distribution.** 3개월 윈도우·offset 1의 **19 패널** 전반의 Growth/Stable/Decline 비율. 클래스 분포는 패널 시작 월에 따라 상당히 변동한다 (예: 2021년 초 Growth 우세 → 2022년 말 Decline 우세). 이 분포 이질성이 클래스 불균형 보정과 시즌 정렬 평가가 동시에 필요한 이유이다.
 
