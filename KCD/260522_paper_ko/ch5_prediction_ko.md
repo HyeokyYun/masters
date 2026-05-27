@@ -115,7 +115,7 @@ LightGBM이 본 데이터의 무엇을 구조적으로 더 잘 잡는지, 본 �
 2. **Histogram-based splitting.** 주간 매출 통계 분포는 heavy tail 과 점포 간 수준 차이를 가짐. LightGBM 의 histogram-based split 이 이런 분위수 구조에 적응.
 3. **고-카디널리티 구조의 효율적 처리.** 업종·동 같은 고-카디널리티 입력(인코딩된 dummy로 투입)에 대해 LightGBM 이 희소 구조를 효율적으로 분할하며, RF 의 다수결 split 보다 적은 noise 로 동작.
 
-이 구조적 속성은 본 데이터의 *feature 이질성 + 강한 소수 클래스 신호 + 큰 categorical cardinality* 와 정합 — LightGBM 이 *일반적으로* 가 아니라 *이 데이터에서* 더 낫다는 해석을 정당화.
+이 구조적 속성은 곧 본 데이터의 *feature 이질성 + 강한 소수 클래스 신호 + 큰 categorical cardinality* 에 맞는 *inductive bias* 이며 — LightGBM 이 *일반적으로* 가 아니라 *이 데이터에서* 더 낫다는 해석을 정당화.
 
 ### 최종 선택
 
@@ -236,7 +236,7 @@ Cluster 분해는 *전체 평균 macro-$F_1$* 으로 가려지는 *cell 별 rank
 
 ### 데이터 특성 해석
 
-이는 외부 예측 모델의 결함이 아니라 *데이터 특성 mismatch*. 이 모델들은 일반적으로 (i) 규칙적으로 샘플링된 시계열, (ii) 비교적 동질 단면, (iii) 불연속이 드문 연속적 신호 를 가정. 본 데이터는 (i) 주간, (ii) 점포 이질, (iii) 영업시간·휴무 불연속 빈번 — 위 가정과 어긋남.
+이는 외부 예측 모델의 결함이 아니라 *데이터 특성 mismatch*. 이 모델들은 일반적으로 (i) 규칙적으로 샘플링된 시계열, (ii) 비교적 동질 단면, (iii) 불연속이 드문 연속적 신호 를 가정. 본 데이터는 (i) 주간, (ii) 점포 이질, (iii) 영업시간·휴무 불연속 빈번 — 위 가정과 어긋남. 주가·거시 지표처럼 집계되고 비교적 연속적인 시계열과 달리, 주간 점포 매출은 event-driven 이며 급격한 0과 국지 충격으로 끊긴다; 더 매끄러운 시계열에 사전학습·튜닝된 모델은 이를 예견할 근거가 거의 없어 관측된 음의 마진에 기여한 것으로 보인다.
 
 이 해석의 의의는 §6.2 *robustness* 차원에서 반복 강조.
 
@@ -272,7 +272,7 @@ rf_decline_x2/x3 의 음의 효과는 6 패널 모두에서 paired $t$-test $p <
 
 ### 해석
 
-cost-sensitive (decline_x2/x3) + 6-변형 manual 의 null 결과는, 본 데이터에서 *Decline 성능이 단순히 class weight 를 키운다고 개선되지 않음* 을 가리킨다. Decline 가중을 키우면 (i) macro-$F_1$ 불변 (manual, $p > 0.42$) 또는 (ii) Stable precision 손실로 macro-$F_1$ 감소 (decline_x2/x3). G/S/D task 에서 제약 요인은 nominal class weight 가 아니라 baseline·hybrid representation 의 feature separability (신규 고객 비율, 영업기간; §\ref{sec:significant_vars}) 로 보인다. **본 데이터의 분류 경계는 sample weight 가 아니라 feature 로 설정됨.**
+cost-sensitive (decline_x2/x3) + 6-변형 manual 의 null 결과는, 본 데이터에서 *Decline 성능이 단순히 class weight 를 키운다고 개선되지 않음* 을 가리킨다. Decline 가중을 키우면 (i) macro-$F_1$ 불변 (manual, $p > 0.42$) 또는 (ii) Stable precision 손실로 macro-$F_1$ 감소 (decline_x2/x3). G/S/D task 에서 제약 요인은 nominal class weight 가 아니라 baseline·hybrid representation 의 feature separability (신규 고객 비율, 영업기간; §\ref{sec:significant_vars}) 로 보인다. **본 데이터의 분류 경계는 sample weight 가 아니라 feature 로 설정됨** — 그래서 본 논문은 loss 수준 class 재균형보다 도메인 주도 representation 에 집중한다.
 
 ---
 
