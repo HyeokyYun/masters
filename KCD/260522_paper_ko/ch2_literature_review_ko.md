@@ -85,12 +85,12 @@ GNN의 표준 아키텍처는 GCN \cite{kipf2017semi}과 GAT \cite{velickovic201
 
 ## §2.4 Hybrid Representation Learning
 
-representation learning의 일반 원리 \cite{bengio2013representation}는 *입력 데이터를 학습에 적합한 잠재 공간으로 변환*하는 것이다. 시계열 예측·분류에서 이 원리는 시계열 통계량, 변곡점 \cite{truong2020changepoint}, shape 기반 클러스터링 \cite{paparrizos2015kshape} 같은 보조 신호를 결합하는 방향으로 진화해 왔다.
+representation learning의 일반 원리 \cite{bengio2013representation}는 *입력 데이터를 학습에 적합한 잠재 공간으로 변환*하는 것이다. 시계열 예측·분류에서 이 원리는 시계열 통계량, 변곡점 \cite{truong2020changepoint}, 매출 궤적 cluster descriptor 같은 보조 신호를 결합하는 방향으로 진화해 왔다.
 
 본 논문에서 "hybrid representation"은 (i) 시계열 통계량, (ii) tabular 메타데이터, (iii) 도메인 신호를 단일 feature 벡터로 결합하여 예측 모델에 투입하는 접근을 의미한다 \cite{fawaz2019deeplearning,salinas2020deepar}. 본 논문은 두 라벨 정의에 대해 두 가지 구분되는 hybrid 형태를 평가한다:
 
-- **G/S/D hybrid representation** (주 과제): 매출 시계열 통계량, 점포 메타데이터, 고객 구성 신호, KMeans cluster 라벨, change-point feature를 결합하여 A_baseline / B_base+cluster / C_base+cp / D_full 의 hybrid feature set 구성 (§5.3).
-- **큰 폭 성장 변곡점 + UDX representation** (보완적): 17개 운영 baseline 변수(신규 고객 비율, 매출 변동계수, 영업 개월 수, 사업 밀도, 평방미터, 평균 매출, 추세 슬로프, 총 관찰 주, 주말 매출 비율, 평균 고객 수, 최대/최소 매출, 동·시군구 카운트와 평균) + `sigungu`·`depth_2` 더미에, K-Shape cluster 라벨, 변곡점 슬로프(`slope_P1`, `slope_P2`), 변곡 주차, UDX 코드 더미(`final_code` — DUY/DDZ/UU 등)를 추가 (§5.2).
+- **G/S/D hybrid representation** (주 과제): 매출 시계열 통계량, 점포 메타데이터, 고객 구성 신호, 매출 궤적 cluster 라벨, change-point feature를 결합하여 A_baseline / B_base+cluster / C_base+cp / D_full 의 hybrid feature set 구성 (§5.3).
+- **큰 폭 성장 변곡점 + UDX representation** (보완적): 17개 운영 baseline 변수(신규 고객 비율, 매출 변동계수, 영업 개월 수, 사업 밀도, 평방미터, 평균 매출, 추세 슬로프, 총 관찰 주, 주말 매출 비율, 평균 고객 수, 최대/최소 매출, 동·시군구 카운트와 평균) + `sigungu`·`depth_2` 더미에, 매출 궤적 cluster 라벨, 변곡점 슬로프(`slope_P1`, `slope_P2`), 변곡 주차, UDX 코드 더미(`final_code` — DUY/DDZ/UU 등)를 추가 (§5.2).
 
 이 구성은 *현상 분석에서 식별된 요인*과 *매출 곡선 형상 신호*를 직접 반영할 수 있어, 단일 모달 입력(예: 매출 시계열만) 대비 우위를 가진다. 또한 더 풍부한 표현은 macro-$F_1$ 평가 하에서 소수 클래스 경계를 더 분리 가능하게 만들 수 있으나, 클래스 불균형 \cite{chawla2002smote,johnson2019survey}은 실증 분석에서 여전히 핵심 과제로 남는다.
 

@@ -113,7 +113,7 @@ G/S/D 세 클래스는 비대칭이며, 불균형은 **패널 내부**에도 **�
 | Stable | 0.569 | 0.333–0.734 |
 | Decline | 0.206 | 0.054–0.620 |
 
-약 5.9만 개 서울 외식업 점포 중, 각 패널은 입력 윈도우와 1년 후 target 윈도우에 모두 관측된 점포를 라벨링한다; 라벨링 패널 `sy2021_sm01_w3m_off1` 은 그런 점포 $n=34{,}274$ 개를 포함한다(시작 월에 따라 패널별 수가 달라짐, Table 6.1 참조). 이후 K-Shape 클러스터링·시즌 정렬 예측에 쓰이는 모델용 패널은, shape 기반 feature에 필요한 완전한 주간 시계열이 없는 276개 점포를 제외하여 $n=33{,}998$ 이다.
+약 5.9만 개 서울 외식업 점포 중, 각 패널은 입력 윈도우와 1년 후 target 윈도우에 모두 관측된 점포를 라벨링한다; 라벨링 패널 `sy2021_sm01_w3m_off1` 은 그런 점포 $n=34{,}274$ 개를 포함한다(시작 월에 따라 패널별 수가 달라짐, Table 6.1 참조). 이후 매출 궤적 clustering·시즌 정렬 예측에 쓰이는 모델용 패널은, shape 기반 feature에 필요한 완전한 주간 시계열이 없는 276개 점포를 제외하여 $n=33{,}998$ 이다.
 
 단순 accuracy로 평가하면 두 함정이 발생한다.
 
@@ -152,11 +152,11 @@ G/S/D 세 클래스는 비대칭이며, 불균형은 **패널 내부**에도 **�
 
 특히 업종 × 동 단위는 본 논문이 강조하는 focal analysis로, "어떤 조합이 Growth 비율이 높고 Decline 비율이 높은가" 를 도출하는 데 사용된다 (§\ref{sec:industry_dong}).
 
-### K-Shape 매출 시계열 클러스터
+### 매출 궤적 클러스터
 
-점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. K-Shape 알고리즘 \cite{paparrizos2015kshape}을 $K = 6$으로 적용하면 6개의 인식 가능한 궤적 형상이 산출된다(Figure 3.2): 고점→**급락(sharp-drop)**, **지속 고수준(sustained-high)**(주기적 dip), **완만한 하락(gradual-decline)**, **지속 하락(sustained-decline)**, **상승/회복(rising/recovery)**, **완만한 상승(gentle-rise)** 클러스터. $K = 6$은 더 잘게 나누기보다 질적으로 구분되는 소수의 해석 가능한 형상을 얻기 위한 의도적 선택이며, 그 결과 `cluster` 라벨은 모델에 보조 feature 하나로만 들어가고 — Ch5에서 보듯 — 그 증분 기여가 제한적이라 핵심 결론이 클러스터 수에 의존하지 않는다. 이 `cluster` 라벨은 큰 폭 성장 변곡점 + UDX representation (§5.2)과 G/S/D hybrid representation (§5.3) 양쪽에서 feature로 직접 사용된다. UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z.
+점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. 정규화된 주간 매출 궤적을 $K = 6$개의 cluster로 묶으면 6개의 인식 가능한 궤적 형상이 산출된다(Figure 3.2): 고점→**급락(sharp-drop)**, **지속 고수준(sustained-high)**(주기적 dip), **완만한 하락(gradual-decline)**, **지속 하락(sustained-decline)**, **상승/회복(rising/recovery)**, **완만한 상승(gentle-rise)** 클러스터. $K = 6$은 더 잘게 나누기보다 질적으로 구분되는 소수의 해석 가능한 형상을 얻기 위한 의도적 선택이다. clustering 알고리즘 자체는 본 논문의 방법론적 기여가 아니며, 그 결과 `cluster` 라벨은 보조적인 매출 궤적 descriptor 하나로만 모델에 들어간다. Ch5에서 보듯 그 증분 기여가 제한적이므로, 핵심 결론은 특정 clustering 절차에 의존하지 않는다. 이 `cluster` 라벨은 큰 폭 성장 변곡점 + UDX representation (§5.2)과 G/S/D hybrid representation (§5.3) 양쪽에서 feature로 직접 사용된다. UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z.
 
-**Figure 3.2** — 6개 K-Shape 클러스터: 멤버 시계열(회색) 위에 클러스터 평균(빨강), 관측 주 전체에 대해 $[0,1]$로 정규화. 각 패턴은 두 예측 타깃의 representation에 `cluster` feature로 들어간다.
+**Figure 3.2** — 6개 매출 궤적 클러스터: 멤버 시계열(회색) 위에 클러스터 평균(빨강), 관측 주 전체에 대해 $[0,1]$로 정규화. 각 패턴은 두 예측 타깃의 representation에 `cluster` feature로 들어간다.
 
 ---
 

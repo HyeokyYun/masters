@@ -30,7 +30,7 @@ baseline 은 매출 시계열의 *shape* 신호(변곡점 위치, 세그먼트 �
 - `slope_P1`: 첫 세그먼트(개업 → P1) 슬로프
 - `slope_P2`: 두 번째 세그먼트(P1 → P2 또는 P1 → 끝) 슬로프
 - `inflection_week`: P1의 week index
-- `final_code` (UDX): P1·P2 두 슬로프의 Up/Down 두 글자 + 점포의 K-Shape 클러스터에서 매핑한 X/Y/Z 패턴 한 글자(§3.5; X = 성장형 클러스터, Y = 안정, Z = 쇠퇴형) — 예: DUY, DDZ. 데이터에 12종 등장
+- `final_code` (UDX): P1·P2 두 슬로프의 Up/Down 두 글자 + 점포의 매출 궤적 cluster에서 매핑한 X/Y/Z 패턴 한 글자(§3.5; X = 성장형 클러스터, Y = 안정, Z = 쇠퇴형) — 예: DUY, DDZ. 데이터에 12종 등장
 
 **Figure 5.A** — 샘플 점포의 검출된 P1과 두 세그먼트 슬로프.
 
@@ -41,10 +41,10 @@ baseline 은 매출 시계열의 *shape* 신호(변곡점 위치, 세그먼트 �
 | Component | Description |
 |---|---|
 | 17 변수 + `sigungu, depth_2` 더미 | baseline 과 공통 |
-| `cluster` | K-Shape 매출 클러스터 라벨 ($K=6$) |
+| `cluster` | 매출 궤적 cluster 라벨 ($K=6$) |
 | `slope_P1`, `slope_P2` | P1, P2 변곡점 세그먼트 슬로프 |
 | `inflection_week` | 첫 변곡점 week index |
-| `final_code` (UDX) | P1/P2 Up/Down 부호 + K-Shape 패턴(X/Y/Z) 더미 (DUY, DDZ 등) |
+| `final_code` (UDX) | P1/P2 Up/Down 부호 + 매출 궤적 cluster 패턴(X/Y/Z) 더미 (DUY, DDZ 등) |
 
 ### 성능
 
@@ -62,7 +62,7 @@ baseline 은 매출 시계열의 *shape* 신호(변곡점 위치, 세그먼트 �
 세 관찰:
 
 1. **shape 신호의 강한 explanatory power.** 매출 곡선 *shape* 의 압축 representation(변곡점, 세그먼트 슬로프, Up/Down 패턴)이 17-변수 baseline 의 binary $F_1$ 을 크게 향상(RF +0.103, XGB +0.137).
-2. **UDX 코드의 post-hoc summary 성질.** `final_code` (DUY, DDZ 등 12 코드 중 하나)는 본질적으로 매출 패턴 *shape* 의 사후 요약이므로 — 특히 X/Y/Z 글자가 전체 시계열을 본 K-Shape 클러스터에서 오므로, 큰 폭 성장 패턴(UU 등)과 강하게 연관됨. 따라서 이 $\Delta F_1$ 은 *forward predictive power* 의 직접 향상이 아닌 **explanatory ablation** 으로 해석되어야 함 — 매출 곡선 shape 이 장기 매출 성장과 강하게 연결된다는 의미. caveat 은 §\ref{sec:limitations} 에서 재논의.
+2. **UDX 코드의 post-hoc summary 성질.** `final_code` (DUY, DDZ 등 12 코드 중 하나)는 본질적으로 매출 패턴 *shape* 의 사후 요약이므로 — 특히 X/Y/Z 글자가 전체 시계열을 본 매출 궤적 cluster에서 오므로, 큰 폭 성장 패턴(UU 등)과 강하게 연관됨. 따라서 이 $\Delta F_1$ 은 *forward predictive power* 의 직접 향상이 아닌 **explanatory ablation** 으로 해석되어야 함 — 매출 곡선 shape 이 장기 매출 성장과 강하게 연결된다는 의미. caveat 은 §\ref{sec:limitations} 에서 재논의.
 3. **모델 비교.** 동일 representation 에서 XGBoost (0.818) 가 RF (0.642) 를 상회. 단 단일 80/20 holdout, single seed 평가는 모델 비교 주장을 통계적으로 검증하지 않음 — 그 검증은 G/S/D 14-패널 paired 비교(§\ref{sec:rf_vs_lgbm})로 위임.
 
 **SHAP feature contributions.** XGBoost `base_udx_inflection` 의 SHAP summary (Figure 5.8) 에서 양성 클래스 예측 기여 최상위는 특정 `final_code` (UDX) 더미와 `cv_sales_card`, `slope_P1`, `new_customer_ratio` — §\ref{sec:significant_vars} 회귀 결과 (신규 고객 비율·매출 변동성 의 강한 효과) 와 정합.
@@ -156,13 +156,13 @@ nc_slope 계수가 모든 코호트에서 양 (Q1 +2.026, Q2 +1.255, Q3 +1.286, 
 
 ---
 
-## §5.6 KMeans Cluster Factor Decomposition
+## §5.6 매출 궤적 Cluster Factor Decomposition
 
-매출 패턴 기반 KMeans cluster (K=6) 로 점포를 분해하고 cluster 별 G/S/D 결과와 feature importance 를 보고.
+매출 패턴 기반 6개 trajectory cluster로 점포를 분해하고 cluster 별 G/S/D 결과와 feature importance 를 보고.
 
 ### Cluster × G/S/D 분포
 
-**Table 5.4 — 6 KMeans clusters (panel `sy2021_sm01_w3m_off1`)**
+**Table 5.4 — 6개 매출 궤적 clusters (panel `sy2021_sm01_w3m_off1`)**
 
 | Cluster | $n$ | Growth | Stable | Decline | macro-$F_1$ |
 |---|---|---|---|---|---|
@@ -284,7 +284,7 @@ cost-sensitive (decline_x2/x3) + 6-변형 manual 의 null 결과는, 본 데이�
 2. **G/S/D baseline vs hybrid.** 14 시즌 정렬 패널에서 RF baseline (A) macro-$F_1 \approx 0.50$ (패널 범위 **0.467–0.546**), cluster+CP hybrid (D) 와의 paired 비교 평균 $\Delta F_1 = +0.0017$, Bonferroni 후 14 패널 중 0개 유의 — *조건부* 개선 (§\ref{sec:taskB_main}).
 3. **G/S/D 모델 비교.** 동일 representation 에서 LightGBM 이 RF 상회 (평균 $\Delta F_1 = +0.0075$, 6 패널 중 5승, 6 중 2에서 $p < 0.05$) — 본 데이터의 *feature 이질성 + 강한 소수 클래스 신호 + 큰 categorical cardinality* 와 LightGBM 구조 특성의 적합으로 해석 (§\ref{sec:rf_vs_lgbm}).
 4. **G/S/D 코호트 분해.** 영업기간 사분위 코호트 분석은 신규 고객 → Growth 효과가 모든 코호트에서 일관, 효과 크기는 Q1·Q4 양끝에서 최대 (§5.4).
-5. **G/S/D cluster 분해.** KMeans cluster 분해는 *fragile cluster* (Decline 35–45%) 를 분리, 이 안에서 hybrid representation 의 마진이 가장 두드러짐 (§5.6).
+5. **G/S/D cluster 분해.** 매출 궤적 cluster 분해는 *fragile cluster* (Decline 35–45%) 를 분리, 이 안에서 hybrid representation 의 마진이 가장 두드러짐 (§5.6).
 6. **G/S/D 외부 비교 · cost-sensitive.** 14 비-LightGBM 비교 모델 중 RF를 상회하는 것은 없고, 우리 LightGBM 계열 3종만 상회 (lgbm_tabular +0.0075, 5/6 승); 14 비-LightGBM 변형 모두 일관된 음의 마진 (−0.0345 ~ −0.2705). cost-sensitive 가중 (rf_decline_x2/x3) 은 macro-$F_1$ 단조 감소 (§\ref{sec:phase5}, §5.8).
 
 다음 장은 G/S/D 결과가 시즌·외부 비교·공간 그래프 모델에 걸쳐 안정적인지 검증. 큰 폭 성장 단일 holdout 의 external validity 는 한계·향후 연구 (§\ref{sec:limitations}) 로.
