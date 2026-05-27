@@ -158,7 +158,7 @@ nc_slope 계수가 모든 코호트에서 양 (Q1 +2.026, Q2 +1.255, Q3 +1.286, 
 
 ## §5.6 패널 내부(Panel-Internal) Cluster 분해
 
-점포를 6개 *패널 내부(panel-internal)* cluster로 분해하고 cluster 별 G/S/D 결과와 feature importance 를 보고. 이 cluster들은 각 시즌 정렬 패널 안에서 feature window의 정규화 매출 시퀀스만으로 적합되며 — G/S/D 모델이 쓰는 forward-valid `cluster` feature와 동일(§5.3) — Figure 3.2의 full-span 기술용(descriptive) 궤적 클러스터와는 다른 객체다. 따라서 여기 cluster 크기 합은 단일 패널의 점포 수(33,998)이며 Figure 3.2의 full-span 전체 점포 수가 아니다.
+점포를 6개 *패널 내부(panel-internal)* cluster로 분해하고 cluster 별 G/S/D 결과와 feature importance 를 보고. 이 cluster들은 각 시즌 정렬 패널 안에서 feature window의 정규화 매출 시퀀스만으로 적합되며 — G/S/D 모델이 쓰는 forward-valid `cluster` feature와 동일(§5.3) — Figure 3.2의 full-span 기술용(descriptive) K-Shape 클러스터와는 다른 객체다. 따라서 여기 cluster 크기 합은 단일 패널의 점포 수(33,998)이며 Figure 3.2의 full-span 전체 점포 수가 아니다.
 
 ### Cluster × G/S/D 분포
 

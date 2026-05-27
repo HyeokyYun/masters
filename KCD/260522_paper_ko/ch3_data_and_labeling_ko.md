@@ -77,7 +77,7 @@ worked-example 라벨링 패널 `sy2021_sm01_w3m_off1` ($n = 34{,}274$, 대표 �
 
 ### 큰 폭 성장 타깃 — 이항 분류 (보완적)
 
-보완적 설명 ablation으로서, 라벨은 `growth_rate` — 점포 관측구간 첫 분기 대비 마지막 분기 평균 주간 카드 매출의 상대 변화율 $(\text{late\_avg}-\text{early\_avg})/\text{early\_avg}$ — 이 1.0 이상인지(즉, 마지막 분기 평균이 첫 분기 평균의 2배 이상)의 이항 변수:
+보완적 설명 ablation으로서, 라벨은 `growth_rate` — 점포 관측구간 첫 분기 대비 마지막 분기(점포별 span) 평균 주간 카드 매출의 상대 변화율 $(\text{late\_avg}-\text{early\_avg})/\text{early\_avg}$ — 이 1.0 이상인지(즉, 마지막 분기 평균이 첫 분기 평균의 2배 이상)의 이항 변수:
 $$\texttt{growth\_type} = \mathbb{1}[\texttt{growth\_rate} \geq 1.0] \in \{0, 1\}.$$
 
 큰 폭 성장 타깃은 **binary $F_1$** (양성 = 큰 폭 성장)을 평가 지표로, **stratified 80/20 holdout (single seed = 42)** 을 split으로 사용한다.
@@ -154,7 +154,7 @@ G/S/D 세 클래스는 비대칭이며, 불균형은 **패널 내부**에도 **�
 
 ### 매출 궤적 클러스터
 
-점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. 정규화된 주간 매출 궤적을 $K = 6$개의 cluster로 묶으면 6개의 인식 가능한 궤적 형상이 산출된다(Figure 3.2): 고점→**급락(sharp-drop)**, **지속 고수준(sustained-high)**(주기적 dip), **완만한 하락(gradual-decline)**, **지속 하락(sustained-decline)**, **상승/회복(rising/recovery)**, **완만한 상승(gentle-rise)** 클러스터. $K = 6$은 더 잘게 나누기보다 질적으로 구분되는 소수의 해석 가능한 형상을 얻기 위한 의도적 선택이다. clustering 알고리즘 자체는 본 논문의 방법론적 기여가 아니며, 그 결과 `cluster` 라벨은 보조적인 매출 궤적 descriptor 하나로만 모델에 들어간다. Ch5에서 보듯 그 증분 기여가 제한적이므로, 핵심 결론은 특정 clustering 절차에 의존하지 않는다. 여기 보인 full-span 군집은 기술용(descriptive)이다; 이는 큰 폭 성장 UDX representation (§5.2)에 feature로 쓰이며, UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z. G/S/D forward 모델은 이 full-span 라벨을 재사용하지 *않는다*: 각 시즌 정렬 패널 안에서 feature window 매출 시퀀스만으로 6개 `cluster` feature를 다시 계산하므로(§5.3) feature가 forward-valid하게 유지된다. 그 패널별 구성은 §5.6에서 보고한다.
+점포 매출 시계열의 *형상(shape)* 도 파생 grouping·예측 feature로 사용된다. 각 점포의 평균·분산 정규화된 주간 매출 궤적을 **K-Shape** 알고리즘 \cite{paparrizos2015kshape} 으로 $K = 6$개 cluster로 묶는다 — K-Shape은 형상 기반 교차상관(cross-correlation) 거리로 군집한다. 유클리디안 거리는 시간 지연에 취약하고 DTW는 이 규모 패널에서 연산이 비싸고 억지 정렬을 유발하는 반면, shift-invariant 한 K-Shape 거리는 스케일 차이·국소 노이즈에 강건하면서 전체 궤적 형상(성장 vs 쇠퇴)을 분리한다. 그 결과 6개의 인식 가능한 궤적 형상이 산출된다(Figure 3.2): 고점→**급락(sharp-drop)**, **지속 고수준(sustained-high)**(주기적 dip), **완만한 하락(gradual-decline)**, **지속 하락(sustained-decline)**, **상승/회복(rising/recovery)**, **완만한 상승(gentle-rise)** 클러스터. $K = 6$은 더 잘게 나누기보다 질적으로 구분되는 소수의 해석 가능한 형상을 얻기 위한 의도적 선택이다. clustering 알고리즘 자체는 본 논문의 방법론적 기여가 아니며, 그 결과 `cluster` 라벨은 보조적인 매출 궤적 descriptor 하나로만 모델에 들어간다. Ch5에서 보듯 그 증분 기여가 제한적이므로, 핵심 결론은 특정 clustering 절차에 의존하지 않는다. 여기 보인 full-span 군집은 기술용(descriptive)이다; 이는 큰 폭 성장 UDX representation (§5.2)에 feature로 쓰이며, UDX 코드용으로는 6개 클러스터를 전체 형상에 따라 세 패턴 글자로 다시 묶는다 — 성장형 클러스터 → X, 안정 클러스터 → Y, 쇠퇴형 클러스터 → Z. G/S/D forward 모델은 이 full-span 라벨을 재사용하지 *않는다*: 각 시즌 정렬 패널 안에서 입력창 매출 시퀀스만으로 K-means 를 돌려 6개 `cluster` feature를 다시 계산하므로(§5.3) feature가 forward-valid하게 유지된다. 그 패널별 구성은 §5.6에서 보고한다.
 
 **Figure 3.2** — 6개 매출 궤적 클러스터: 멤버 시계열(회색) 위에 클러스터 평균(빨강), 관측 주 전체에 대해 $[0,1]$로 정규화. 이 full-span 형상들은 큰 폭 성장 UDX 코드에 쓰이고, G/S/D 모델은 별도의 forward-valid 패널별 `cluster` feature를 사용한다(§5.6).
 
@@ -166,6 +166,7 @@ G/S/D 세 클래스는 비대칭이며, 불균형은 **패널 내부**에도 **�
 
 - **결측 주 처리.** 일시적 결측은 인접 값의 선형 보간으로 채우고, 연속 결측 구간은 가능한 폐업 기간으로 마스킹한다.
 - **폐업·신규 개업 구간 식별.** 임계값 이상의 연속 0 매출 주가 있거나 명시적으로 폐업일로 기록된 구간은 입력 윈도우에서 제외한다.
+- **패널 포함 기준.** 점포는 feature·target 윈도우 각각에서 기대 주차의 60% 이상(최소 2주)을 관측해야 시즌 정렬 패널에 포함되며, 모델용 패널은 shape 기반 feature에 필요한 완전 시계열이 없는 276개 점포를 추가로 제외한다.
 - **시즌 정렬을 위한 캘린더 매칭.** 학습·평가 패널을 동일 캘린더 단위(예: 1–3월 = 겨울 분기)로 정렬한다. Chapter 6의 시즌 rolling 평가의 기반이다.
 - **점포 단위 정규화.** 점포별 매출 수준 차를 제거하기 위해 매출 시계열을 within-store 또는 within-quarter 평균으로 정규화한다.
 - **outlier 처리.** 0 매출 또는 비현실적으로 큰 값(예: 단일 주 매출이 점포 평균의 100배 초과)은 winsorize 또는 마스킹한다.
