@@ -103,21 +103,21 @@ $$\texttt{growth\_type} = \mathbb{1}[\texttt{growth\_rate} \geq 1.0] \in \{0, 1\
 
 ### §3.4.1 클래스 불균형의 정량 진단
 
-G/S/D 세 클래스의 분포는 데이터 특성상 본질적으로 비대칭이다. 패널별 클래스 비율은 윈도우 길이와 시작 월에 따라 크게 달라진다. 라벨링 패널 `sy2021_sm01_w3m_off1` (입력: 2021.01–03 → target: 2022.01–03) 의 클래스 비율은 Table 3.4와 같다.
+G/S/D 세 클래스는 비대칭이며, 불균형은 **패널 내부**에도 **패널 간**에도 존재한다. 3개월(offset-1) 시즌 정렬 패널 19개를 풀링하면(store-panel 관측 $682{,}365$개), **Stable이 다수 클래스(약 57%)** 이고 Growth·Decline은 각각 약 20%다. 게다가 구성은 패널마다 크게 변동한다 — Decline 비중만 해도 패널에 따라 5%~62%, Growth는 4%~57% 범위다(Table 3.4, Figure 3.1).
 
-**Table 3.4 — G/S/D class proportions** (`sy2021_sm01_w3m_off1`, $n = 34{,}274$)
+**Table 3.4 — G/S/D class proportions** (3개월 시즌 정렬 19패널 풀링, offset 1; store-panel 관측 $682{,}365$개)
 
-| Class | $n$ | Proportion |
+| Class | 풀링 비율 | 패널별 범위 |
 |---|---|---|
-| Growth | 19,404 | 0.566 |
-| Stable | 12,207 | 0.356 |
-| Decline | 2,663 | 0.078 |
+| Growth | 0.226 | 0.044–0.566 |
+| Stable | 0.569 | 0.333–0.734 |
+| Decline | 0.206 | 0.054–0.620 |
 
 약 5.9만 개 서울 외식업 점포 중, 각 패널은 입력 윈도우와 1년 후 target 윈도우에 모두 관측된 점포를 라벨링한다; 라벨링 패널 `sy2021_sm01_w3m_off1` 은 그런 점포 $n=34{,}274$ 개를 포함한다(시작 월에 따라 패널별 수가 달라짐, Table 6.1 참조). 이후 K-Shape 클러스터링·시즌 정렬 예측에 쓰이는 모델용 패널은, shape 기반 feature에 필요한 완전한 주간 시계열이 없는 276개 점포를 제외하여 $n=33{,}998$ 이다.
 
-Decline 클래스가 약 **7.8%** 로 가장 얇다. 단순 accuracy로 평가하면 두 함정이 발생한다.
+단순 accuracy로 평가하면 두 함정이 발생한다.
 
-1. 다수 클래스(Growth 또는 Stable) 만 예측해도 accuracy가 부풀려진다. 예: Growth-only 예측의 accuracy는 약 0.57.
+1. **Stable이 다수 클래스**이므로, Stable-only 예측만으로도 풀링 기준 약 57%(Stable 편중 패널에선 더) accuracy가 나오며, Growth·Decline 점포는 하나도 식별하지 못한다.
 2. 결과적으로 본 논문의 핵심 관심 — *실제 Decline 점포를 Decline으로 정확히 식별하는지* (특히 조기 경보 응용) — 이 흐려진다.
 
 ### §3.4.2 지표 선택: Macro-$F_1$
